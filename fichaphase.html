@@ -1,0 +1,878 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+    <link rel="stylesheet" href="fichaluiz.css" />
+
+    <title>Phase</title>
+  </head>
+  <body>
+    <h1 class="title">Phase</h1>
+
+    <!-- modal -->
+    <div id="diceAttributes" class="modal">
+      <div class="modal-content">
+        <img class="modalDice" src="./img/dado.png" alt="Dado" />
+        <h2 id="diceNumber"></h2>
+        <p id="diceType"></p>
+      </div>
+    </div>
+
+    <div id="lifeModal" class="modal with-input">
+      <div class="modal-content">
+        <h2>MODIFICAR VIDA</h2>
+        <hr />
+        <form class="formModal" id="changeLife">
+          <h3>Atual</h3>
+          <input type="number" name="current" id="lifeCurrent" min="0" />
+          <h3>Máximo</h3>
+          <input type="number" name="max" id="lifeMax" min="0" />
+          <input type="submit" value="Salvar" />
+        </form>
+      </div>
+    </div>
+
+    <div id="sanityModal" class="modal with-input">
+      <div class="modal-content">
+        <h2>MODIFICAR MANA</h2>
+        <hr />
+        <form class="formModal" id="changeSanity">
+          <h3>Atual</h3>
+          <input
+            type="number"
+            name="sanityCurrent"
+            id="sanityCurrent"
+            min="0"
+          />
+          <h3>Máximo</h3>
+          <input type="number" name="sanityMax" id="sanityMax" min="0" />
+          <input type="submit" value="Salvar" />
+        </form>
+      </div>
+    </div>
+        </form>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="details border">
+        <h2 class="grid-title">DETALHES PESSOAIS</h2>
+        <hr />
+
+        <div class="inputs">
+          <h4>Crystal coin</h4>
+          <input type="text" name="cristal" id="cristal" value="" />
+          <h4>Estrelas</h4>
+          <input type="text" name="star" id="star" value="" />
+          <h4>Classe</h4>
+          <input type="text" name="classe" id="classe" value="" />
+          <h4>Idade</h4>
+          <input type="text" name="age" id="age" value="" />
+          <h4>Sexo</h4>
+          <select id="sex" name="sex">
+            <option value="male">Masculino</option>
+            <option value="female">Feminino</option>
+            <option value="other">Outros</option>
+          </select>
+          <br>
+          <h2>Alma</h2>
+          <br>
+          <h3>Cor da alma: Cíano</h3>
+          <h4>Habilidade</h4>
+          <br>
+          <br>
+          <img src="imagens/soul1.png" class="imgsoul">
+          <h2>Soul resonance</h2>
+          <br>
+          <h4>Passiva:</h4>
+          <br>
+          <h4>Ativa:</h4>
+          <h2>Runas</h2>
+          <br>
+          <img class="runaimg" src="imagens/Rune_slots.webp"/>
+          <br>
+          <h4>1: <select id="rune" name="rune">
+            <option value="none">Nenhuma</option>
+            <option value="accuracy">accuracy</option>
+            <option value="blade">Blade</option>
+            <option value="despair">Despair</option>
+            <option value="destroy">Destroy</option>
+            <option value="determination">Determi nation</option>
+            <option value="enchance">Enchance</option>
+            <option value="endure">Endure</option>
+            <option value="energy">Energy</option>
+            <option value="fatal">Fatal</option>
+            <option value="fight">Fight</option>
+            <option value="focus">Focus</option>
+            <option value="guard">Guard</option>
+            <option value="nemesis">Nemesis</option>
+            <option value="Rage">Rage</option>
+            <option value="revenge">Revenge</option>
+            <option value="shield">Shield</option>
+            <option value="swift">Swift</option>
+            <option value="tolerance">Tolerance</option>
+            <option value="violent">Violent</option>
+            <option value="will">Will</option>
+          </select> | <select id="at" name="at"><option value="none">Nenhuma</option>
+            <option value="dmg1">DMG'A</option><option value="dmg1c">DMG'A%</option>
+            <option value="dmg2">DMG'H</option>
+            <option value="dmg2c">DMG'H%</option>
+            <option value="dmg3">DMG'T</option>
+            <option value="dmg3c">DMG'T%</option>
+            <option value="hp">HP</option>
+            <option value="hpc">HP%</option>
+            <option value="mp">MP</option>
+            <option value="mpc">MP%</option>
+            <option value="sort">Sort</option>
+            <option value="sortc">Sort%</option>
+        </select> + <input class="run" type="text" name="run1" id="run1" value="" /></h4>
+        <h4>2: <select id="rune" name="rune">
+            <option value="none">Nenhuma</option>
+            <option value="accuracy">accuracy</option>
+            <option value="blade">Blade</option>
+            <option value="despair">Despair</option>
+            <option value="destroy">Destroy</option>
+            <option value="determination">Determi nation</option>
+            <option value="enchance">Enchance</option>
+            <option value="endure">Endure</option>
+            <option value="energy">Energy</option>
+            <option value="fatal">Fatal</option>
+            <option value="fight">Fight</option>
+            <option value="focus">Focus</option>
+            <option value="guard">Guard</option>
+            <option value="nemesis">Nemesis</option>
+            <option value="Rage">Rage</option>
+            <option value="revenge">Revenge</option>
+            <option value="shield">Shield</option>
+            <option value="swift">Swift</option>
+            <option value="tolerance">Tolerance</option>
+            <option value="violent">Violent</option>
+            <option value="will">Will</option>
+          </select> | <select id="at" name="at"><option value="none">Nenhuma</option>
+            <option value="dmg1">DMG'A</option><option value="dmg1c">DMG'A%</option>
+            <option value="dmg2">DMG'H</option>
+            <option value="dmg2c">DMG'H%</option>
+            <option value="dmg3">DMG'T</option>
+            <option value="dmg3c">DMG'T%</option>
+            <option value="hp">HP</option>
+            <option value="hpc">HP%</option>
+            <option value="mp">MP</option>
+            <option value="mpc">MP%</option>
+            <option value="sort">Sort</option>
+            <option value="sortc">Sort%</option>
+        </select> + <input class="run" type="text" name="run2" id="run2" value="" /></h4>
+        <h4>3: <select id="rune" name="rune">
+            <option value="none">Nenhuma</option>
+            <option value="accuracy">accuracy</option>
+            <option value="blade">Blade</option>
+            <option value="despair">Despair</option>
+            <option value="destroy">Destroy</option>
+            <option value="determination">Determi nation</option>
+            <option value="enchance">Enchance</option>
+            <option value="endure">Endure</option>
+            <option value="energy">Energy</option>
+            <option value="fatal">Fatal</option>
+            <option value="fight">Fight</option>
+            <option value="focus">Focus</option>
+            <option value="guard">Guard</option>
+            <option value="nemesis">Nemesis</option>
+            <option value="Rage">Rage</option>
+            <option value="revenge">Revenge</option>
+            <option value="shield">Shield</option>
+            <option value="swift">Swift</option>
+            <option value="tolerance">Tolerance</option>
+            <option value="violent">Violent</option>
+            <option value="will">Will</option>
+          </select> | <select id="at" name="at"><option value="none">Nenhuma</option>
+            <option value="dmg1">DMG'A</option><option value="dmg1c">DMG'A%</option>
+            <option value="dmg2">DMG'H</option>
+            <option value="dmg2c">DMG'H%</option>
+            <option value="dmg3">DMG'T</option>
+            <option value="dmg3c">DMG'T%</option>
+            <option value="hp">HP</option>
+            <option value="hpc">HP%</option>
+            <option value="mp">MP</option>
+            <option value="mpc">MP%</option>
+            <option value="sort">Sort</option>
+            <option value="sortc">Sort%</option>
+        </select> + <input class="run" type="text" name="run3" id="run3" value="" /></h4>
+        <h4>4: <select id="rune" name="rune">
+            <option value="none">Nenhuma</option>
+            <option value="accuracy">accuracy</option>
+            <option value="blade">Blade</option>
+            <option value="despair">Despair</option>
+            <option value="destroy">Destroy</option>
+            <option value="determination">Determi nation</option>
+            <option value="enchance">Enchance</option>
+            <option value="endure">Endure</option>
+            <option value="energy">Energy</option>
+            <option value="fatal">Fatal</option>
+            <option value="fight">Fight</option>
+            <option value="focus">Focus</option>
+            <option value="guard">Guard</option>
+            <option value="nemesis">Nemesis</option>
+            <option value="Rage">Rage</option>
+            <option value="revenge">Revenge</option>
+            <option value="shield">Shield</option>
+            <option value="swift">Swift</option>
+            <option value="tolerance">Tolerance</option>
+            <option value="violent">Violent</option>
+            <option value="will">Will</option>
+          </select> | <select id="at" name="at"><option value="none">Nenhuma</option>
+            <option value="dmg1">DMG'A</option><option value="dmg1c">DMG'A%</option>
+            <option value="dmg2">DMG'H</option>
+            <option value="dmg2c">DMG'H%</option>
+            <option value="dmg3">DMG'T</option>
+            <option value="dmg3c">DMG'T%</option>
+            <option value="hp">HP</option>
+            <option value="hpc">HP%</option>
+            <option value="mp">MP</option>
+            <option value="mpc">MP%</option>
+            <option value="sort">Sort</option>
+            <option value="sortc">Sort%</option>
+        </select> + <input class="run" type="text" name="run4" id="run4" value="" /></h4>
+        <h4>5: <select id="rune" name="rune">
+            <option value="none">Nenhuma</option>
+            <option value="accuracy">accuracy</option>
+            <option value="blade">Blade</option>
+            <option value="despair">Despair</option>
+            <option value="destroy">Destroy</option>
+            <option value="determination">Determi nation</option>
+            <option value="enchance">Enchance</option>
+            <option value="endure">Endure</option>
+            <option value="energy">Energy</option>
+            <option value="fatal">Fatal</option>
+            <option value="fight">Fight</option>
+            <option value="focus">Focus</option>
+            <option value="guard">Guard</option>
+            <option value="nemesis">Nemesis</option>
+            <option value="Rage">Rage</option>
+            <option value="revenge">Revenge</option>
+            <option value="shield">Shield</option>
+            <option value="swift">Swift</option>
+            <option value="tolerance">Tolerance</option>
+            <option value="violent">Violent</option>
+            <option value="will">Will</option>
+          </select> | <select id="at" name="at"><option value="none">Nenhuma</option>
+            <option value="dmg1">DMG'A</option><option value="dmg1c">DMG'A%</option>
+            <option value="dmg2">DMG'H</option>
+            <option value="dmg2c">DMG'H%</option>
+            <option value="dmg3">DMG'T</option>
+            <option value="dmg3c">DMG'T%</option>
+            <option value="hp">HP</option>
+            <option value="hpc">HP%</option>
+            <option value="mp">MP</option>
+            <option value="mpc">MP%</option>
+            <option value="sort">Sort</option>
+            <option value="sortc">Sort%</option>
+        </select> + <input class="run" type="text" name="run5" id="run5" value="" /></h4>
+        <h4>6: <select id="rune" name="rune">
+            <option value="none">Nenhuma</option>
+            <option value="accuracy">accuracy</option>
+            <option value="blade">Blade</option>
+            <option value="despair">Despair</option>
+            <option value="destroy">Destroy</option>
+            <option value="determination">Determi nation</option>
+            <option value="enchance">Enchance</option>
+            <option value="endure">Endure</option>
+            <option value="energy">Energy</option>
+            <option value="fatal">Fatal</option>
+            <option value="fight">Fight</option>
+            <option value="focus">Focus</option>
+            <option value="guard">Guard</option>
+            <option value="nemesis">Nemesis</option>
+            <option value="Rage">Rage</option>
+            <option value="revenge">Revenge</option>
+            <option value="shield">Shield</option>
+            <option value="swift">Swift</option>
+            <option value="tolerance">Tolerance</option>
+            <option value="violent">Violent</option>
+            <option value="will">Will</option>
+          </select> | <select id="at" name="at"><option value="none">Nenhuma</option>
+            <option value="dmg1">DMG'A</option><option value="dmg1c">DMG'A%</option>
+            <option value="dmg2">DMG'H</option>
+            <option value="dmg2c">DMG'H%</option>
+            <option value="dmg3">DMG'T</option>
+            <option value="dmg3c">DMG'T%</option>
+            <option value="hp">HP</option>
+            <option value="hpc">HP%</option>
+            <option value="mp">MP</option>
+            <option value="mpc">MP%</option>
+            <option value="sort">Sort</option>
+            <option value="sortc">Sort%</option>
+        </select> + <input class="run" type="text" name="run6" id="run6" value="" /></h4>
+        <div>
+            <h2 class="grid-title">Resistências</h2>
+            <div class="resList" id="resList">
+                <br>
+                <table border="1" class="res">
+                    <tr>
+                        <img src="imagens/fogo5.png" class="imgresfo">
+                        <td class="elem">Ígneo</td>
+                        <img src="imagens/agua4.png" class="imgresag">
+                        <td class="elem">Hydro</td>
+                        <img src="imagens/sagrado2.webp" class="imgressag">
+                        <td class="elem">Sagrado</td>
+                        <img src="imagens/morte11.png" class="imgresmor">
+                        <td class="elem">Morte</td>
+                    </tr>
+                    <tr>
+                        <td>80%</td>
+                        <td>80%</td>
+                        <td>0%</td>
+                        <td>-50%</td>
+                    </tr>
+                    </table>
+                    <table>
+                    <tr>
+                        <img src="imagens/fisico.png" class="imgresfis">
+                        <td class="elem">Físico</td>
+                        <img src="imagens/veneno.png" class="imgresven">
+                        <td 
+                        class="elem">Veneno</td>
+                        <img src="imagens/eterio.png" class="imgresete">
+                        <td class="elem">Etério</td>
+                        <img src="imagens/eletrico.png" class="imgresele">
+                        <td class="elem">Elétrico</td>
+                    </tr>
+                    <tr>
+                        <td>80%</td>
+                        <td>100%</td>
+                        <td>100%</td>
+                        <td>0%</td>
+                    </tr>
+                    </table>
+                    <table>
+                    <tr>
+                        <img src="imagens/sombra.png" class="imgressom">
+                        <td class="elem">Sombra</td>
+                        <img src="imagens/luz.png" class="imgresluz">
+                        <td class="elem">Luz</td>
+                        <img src="imagens/psiquico.png" class="imgrespsi">
+                        <td class="elem">Psíquico</td>
+                        <img src="imagens/espiritual.png" class="imgresesp">
+                        <td class="elem">Espiritual</td>
+                    </tr>
+                    <tr>
+                        <td>80%</td>
+                        <td>80%</td>
+                        <td>25%</td>
+                        <td>0%</td>
+                    </tr>
+                </table>
+                <div class="carrossel owl-carousel">
+                  <div class="conquista">
+                      <div class="conquistaCaixa">
+                        <br><br>
+                        <h2>Habilidades</h2>
+                        <hr/>
+                        <button onclick="leiaMais1()" id="btnLeiaMais1" class="btnLeiaMais1">Primeiro selo</button>
+                        <span id="tresPontos1"></span><span id="mostrarMais1" class="hability"><br><br>O corpo de Bloodman é completamente feito de Neter, permitindo que ele deforme, modele e mova seu corpo da maneira que desejar, e o torna quase completamente imune a todas as formas de ambos(danos físicos e mágicos). No entanto, se o próprio atacar um alvo, ele deve permanecer tangível, deixando-o suscetível a contra-ataques. Após a liberação do selo, apenas estar perto de Bloodman incita a morte, já que a grande quantidade de neter oprime e mata aqueles que as inalam.<br>
+                        <br><p class="habilitysec">Passiva</p></span>
+                        <hr/>
+                        <button onclick="leiaMais2()" id="btnLeiaMais2" class="btnLeiaMais5">Segundo selo</button>
+                <span id="tresPontos2"></span><span id="mostrarMais2" class="hability"><br><br>Depois de liberar o Primeiro Selo, torna-se capaz de liberar o segundo, que convoca um mar de caveiras que rouba a vida daqueles que são pegos nele. O Segundo Selo pode ser dissipado com magia de elemento "positivo".<br><br>Vida drenada:5% do Hp por turno.
+                <br><br><p class="habilitysec">Passiva</p></span>
+                <hr/>
+                <button onclick="leiaMais3()" id="btnLeiaMais3" class="btnLeiaMais3">Terceiro selo</button>
+              <span id="tresPontos3"></span><span id="mostrarMais3" class="hability"><br><br>Torna seu corpo completamente feito de neter.<br><br>Efeito:+50% de mana, 100% de resistencia ao éter.
+                <br><br><p class="habilitysec">Passiva</p></span>
+              <hr/>
+              <button onclick="leiaMais4()" id="btnLeiaMais4" class="btnLeiaMais4">Maldição da bomba</button>
+            <span id="tresPontos4"></span><span id="mostrarMais4" class="hability"><br><br> Reside completamente no uso de explosões, que podem ser acionadas remotamente ou por contato direto. O usuário também pode criar bombas de mana em um formato desejado. Além disso, qualquer contato que fizerem em você pode fazer com que quem o tocou exploda. Ademais, possui a capacidade de transformar o que deseja em bomba, o próprio corpo do usuário não é excluído disso.<br><br>Dano de explosões:100%.<br>
+            <br><p class="habilitysec">Passiva</p></span>
+            <hr/>
+            <button onclick="leiaMais5()" id="btnLeiaMais5" class="btnLeiaMais3">Tenga goken</button>
+          <span id="tresPontos5"></span><span id="mostrarMais5" class="hability"><br><br> Permite ao usuário usar seus braços como se fossem armas brancas reais fortes os suficientes para fazer ataques a distância cortantes.<br><br>Todo o ataque desarmado é considerado ataque com "armas leves".
+          <br><br><p class="habilitysec">Passiva</p></span>
+          <hr/>
+<button onclick="leiaMais6()" id="btnLeiaMais6" class="btnLeiaMais6">Tenchi Kaimei</button>
+        <span id="tresPontos6"></span><span id="mostrarMais6" class="hability"><br><br>O usuário convoca grandes marés de água negra que engolem e inundam uma área tão grande quanto a escolha do usuário; As águas são venenosas devido à abundância de carbono. Se o usuário for derrotado, as águas negras se dispersarão e desaparecerão, ademais quem mergulhar terá a impresão da água ter uma profundidade infinita.<br><br>Dano de veneno igual 50% do dano de "canalizador" por turno até o fim da batalha.
+        <br><br><p class="habilitysec">Passiva</p></span>
+        <hr/>
+<button onclick="leiaMais7()" id="btnLeiaMais7" class="btnLeiaMais7">Devil slayer de gelo</button>
+      <span id="tresPontos7"></span><span id="mostrarMais7" class="hability"><br><br>Permite ao usuário produzir o elemento gelo para vários propósitos.
+        Como outros Slayers, o usuário é capaz de consumir fontes externas de gelo, mesmo aquelas formadas do nada, a fim de reabastecer sua força e aumentar seu poder, além de ter uma tremenda resistência ao elemento gelo. Além disso, o usuário é capaz de controlar um pouco o gelo dos outros.
+        <br><br>Dano de gelo igual 100% | CD de congelamento: P.M
+      <br><br><p class="habilitysec">Passiva</p></span>
+      <hr/>
+<button onclick="leiaMais8()" id="btnLeiaMais8" class="btnLeiaMais8">Maldição dos espinhos</button>
+    <span id="tresPontos8"></span><span id="mostrarMais8" class="hability"><br><br> o usuário é capaz de criar, bem como manipular, espinhos à sua vontade. Além disso, o usuário pode criar uma explosão altamente destrutiva cujo núcleo tem a forma de pétalas de rosa.
+      <br> <br>Dano físico: 100%| Dano da explosão: 150%.
+    <br><br><p class="habilitysec">Passiva</p></span>
+    <hr/>
+<button onclick="leiaMais9()" id="btnLeiaMais9" class="btnLeiaMais9">Absorption curse</button>
+  <span id="tresPontos9"></span><span id="mostrarMais9" class="hability"><br><br> Esta maldição concede ao usuário a capacidade de absorver as almas dos seres vivos, bem como da magia através do toque. Convenientemente, o usuário também é capaz de esticar partes do corpo, como os membros, em proporções longas, podendo até formar pontas de suas costas e braços, o usuário também pode fazer com que outros os absorvam.
+    <br><br>Dano do dreno de alma: 25%.
+    <br><br><p class="habilitysec">Passiva</p></span>
+  <hr/>
+<button onclick="leiaMais10()" id="btnLeiaMais10" class="btnLeiaMais10">Aprimoramento</button>
+  <span id="tresPontos10"></span><span id="mostrarMais10" class="hability"><br><br> O aprimoramento permite que o usuário, como o nome sugere, aprimore o corpo do alvo da maneira que achar melhor. Embora usado principalmente como um meio de aumentar a força de seus alvos (aqueles que não conseguem resistir à Maldição são mortos e transformados em bonecos de papel preto), a Maldição também pode ser usada para aumentar a sensibilidade à dor de alguém; Quando usado sobre si mesmo, o usuário também é capaz de se fortalecer sem limites. Finalmente, além de mero aprimoramento, o aprimoramento também pode retirar coisas do inimigo do usuário, como seus cinco sentidos.
+    <br><br>Efeito: aumenta em 25% do dano causado ao alvo afetado(de todas as fontes)
+   <br><br><p class="habilitysec">Passiva</p></span>
+  <hr/>
+<button onclick="leiaMais11()" id="btnLeiaMais11" class="btnLeiaMais11">Calamity Curse</button>
+  <span id="tresPontos11"></span><span id="mostrarMais11" class="hability"><br><br> Gira em torno do uso de várias calamidades, como tornados, dos quais o usuário é capaz de envolver seu corpo e membros.  Além de tornados, o usuário também tem a capacidade de criar terremotos, tempestades de fogo, raios, tempestades e deslizamentos de terra.
+    <br><br>Dano: 100%(o elemento depende do disastre)
+    <br><br><p class="habilitysec">Passiva</p></span>
+  <hr/>
+<button onclick="leiaMais12()" id="btnLeiaMais12" class="btnLeiaMais12">Macro</button>
+  <span id="tresPontos12"></span><span id="mostrarMais12" class="hability"><br><br> A macro permite que o usuário assuma o controle total de algo, o que é definido como dar uma "ordem". Se eles estão mortos, vivos, ou um objeto inanimado é irrelevante; uma vez que algo está sob o controle do usuário uma vez, ele pode retomar remotamente o controle a qualquer momento. Esta Maldição também pode ser usada para capacitar drasticamente o usuário em um processo que eles chamam de "quebrar seu limite". Parece haver um limite para a Maldição.
+
+    <br><br><p class="habilitysec">Passiva</p></span>
+  <hr/>
+ <button onclick="leiaMais13()" id="btnLeiaMais13" class="btnLeiaMais13">Conexão</button>
+  <span id="tresPontos13"></span><span id="mostrarMais13" class="hability"><br><br> Este feitiço permite que absorva a alma de uma certa pessoa. Ao estender seus braços e "conectá-los" a tal pessoa, drenando seu poder mágico. Além disso, permite que ele se transforme naquelas almas que já absorveu, através do uso da Revolução.
+    <br><br><p class="habilitysec">Passiva</p></span>
+  <hr/>
+<button onclick="leiaMais14()" id="btnLeiaMais14" class="btnLeiaMais14">Demon eyes</button>
+  <span id="tresPontos14"></span><span id="mostrarMais14" class="hability"><br><br> Ao liberar seu poder ainda mais longe do que a Forma Etérea original que eles podem acessar, o usuário é capaz de iniciar uma transformação secundária por meio de uma "liberação do limitador". Duas asas baseadas em inscrições se formam ao redor de seus braços, luzes são liberadas dos olhos, enquanto um olho aparece em cada palma.
+    <br><br>Efeito:+20% em todos os seus atributos e maestrias.
+    <br><br><p class="habilitysec">Passiva</p></span>
+  <hr/>
+<button onclick="leiaMais15()" id="btnLeiaMais15" class="btnLeiaMais15">Necromancer</button>
+  <span id="tresPontos15"></span><span id="mostrarMais15" class="hability"><br><br> Utilizando esta forma de Maldição, o usuário é capaz de reviver uma pessoa falecida que pode se comportar como um ser humano vivo normal sob seu controle. O usuário é capaz de reviver várias centenas de cadáveres de uma só vez. No entanto, a desvantagem desta Maldição é que os cadáveres sob o controle do usuário podem permanecer reanimados por um período limitado de tempo, após a derrota do usuário, os cadáveres sob seu controle param de funcionar.
+    <br><br><p class="habilitysec">Passiva</p></span>
+  <hr/>
+<button onclick="leiaMais16()" id="btnLeiaMais16" class="btnLeiaMais16">Memento mori</button>
+  <span id="tresPontos16"></span><span id="mostrarMais16" class="hability"><br><br>Produz uma névoa paralítica escura ao redor do alvo que os envolve, criando um enorme feixe de espíritos das trevas que atinge o céu. As vítimas desta Maldição não estão mais vivas nem mortas, mas são simplesmente apagadas, tornando-se nada por toda a eternidade.
+    <br><br>Leva entorno de 3 turnos para ser feito. 
+   <br><br><p class="habilitysec">Passiva</p></span>
+  <hr/>
+<button onclick="leiaMais17()" id="btnLeiaMais17" class="btnLeiaMais17">Telepatia</button>
+  <span id="tresPontos17"></span><span id="mostrarMais17" class="hability"><br><br>É capaz de sequestrar a comunicação mental. Além disso, também é capaz de se comunicar telepaticamente.
+    <br><br> <p class="habilitysec">Passiva</p></span>
+  <hr/>
+<button onclick="leiaMais18()" id="btnLeiaMais18" class="btnLeiaMais18">Alegria</button>
+  <span id="tresPontos18"></span><span id="mostrarMais18" class="hability"><br><br>Ao passar a mão, é capaz de fazer uso dessa Maldição , que transforma o Cubo em um monstro gigantesco chamado Plutogrim; Quando Alegria é ativado, o Cubo da fortaleza móvel se transforma em um monstro demoníaco chamado Plutogrim. Durante esse processo, projéteis pegajosos são disparados arbitrariamente por todo o edifício, aderindo a tudo o que tocam, eventualmente se espalhando e inundando toda a fortaleza. Qualquer um pego pela substância permanece em estado suspenso permanentemente, ou até que seja libertado por outra pessoa. Aqueles que são colocados em um estado suspenso não se lembrarão de estar no estado mencionado assim que forem liberados. Apesar dos efeitos sombrios de Alegria, depois de se transformar em Plutogrim, ele libera um rugido ensurdecedor que pode causar danos massivos às áreas circundantes abaixo dele. 
+  <br> 
+  <br><p class="habilitysec">Passiva</p></span>
+  <hr/>
+  <button onclick="leiaMais19()" id="btnLeiaMais19" class="btnLeiaMais19">Flor da Prisão</button>
+  <span id="tresPontos19"></span><span id="mostrarMais19" class="hability"><br><br>Cultiva uma flor grande e monstruosa com espinhos e correntes ao redor de seu bulbo, que ele descreve como " a flor da prisão que floresce no submundo " que pode usar sua videira para atacar os oponentes. Também é capaz de conter outros dentro de seu bulbo. 
+    <br><br>Demora 1 turno para florecer | Dano: 150%
+    <br><br><p class="habilitysec">Passiva</p></span>
+  <hr/>
+<button onclick="leiaMais20()" id="btnLeiaMais20" class="btnLeiaMais20">Explosão</button>
+  <span id="tresPontos20"></span><span id="mostrarMais20" class="hability"><br><br>Cria uma rosa composta de Curse Power que engole seus arredores próximos em uma explosão destrutiva.
+    <br><br>Demora 1 turnos para florecer | Dano: 50% em área.
+   <br><br><p class="habilitysec">Passiva</p></span>
+  <hr/>
+<button onclick="leiaMais21()" id="btnLeiaMais21" class="btnLeiaMais21">Dea Yggdrasil</button>
+  <span id="tresPontos21"></span><span id="mostrarMais21" class="hability"><br><br>Cria uma enorme esfera giratória de sua mão de onde uma imensa viga de madeira é disparada no alvo.
+    <br><br>Dano: 100% da maestria "canalizador" em área como dano físico.
+    <br><br><p class="habilitysec">Passiva</p></span>
+  <hr/>
+<button onclick="leiaMais22()" id="btnLeiaMais22" class="btnLeiaMais22">Organic Link Magic</button>
+  <span id="tresPontos22"></span><span id="mostrarMais22" class="hability"><br><br>É capaz de usar esta forma de magia que permite que ele se funda com magias "constantes",
+  <br>
+  <br><p class="habilitysec">Passiva</p></span>
+  <hr/>
+<button onclick="leiaMais23()" id="btnLeiaMais23" class="btnLeiaMais23">Aprimoramento por segundo</button>
+  <span id="tresPontos23"></span><span id="mostrarMais23" class="hability"><br><br>É capaz de aumentar continuamente seu próprio poder, aumentando conforme os segundos passam.
+    <br><br>Efeito: a cada turno aumenta todos os atributos e maestrias em 5%, até um limite de 200%.
+   <br><br><p class="habilitysec">Passiva</p></span>
+  <hr/>
+<button onclick="leiaMais24()" id="btnLeiaMais24" class="btnLeiaMais24">Capture bomb</button>
+  <span id="tresPontos24"></span><span id="mostrarMais24" class="hability"><br><br>Prende um alvo no alcance de vários metros em uma orbe transparente e flutuante.
+    <br> <br>CD:P.M | Dano: 125%
+    <br><br><p class="habilitysec">Passiva</p></span>
+  <hr/>
+<button onclick="leiaMais25()" id="btnLeiaMais25" class="btnLeiaMais25">Revolução</button>
+  <span id="tresPontos25"></span><span id="mostrarMais25" class="hability"><br><br>Este feitiço permite que assuma a aparência de qualquer alma que ele tenha absorvido, bem como tenha acesso às suas habilidades. A alma cuja forma ele assume pode ser qualquer humano, Espírito Celestial ou tipo de Magia (recebendo os efeitos da Magia neste caso).
+
+    <br><br><p class="habilitysec">Passiva</p></span>
+  <hr/>
+<button onclick="leiaMais26()" id="btnLeiaMais26" class="btnLeiaMais26">Ejeção</button>
+  <span id="tresPontos26"></span><span id="mostrarMais26" class="hability"><br><br>Ao dizer o nome de uma alma que ele absorveu anteriormente e erguer os braços, Franmalth é capaz de rejeitar aquela alma perdendo também as habilidades que possuía.
+   <br>
+  <br><p class="habilitysec">Passiva</p></span>
+  <hr/>
+<button onclick="leiaMais27()" id="btnLeiaMais27" class="btnLeiaMais27">Transformação de Áries</button>
+  <span id="tresPontos27"></span><span id="mostrarMais27" class="hability"><br><br>utiliza a Revolução para assumir a forma do Espírito Celestial, Áries. Wool Magic: É um tipo de magia que permite ao lançador liberar e manipular lã de cor rosa. A lã convocada pode assumir uma forma sólida ou até mesmo gasosa. Principalmente para o combate, ele apenas envolve o oponente em lã confortável, enviando-o para um estado mais relaxado e confortável, distraindo-o temporariamente e permitindo que o lançador vá para uma escala mais ofensiva. A lã pode enredar vários oponentes ao mesmo tempo. Para fins complementares, Wool Magic pode atuar como uma espécie de airbag que pega uma pessoa de uma grande altura, tornando sua queda muito menos dolorosa. Wool Magic é eficaz em qualquer tipo de ambiente, mesmo em coisas como a água.
+   <br>
+  <br><p class="habilitysec">Passiva</p></span>
+  <hr/>
+<button onclick="leiaMais28()" id="btnLeiaMais28" class="btnLeiaMais28">Transformação de touro</button>
+  <span id="tresPontos28"></span><span id="mostrarMais28" class="hability"><br><br>Franmalth utiliza a Revolução para assumir a forma do Espírito Celestial, Touro. Força Aprimorada : Usando a alma de Touro, Franmalth possuiu a força de Touro, sendo capaz de esmurrar Natsu com força no chão depois de enganar o Fire Dragon Slayer com o rosto de Áries.
+    <br><br>Efeito: +200% em força.
+    <br><br><p class="habilitysec">Passiva</p></span>
+  <hr/>
+<button onclick="leiaMais29()" id="btnLeiaMais29" class="btnLeiaMais29">Transformação de hades</button>
+  <span id="tresPontos29"></span><span id="mostrarMais29" class="hability"><br><br>->Chain magic: Esta magia permite ao usuário atirar longas correntes de suas mãos, completas com ganchos nas extremidades. Eles podem ser usados em combate lançando os ganchos através dos inimigos. No entanto, essas correntes são quebráveis.
+    <br><br>
+    Cd:P.m em caso de falaha, o inimigo é enraizado. | dano: 10% de dano sombrio.
+    <br> <br>
+    ->Bullet magic: O usuário imita a forma de uma arma com as mãos e cria esferas mágicas no ar ao seu redor, das quais o usuário pode disparar balas mágicas em rápida sucessão. Os usuários avançados desta magia são capazes de realizar o ataque com ambas as mãos simultaneamente, como se estivessem "empunhando duas vezes".
+    <br><br>
+    Dano: 50% de dano sombrio
+    <br> <br>
+    ->Amaterasu: É uma mágica em que seus usuários executam diferentes padrões de mão para criar diferentes efeitos. Depois de executar esses mudras , os selos mágicos de Amaterasu aparecem, com cada fórmula tendo uma aparência diferente. Uma vez escritos, os selos desencadeiam explosões letais ao redor e dentro da área alvo. A escala da destruição causada por essas explosões parece estar ligada à quantidade de selos usados no feitiço.
+    <br><br>
+    Dano: 25% por turno de dano sombrio.
+   <br><br>
+  <br><p class="habilitysec">Passiva</p></span>
+  <hr/>
+<button onclick="leiaMais30()" id="btnLeiaMais30" class="btnLeiaMais30">Transformação do Modo Dragão de Fogo Relâmpago</button>
+  <span id="tresPontos30"></span><span id="mostrarMais30" class="hability"><br><br>O usuário ganha a habilidade de usar sua Magia de Dragon Slayer aprimorada com raios.
+    <br><br>
+    Efeito:+100% em todos os atributos e maestrias por 5 turnos, outrora ao final deve passar em um teste de constituição CD:630, em caso de falha fica "vulneravel", "paralizado","lento" por 2 turnos e perde a próxima ação.
+    <br><br>
+    ->Sopro do dragão de fogo Relâmpago: Cospe uma rajada de fogo carregado com eletricidade.
+    <br><br>
+    Dano:400%+200 de dano elétrico e fogo | CD:P.M em caso de falha o alvo deve rolar 1d20 acima de 10 fica paralizado, abaixo, queimando.
+    <br><br>
+    ->punho do dragão de fogo relâmpago: O usuário concentra fogo elétrico nos punhos e despeja a energia em forma de socos.
+    <br><br>
+    Dano: 500%+200 de dano elétrico e fogo | CD:P.M em caso de falha o alvo deve rolar 1d20 acima de 10 fica paralizado, abaixo, queimando.
+    <br><br>
+    ->Chama brilhante do dragão de fogo relâmpago: Junta energia nas mãos e as concentra em uma grande esfera arremessavel.
+    <br><br>
+    Dano: 950%+450 de dano elétrico e fogo | CD:P.M em caso de falha o alvo deve rolar 1d20 acima de 10 fica paralizado, abaixo, queimando.
+   <br>
+  <br><p class="habilitysec">Passiva</p></span>
+  <hr/>
+  <button onclick="leiaMais31()" id="btnLeiaMais31" class="btnLeiaMais31">Inferno</button>
+    <span id="tresPontos31"></span><span id="mostrarMais31" class="hability"><br><br>Quando o oponente está próximo, emite uma grande quantidade de chamas de seu corpo deixando-o sem fôlego. Alternativamente, Tempester pode exalar uma enorme quantidade de chamas que, instantaneamente, cobrem o campo de batalha para queimar o alvo.
+     <br><br> Dano: 150% de dano de fogo.
+     <br><br><p class="habilitysec">Passiva</p></span>
+    <hr/>
+  <button onclick="leiaMais32()" id="btnLeiaMais32" class="btnLeiaMais32">Demonic Eye Unleashed</button>
+    <span id="tresPontos32"></span><span id="mostrarMais32" class="hability"><br><br>Seilah forma círculos de kanji ao redor de sua mão, para os quais um terceiro olho cresce em sua palma aberta. A partir deste ponto, ela é capaz de gerar uma enorme explosão de energia com força destrutiva.
+      <br><br> Dano: 250% de dano cinético. 
+      <br><br><p class="habilitysec">Passiva</p></span>
+    <hr/>
+  <button onclick="leiaMais33()" id="btnLeiaMais33" class="btnLeiaMais33">Self explosion</button>
+    <span id="tresPontos33"></span><span id="mostrarMais33" class="hability"><br><br>Faz seu corpo explodir, transformando-o em uma espessa névoa negra. As partículas dessa névoa podem danificar o Ethernano na atmosfera e podem causar tanto deficiência quanto doenças em Magia.
+      <br><br><p class="habilitysec">Passiva</p></span>
+    <hr/>
+  <button onclick="leiaMais34()" id="btnLeiaMais34" class="btnLeiaMais34">Julgamento da Estrela Maléfica</button>
+    <span id="tresPontos34"></span><span id="mostrarMais34" class="hability"><br><br>Keyes levanta seu cajado e uma aura negra o envolve. Ele usa a aura para infligir dano massivo de aspecto de escuridão a uma grande escala de inimigos de uma só vez.
+      <br><br>Dano: 125% de dano de escuridão.<br><br>
+    <p class="habilitysec">Passiva</p></span>
+    <hr/>
+  <button onclick="leiaMais35()" id="btnLeiaMais35" class="btnLeiaMais35">Portão Defeituoso</button>
+    <span id="tresPontos35"></span><span id="mostrarMais35" class="hability"><br><br>O portão é incapaz de liberar a mana dentro de seu corpo de volta para a atmosfera, embora ela mencione que ele é capaz de absorver uma quantidade incrível e que não causa nenhum dano a seu corpo enquanto ele usa toda a sua mana para aumentar suas habilidades físicas. Por causa disso, ele pode tornar os outros incapazes de usar qualquer Magic ou Spirit Arts enquanto ele está absorvendo mana. Além disso, Reinhard não tem afinidade com magia, tornando-o incapaz de usá-la.
+    <br><br>
+    <p class="habilitysec">Passiva</p></span>
+    <hr/>
+  <button onclick="leiaMais36()" id="btnLeiaMais36" class="btnLeiaMais36">Pseudo Espírito de Afinidade</button>
+    <span id="tresPontos36"></span><span id="mostrarMais36" class="hability"><br><br>Espíritos Inferiores são atraídos por você e tentam curá-lo sempre que ele é ferido, porém, ele mesmo é incapaz de ordenar ou usar esses Espíritos.
+    <br><br>
+    <p class="habilitysec">Passiva</p></span>
+    <hr/>
+                      </div>
+                  </div>
+        </div>
+            </div>
+          </div>
+
+        
+        </div>
+      </div>
+      <div class="character">
+        <div class="characterHeader">
+          
+        </div>
+
+        <div class="bars">
+          <h4>Vida</h4>
+          <div class="bar">
+            <div class="lifeBar" style="width: 0%">
+              <p class="barcount" id="lifeCount"></p>
+            </div>
+          </div>
+
+          <h4>Mana</h4>
+          <div class="sanity">
+            <div class="contentSanityBar">
+              <div class="sanityBar" style="width: 0%">
+                <p class="barcount" id="sanityCount"></p>
+              </div>
+            </div>
+          </div>
+        </div>
+<br>
+      <div class="attributes border">
+        <h2 class="grid-title">ATRIBUTOS</h2>
+        <hr />
+
+        <div class="attributesList" id="attributesList"></div>
+      </div>
+      <br>
+      <div class="expertise border">
+        <br>
+        <h2>C.A</h2>
+        <hr />
+        <br>
+        <table border="1" class="ca">
+            <tr>
+                <img src="imagens/esquiva.png" class="imgresqui">
+                <td class="caat">Esquiva:</td>
+                <img src="imagens/bloqueio.png" class="imgbloq">
+                <td class="caat">Bloqueio:</td>
+            </tr>
+            <tr>
+                <td>Bônus extra: 0</td>
+                <td>Armadura Extra: 0</td>
+            </tr>
+            </table>
+            <br>
+            <br>
+            <br>
+            <h2>Velocidade</h2>
+            <hr >
+            <br>
+            <table border="1" class="speed">
+              <tr>
+                  <img src="imagens/corrida.png" class="imgspeed">
+                  <td class="verozidade">Velocidade:</td>
+                  <img src="imagens/Zona" class="imgzona">
+                  <td class="verozidade">Zona:</td>
+              </tr>
+              </table>
+      </div>
+      <br>
+      <br>
+      <div class="expertise border">
+        <br>
+        <h2>Maestria</h2>
+        <hr />
+        <br>
+        <table class="maesp">
+          <tr>
+              <img src="imagens/machado.png" class="imgmaesal">
+              <td class="maes">Arma longa</td>
+              <img src="imagens/faca.png" class="imgmaesac">
+              <td 
+              class="maes">Arma curta</td>
+              <img src="imagens/soco.png" class="imgmaesfis">
+              <td class="maes">Físico</td>
+          </tr>
+          <tr>
+              <td>0</td>
+              <td>80</td>
+              <td>0</td>
+          </tr>
+          </table>
+          <br>
+          <table class="maesp">
+          <tr>
+              <img src="imagens/pistole.png" class="imgmaesaf">
+              <td class="maes">Arma de fogo</td>
+              <img src="imagens/arco.png" class="imgmaesaa">
+              <td class="maes">Arma arcaica</td>
+              <img src="imagens/lança.png" class="imgmaeslan">
+              <td class="maes">Lança</td>
+          </tr>
+          <tr>
+              <td>0</td>
+              <td>0</td>
+              <td>0</td>
+          </tr>
+      </table>
+      <br>
+      <table class="maesp">
+        <tr>
+            <img src="imagens/cana.png" class="imgmaesaf">
+            <td class="maes">Canalizador</td>
+            <img src="imagens/gadanha1.png" class="imgmaesaa">
+            <td class="maes">Gadanhas</td>
+            <img src="imagens/pecu.png" class="imgmaeslan">
+            <td class="maes">Peculiaridade</td>
+        </tr>
+        <tr>
+            <td>40</td>
+            <td>0</td>
+            <td>0</td>
+        </tr>
+    </table>
+      </div>
+      <br>
+      <div class="border">
+        <div class="combatHeader">
+          <h2 class="grid-title">Bençãos</h2>
+        </div>
+        <hr />
+        <div class="carrossel owl-carousel">
+          <div class="conquista">
+              <div class="conquistaCaixa">
+                  <button onclick="leiaMais1a()" id="btnLeiaMais1a" class="btnLeiaMais">Evitar Flecha</button>
+                  <span id="tresPontos1a"></span><span id="mostrarMais1a" class="bens"><br><br>Não pode ser acertado por projéteis físicos.<br>
+                  <br></span>
+                  <hr/>
+                  <button onclick="leiaMais2a()" id="btnLeiaMais2a" class="btnLeiaMais">Garantia de Flecha</button>
+                  <span id="tresPontos2a"></span><span id="mostrarMais2a" class="bens"><br><br>Todo projétil físico acerta o alvo.<br>
+                  <br></span>
+                  <hr/>
+                  <button onclick="leiaMais3a()" id="btnLeiaMais3a" class="btnLeiaMais">Resistência a Mágica</button>
+                  <span id="tresPontos3a"></span><span id="mostrarMais3a" class="bens"><br><br>Nenhum tipo de mágia usada contra você funciona, benéficas ou prejudiciais.<br>
+                  <br></span>
+                  <hr/>
+                  <button onclick="leiaMais4a()" id="btnLeiaMais4a" class="btnLeiaMais">Evitar Fogo</button>
+                  <span id="tresPontos4a"></span><span id="mostrarMais4a" class="bens"><br><br>Seu corpo tem dificuldade de se queimar(80% de Resistência <br>ígnea).<br>
+                  <br></span>
+                  <hr/>
+                  <button onclick="leiaMais5a()" id="btnLeiaMais5a" class="btnLeiaMais">Absorção de impacto</button>
+                  <span id="tresPontos5a"></span><span id="mostrarMais5a" class="bens"><br><br>Seu corpo é extremamente resistente ao vento e impactos(imu<br>nidade ondas de choque).<br>
+                  <br></span>
+                  <hr/>
+                  <button onclick="leiaMais6a()" id="btnLeiaMais6a" class="btnLeiaMais">Resistir a dano físico</button>
+                  <span id="tresPontos6a"></span><span id="mostrarMais6a" class="bens"><br><br>Seu corpo é extremamente resistente a ataques físicos(80% de<br> resistência física).<br>
+                  <br></span>
+                  <hr/>
+                  <button onclick="leiaMais7a()" id="btnLeiaMais7a" class="btnLeiaMais">Água Refletida</button>
+                  <span id="tresPontos7a"></span><span id="mostrarMais7a" class="bens"><br><br>Parte de ataques hydro são refletidos(80% de resistência <br>hydro).<br>
+                  <br></span>
+                  <hr/>
+                  <button onclick="leiaMais8a()" id="btnLeiaMais8a" class="btnLeiaMais">Imunidade a Escuridão</button>
+                  <span id="tresPontos8a"></span><span id="mostrarMais8a" class="bens"><br><br>Parte de ataques de escuridão são nulificados(80% de resistên<br>cia à escuridão)<br>
+                  <br></span>
+                  <hr/>
+                  <button onclick="leiaMais9a()" id="btnLeiaMais9a" class="btnLeiaMais">Compartilhamento de Luz</button>
+                  <span id="tresPontos9a"></span><span id="mostrarMais9a" class="bens"><br><br>Parte de ataques de luz são compartilhados para qualquer outro<br> ser no local.(80% de resistência à luz)<br>
+                  <br></span>
+                  <hr/>
+                  <button onclick="leiaMais10a()" id="btnLeiaMais10a" class="btnLeiaMais">Rapidez</button>
+                  <span id="tresPontos10a"></span><span id="mostrarMais10a" class="bens"><br><br>Pode se mover a velocidades sobre-humanas, também afetando montarias(+25% de velocidade de movimento).<br>
+                  <br></span>
+                  <hr/>
+                  <button onclick="leiaMais11a()" id="btnLeiaMais11a" class="btnLeiaMais">Mestre em Montaria</button>
+                  <span id="tresPontos11a"></span><span id="mostrarMais11a" class="bens"><br><br>Pode montar em qualquer coisa.<br>
+                  <br></span>
+                  <hr/>
+                  <button onclick="leiaMais12a()" id="btnLeiaMais12a" class="btnLeiaMais">Iniciativa</button>
+                  <span id="tresPontos12a"></span><span id="mostrarMais12a" class="bens"><br><br>Ele não pode sofrer emboscadas, e todos os ataques iniciais do Reinhard conectam(imune ao efeito "surpresa", +1 ataque por<br>turno).<br>
+                  <br></span>
+                  <hr/>
+                  <button onclick="leiaMais13a()" id="btnLeiaMais13a" class="btnLeiaMais">Imunidade a Ataques Seguidos</button>
+                  <span id="tresPontos13a"></span><span id="mostrarMais13a" class="bens"><br><br>O segundo e os ataques em diante não funcionam(imune à especialização "combo").<br>
+                  <br></span>
+                  <hr/>
+                  <button onclick="leiaMais14a()" id="btnLeiaMais14a" class="btnLeiaMais">Benção da Chuva</button>
+                  <span id="tresPontos14a"></span><span id="mostrarMais14a" class="bens"><br><br>Ganha poder na chuva(+10% em todos os atributos enquanto<br> está chovendo).<br>
+                  <br></span>
+                  <hr/>
+                  <button onclick="leiaMais15a()" id="btnLeiaMais15a" class="btnLeiaMais">Benção da Manhã</button>
+                  <span id="tresPontos15a"></span><span id="mostrarMais15a" class="bens"><br><br>Ganha poder durante a manhã(+10% em todos os atributos<br> enquanto está de manhã).<br>
+                  <br></span>
+                  <hr/>
+                  <button onclick="leiaMais16a()" id="btnLeiaMais16a" class="btnLeiaMais">Ler Mentes</button>
+                  <span id="tresPontos16a"></span><span id="mostrarMais16a" class="bens"><br><br>Entendimento vago do que está na mente de outras pessoas.<br>
+                  <br></span>
+                  <hr/>
+                  <button onclick="leiaMais17a()" id="btnLeiaMais17a" class="btnLeiaMais">Maestria em ítens</button>
+                  <span id="tresPontos17a"></span><span id="mostrarMais17a" class="bens"><br><br>Consegue utilizar qualquer ítem que ele possui, excluindo<br>aqueles que precisam de magia.<br>
+                  <br></span>
+                  <hr/>
+                  <button onclick="leiaMais18a()" id="btnLeiaMais18a" class="btnLeiaMais">Maestria sem Armas</button>
+                  <span id="tresPontos18a"></span><span id="mostrarMais18a" class="bens"><br><br>Continua forte até mesmo sem armas(trata a maestria físico<br>como a maestria "armas leves").<br>
+                  <br></span>
+                  <hr/>
+                  <button onclick="leiaMais19a()" id="btnLeiaMais19a" class="btnLeiaMais">Benção do Deus da Guerra</button>
+                  <span id="tresPontos19a"></span><span id="mostrarMais19a" class="bens"><br><br>Pode utilizar qualquer arma com Maestria(Trata todas as<br>maestrias com armas como a maestria "armas leves").<br>
+                  <br></span>
+                  <hr/>
+                  <button onclick="leiaMais20a()" id="btnLeiaMais20a" class="btnLeiaMais">Benção da Água</button>
+                  <span id="tresPontos20a"></span><span id="mostrarMais20a" class="bens"><br><br>Pode andar na água.<br>
+                  <br></span>
+                  <hr/>
+                  <button onclick="leiaMais21a()" id="btnLeiaMais21a" class="btnLeiaMais">Benção da Névoa</button>
+                  <span id="tresPontos21a"></span><span id="mostrarMais21a" class="bens"><br><br>Névoas não pioram sua vista. 
+                    <br>
+                  <br></span>
+                  <hr/>
+                  <button onclick="leiaMais22a()" id="btnLeiaMais22a" class="btnLeiaMais">Benção da Nuvem</button>
+                  <span id="tresPontos22a"></span><span id="mostrarMais22a" class="bens"><br><br>Pode andar em nuvens.<br>
+                  <br></span>
+                  <hr/>
+                  <button onclick="leiaMais23a()" id="btnLeiaMais23a" class="btnLeiaMais">Benção do Relâmpago</button>
+                  <span id="tresPontos23a"></span><span id="mostrarMais23a" class="bens"><br><br>Relâmpago nunca irá acerta-lo.<br>
+                  <br></span>
+                  <hr/>
+                  <button onclick="leiaMais24a()" id="btnLeiaMais24a" class="btnLeiaMais">Conhecimento de Sódio</button>
+                  <span id="tresPontos24a"></span><span id="mostrarMais24a" class="bens"><br><br>Nunca irá misturar açucar com sal.<br>
+                  <br></span>
+                  <hr/>
+                  <button onclick="leiaMais25a()" id="btnLeiaMais25a" class="btnLeiaMais">Rei do Gosto</button>
+                  <span id="tresPontos25a"></span><span id="mostrarMais25a" class="bens"><br><br>Não importa de que modo ou que comida ele cozinhe, ela<br> ficará deliciosa.<br>
+                  <br></span>
+                  <hr/>
+                  <button onclick="leiaMais26a()" id="btnLeiaMais26a" class="btnLeiaMais">Benção da cozinha</button>
+                  <span id="tresPontos26a"></span><span id="mostrarMais26a" class="bens"><br><br>Maestria completa em todos os métodos de cozinha.<br>
+                  <br></span>
+                  <hr/>
+                  <button onclick="leiaMais27a()" id="btnLeiaMais27a" class="btnLeiaMais">Design de Roupas</button>
+                  <span id="tresPontos27a"></span><span id="mostrarMais27a" class="bens"><br><br>Consegue desenhar e projetar belas roupas que poderiam o tornar rico.<br>
+                  <br></span>
+                  <hr/>
+                  <button onclick="leiaMais28a()" id="btnLeiaMais28a" class="btnLeiaMais">Maestria em Ensinar</button>
+                  <span id="tresPontos28a"></span><span id="mostrarMais28a" class="bens"><br><br>Seus estudantes aprendem rapidamente.<br>
+                  <br></span>
+                  <hr/>
+                  <button onclick="leiaMais29a()" id="btnLeiaMais29a" class="btnLeiaMais">Mestre em Treinamento</button>
+                  <span id="tresPontos29a"></span><span id="mostrarMais29a" class="bens"><br><br>Consegue treinar não apenas seu corpo, como também outras pessoas, a seu potencial máximo.<br>
+                  <br></span>
+                  <hr/>
+                  <button onclick="leiaMais30a()" id="btnLeiaMais30a" class="btnLeiaMais">Imunidade a Veneno</button>
+                  <span id="tresPontos30a"></span><span id="mostrarMais30a" class="bens"><br><br>Imunidade a todos os venenos.<br>
+                  <br></span>
+                  <hr/>
+                  <button onclick="leiaMais31a()" id="btnLeiaMais31a" class="btnLeiaMais">Imunidade a Doenças</button>
+                  <span id="tresPontos31a"></span><span id="mostrarMais31a" class="bens"><br><br>Imunidade a todas as doenças.<br>
+                  <br></span>
+                  <hr/>
+                  <button onclick="leiaMais32a()" id="btnLeiaMais32a" class="btnLeiaMais">Sangramento Poderoso</button>
+                  <span id="tresPontos32a"></span><span id="mostrarMais32a" class="bens"><br><br>Sangrar o torna mais forte(+10% em todos os atributos enquanto<br>está com a condição "sangrando").<br>
+                  <br></span>
+                  <hr/>
+                  <button onclick="leiaMais33a()" id="btnLeiaMais33a" class="btnLeiaMais">Benção da Fênix</button>
+                  <span id="tresPontos33a"></span><span id="mostrarMais33a" class="bens"><br><br>Após a morte, ele é presenteado com um "continuar?" uma vez.<br>
+                  <br></span>
+                  <hr/>
+                  <button onclick="leiaMais34a()" id="btnLeiaMais34a" class="btnLeiaMais">Julgamento</button>
+                  <span id="tresPontos34a"></span><span id="mostrarMais34a" class="bens"><br><br>Permite que o Reinhard saiba qual proteção divina seus inimigos possuem.<br>
+                  <br></span>
+                  <hr/>
+                  <button onclick="leiaMais35a()" id="btnLeiaMais35a" class="btnLeiaMais">Benção do sol</button>
+                  <span id="tresPontos35a"></span><span id="mostrarMais35a" class="bens"><br><br>Fica mais forte durante dias ensolarados(+10% em todos os<br> atributos enquanto está sol).<br>
+                  <br></span>
+                  <hr/>
+                  <button onclick="leiaMais36a()" id="btnLeiaMais36a" class="btnLeiaMais">Benção da noite</button>
+                  <span id="tresPontos36a"></span><span id="mostrarMais36a" class="bens"><br><br>Fica mais forte durante as noites(+10% em todos os atributos enquanto está noite).<br>
+                  <br></span>
+                  <hr/>
+
+              </div>
+              
+          </div>
+</div>
+        <br>
+      </div>
+    </div>
+
+    <div class="modal-overlay active">
+            <div class="modal">
+                <h2>MODIFICAR VIDA</h2>
+                <hr>
+                <form id="changeLife">
+                    <span class="modalspan">Atual</span>
+                    <input class="modalinput" type="number" name="current" id="lifeCurrent" min="0">
+
+                    <span class="modalspan">Máximo</span>
+                    <input class="modalinput" type="number" name="max" id="lifeMax" min="0">
+                    <input class="modalbutton" type="submit" value="Salvar">
+                </form>
+            </div>
+        </div>
+
+    <script src="fichaluiz.js"></script>
+  </body>
+</html>
