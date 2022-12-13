@@ -2,16 +2,16 @@ const data = {
   cristal: 0,
   star: 1,
   classe: 1,
-  age: 30,
+  age: 27,
   sex: 'male',
 
   life: {
-    current: 12,
-    max: 12,
+    current: 140,
+    max: 14*10 * 1,
   },
   sanity: {
-    current: 62,
-    max: 62,
+    current: 120,
+    max: 12*10*1,
   },
 
   weapons: [
@@ -1249,3 +1249,153 @@ if (tresPontos36a.style.display === 'none') {
     btnLeiaMais36a.innerHTML = 'Benção da noite';
 }
 }
+function leiaMais38a() {
+    const tresPontos38a = document.getElementById('tresPontos38a');
+    const mostrarMais38a = document.getElementById('mostrarMais38a');
+    const btnLeiaMais38a = document.getElementById('btnLeiaMais38a');
+    
+    if (tresPontos38a.style.display === 'none') {
+        tresPontos38a.style.display = 'inline';
+        mostrarMais38a.style.display = 'none';
+        btnLeiaMais38a.innerHTML = 'Benção da indestrutibilidade ';
+    } else {
+        tresPontos38a.style.display = 'none';
+        mostrarMais38a.style.display = 'inline';
+        btnLeiaMais38a.innerHTML = 'Benção da indestrutibilidade ';
+    }
+    }
+    function leiaMais37a() {
+        const tresPontos37a = document.getElementById('tresPontos37a');
+        const mostrarMais37a = document.getElementById('mostrarMais37a');
+        const btnLeiaMais37a = document.getElementById('btnLeiaMais37a');
+        
+        if (tresPontos37a.style.display === 'none') {
+            tresPontos37a.style.display = 'inline';
+            mostrarMais37a.style.display = 'none';
+            btnLeiaMais37a.innerHTML = 'Proteção Divina da Vestimenta';
+        } else {
+            tresPontos37a.style.display = 'none';
+            mostrarMais37a.style.display = 'inline';
+            btnLeiaMais37a.innerHTML = 'Proteção Divina da Vestimenta';
+        }
+        }
+
+        // document.getElementById('discount-form').addEventListener('submit', calculateDiscount);
+
+ document.getElementById('discount-form').addEventListener('submit', function(e) {
+
+    // Hide Results
+    document.getElementById('results').style.display = 'none';
+
+    // Show Loader
+    document.getElementById('loader').style.display = 'block';
+
+
+    setTimeout(calculateDiscount, 700);
+
+    e.preventDefault();
+ });
+
+ 
+// Calculate Results
+function calculateDiscount() {
+ 
+    // UI variables
+    const actualPrice = document.getElementById('price');
+    const discount = fogo
+    let discountedResult = document.getElementById('discounted-price');
+
+    var fogo = 80
+    var agua = 80
+    var sagrado = 80
+    var morte = -50
+    var veneno = 80
+    var fisico = 80
+    var ether = 80
+    var eletrico = 80
+    var sombra = 80
+    var luz = 80
+    var psiquico = 80
+    var espiritual = 80
+
+    const priceInput = parseFloat(actualPrice.value);
+    const discountInput = parseFloat(discount.value);
+
+    // console.log(priceInput);
+    // console.log(discountInput);
+
+
+    // Complete Formula to find discount
+    const x = priceInput * (discount / 100);
+    
+    // Subtract the discount from the orignal file
+    const discountedPrice = priceInput - x;
+    // console.log(`Discounted Result: ${discountedPrice}`);
+    if(isFinite(discountedPrice)) {
+        discountedResult.value = discountedPrice.toFixed(2);
+
+        // Show Reult
+        document.getElementById('results').style.display = 'block';
+
+        // Hide Loader
+        document.getElementById('loader').style.display = 'none';
+        
+        //    console.log(`Discounted Result: ${discountedResult}`);
+    } else {
+        // console.log('Please check your number');
+        showError('Please check your numbers');
+
+        
+    }
+
+    // e.preventDefault();
+}
+
+
+// Show Error 
+
+function showError(error) {
+
+            // Hide Reult
+            document.getElementById('results').style.display = 'none';
+
+            // Hide Loader
+            document.getElementById('loader').style.display = 'none';
+ 
+    // Create a div
+    const errorDiv = document.createElement('div');
+
+    // Get Elements
+    const card = document.querySelector('.card');
+    const heading = document.querySelector('.heading');
+
+    // Create a class
+    errorDiv.className = 'alert alert-danger';
+    // Create textnode and append to div
+    errorDiv.appendChild(document.createTextNode(error));
+
+    // Insert error above heading
+    card.insertBefore(errorDiv, heading);
+
+    // Clear error after 3 sec
+    setTimeout(clearError, 3000);
+}
+
+
+// Clear Error Function
+function clearError() {
+    document.querySelector('.alert').remove();
+}
+const openModalButton = document.querySelector("#open-modal");
+const closeModalButton = document.querySelector("#close-modal");
+const modal = document.querySelector("#modal");
+const fade = document.querySelector("#fade");
+
+const toggleModal = () => {
+  modal.classList.toggle("hide");
+  fade.classList.toggle("show");
+};
+
+[openModalButton, closeModalButton, fade].forEach((el) => {
+  el.addEventListener("click", () => toggleModal());
+});
