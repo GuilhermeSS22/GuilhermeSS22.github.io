@@ -20,31 +20,31 @@ const data = {
   attributes: [
     {
       type: 'P.Mágico',
-      amount: 15,
+      amount: 17,
     },
     {
       type: 'Constituição',
-      amount: 14,
+      amount: 15,
     },
     {
       type: 'Destreza',
-      amount: 16,
+      amount: 18,
     },
     {
       type: 'Sabedoria',
-      amount: 12,
+      amount: 13,
     },
     {
       type: 'Força',
-      amount: 10,
+      amount: 11,
     },
     {
       type: 'Inteligência',
-      amount: 12,
+      amount: 13,
     },
     {
       type: 'Carisma',
-      amount: 10,
+      amount: 11,
     },
     {
       type: 'Sorte',
@@ -52,7 +52,7 @@ const data = {
     },
     {
       type: 'Sanidade',
-      amount: 11,
+      amount: 55,
     },
   ],
 }
