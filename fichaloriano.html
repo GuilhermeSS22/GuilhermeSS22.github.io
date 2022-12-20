@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+    <link rel="stylesheet" href="fichagg.css" />
+
+    <title>Lorian Muto</title>
+  </head>
+  <body>
+    <h1 class="title">Lorian Muto</h1>
+
+    <!-- modal -->
+    <div id="diceAttributes" class="modal">
+      <div class="modal-content">
+        <img class="modalDice" src="./img/dado.png" alt="Dado" />
+        <h2 id="diceNumber"></h2>
+        <p id="diceType"></p>
+      </div>
+    </div>
+
+    <div id="lifeModal" class="modal with-input">
+      <div class="modal-content">
+        <h2>MODIFICAR VIDA</h2>
+        <hr />
+        <form class="formModal" id="changeLife">
+          <h3>Atual</h3>
+          <input type="number" name="current" id="lifeCurrent" min="0" />
+          <h3>Máximo</h3>
+          <input type="number" name="max" id="lifeMax" min="0" />
+          <input type="submit" value="Salvar" />
+        </form>
+      </div>
+    </div>
+
+    <div id="sanityModal" class="modal with-input">
+      <div class="modal-content">
+        <h2>MODIFICAR MANA</h2>
+        <hr />
+        <form class="formModal" id="changeSanity">
+          <h3>Atual</h3>
+          <input
+            type="number"
+            name="sanityCurrent"
+            id="sanityCurrent"
+            min="0"
+          />
+          <h3>Máximo</h3>
+          <input type="number" name="sanityMax" id="sanityMax" min="0" />
+          <input type="submit" value="Salvar" />
+        </form>
+      </div>
+    </div>
+        </form>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="details border">
+        <h2 class="grid-title">DETALHES PESSOAIS</h2>
+        <hr />
+
+        <div class="inputs">
+          <h4>Crystal coin</h4>
+          <input type="text" name="cristal" id="cristal" value="" />
+          <h4>Estrelas</h4>
+          <input type="text" name="star" id="star" value="" />
+          <h4>Classe</h4>
+          <input type="text" name="classe" id="classe" value="" />
+          <h4>Idade</h4>
+          <input type="text" name="age" id="age" value="" />
+          <h4>Sexo</h4>
+          <select id="sex" name="sex">
+            <option value="male">Masculino</option>
+            <option value="female">Feminino</option>
+            <option value="other">Outros</option>
+          </select>
+          <br>
+          <h2>Alma</h2>
+          <br>
+          <h3>Cor da alma: Amarelo</h3>
+          <h4>Habilidade</h4>
+          <br>
+          <h3>Cor da alma: Vermelho</h3>
+          <h4>Habilidade</h4>
+          <br>
+          <br>
+          <img src="imagens/soul1.png" class="imgsoul">
+          <h2>Soul resonance</h2>
+          <br>
+          <h4>Passiva:</h4>
+          <br>
+          <h4>Ativa:</h4>
+          <h2>Runas</h2>
+          <br>
+          <img class="runaimg" src="imagens/Rune_slots.webp"/>
+          <br>
+          <h4>1: <select id="rune" name="rune">
+            <option value="none">Nenhuma</option>
+            <option value="accuracy">accuracy</option>
+            <option value="blade">Blade</option>
+            <option value="despair">Despair</option>
+            <option value="destroy">Destroy</option>
+            <option value="determination">Determi nation</option>
+            <option value="enchance">Enchance</option>
+            <option value="endure">Endure</option>
+            <option value="energy">Energy</option>
+            <option value="fatal">Fatal</option>
+            <option value="fight">Fight</option>
+            <option value="focus">Focus</option>
+            <option value="guard">Guard</option>
+            <option value="nemesis">Nemesis</option>
+            <option value="Rage">Rage</option>
+            <option value="revenge">Revenge</option>
+            <option value="shield">Shield</option>
+            <option value="swift">Swift</option>
+            <option value="tolerance">Tolerance</option>
+            <option value="violent">Violent</option>
+            <option value="will">Will</option>
+          </select> | <select id="at" name="at"><option value="none">Nenhuma</option>
+            <option value="dmg1">DMG'A</option><option value="dmg1c">DMG'A%</option>
+            <option value="dmg2">DMG'H</option>
+            <option value="dmg2c">DMG'H%</option>
+            <option value="dmg3">DMG'T</option>
+            <option value="dmg3c">DMG'T%</option>
+            <option value="hp">HP</option>
+            <option value="hpc">HP%</option>
+            <option value="mp">MP</option>
+            <option value="mpc">MP%</option>
+            <option value="sort">Sort</option>
+            <option value="sortc">Sort%</option>
+        </select> + <input class="run" type="text" name="run1" id="run1" value="" /></h4>
+        <h4>2: <select id="rune" name="rune">
+            <option value="none">Nenhuma</option>
+            <option value="accuracy">accuracy</option>
+            <option value="blade">Blade</option>
+            <option value="despair">Despair</option>
+            <option value="destroy">Destroy</option>
+            <option value="determination">Determi nation</option>
+            <option value="enchance">Enchance</option>
+            <option value="endure">Endure</option>
+            <option value="energy">Energy</option>
+            <option value="fatal">Fatal</option>
+            <option value="fight">Fight</option>
+            <option value="focus">Focus</option>
+            <option value="guard">Guard</option>
+            <option value="nemesis">Nemesis</option>
+            <option value="Rage">Rage</option>
+            <option value="revenge">Revenge</option>
+            <option value="shield">Shield</option>
+            <option value="swift">Swift</option>
+            <option value="tolerance">Tolerance</option>
+            <option value="violent">Violent</option>
+            <option value="will">Will</option>
+          </select> | <select id="at" name="at"><option value="none">Nenhuma</option>
+            <option value="dmg1">DMG'A</option><option value="dmg1c">DMG'A%</option>
+            <option value="dmg2">DMG'H</option>
+            <option value="dmg2c">DMG'H%</option>
+            <option value="dmg3">DMG'T</option>
+            <option value="dmg3c">DMG'T%</option>
+            <option value="hp">HP</option>
+            <option value="hpc">HP%</option>
+            <option value="mp">MP</option>
+            <option value="mpc">MP%</option>
+            <option value="sort">Sort</option>
+            <option value="sortc">Sort%</option>
+        </select> + <input class="run" type="text" name="run2" id="run2" value="" /></h4>
+        <h4>3: <select id="rune" name="rune">
+            <option value="none">Nenhuma</option>
+            <option value="accuracy">accuracy</option>
+            <option value="blade">Blade</option>
+            <option value="despair">Despair</option>
+            <option value="destroy">Destroy</option>
+            <option value="determination">Determi nation</option>
+            <option value="enchance">Enchance</option>
+            <option value="endure">Endure</option>
+            <option value="energy">Energy</option>
+            <option value="fatal">Fatal</option>
+            <option value="fight">Fight</option>
+            <option value="focus">Focus</option>
+            <option value="guard">Guard</option>
+            <option value="nemesis">Nemesis</option>
+            <option value="Rage">Rage</option>
+            <option value="revenge">Revenge</option>
+            <option value="shield">Shield</option>
+            <option value="swift">Swift</option>
+            <option value="tolerance">Tolerance</option>
+            <option value="violent">Violent</option>
+            <option value="will">Will</option>
+          </select> | <select id="at" name="at"><option value="none">Nenhuma</option>
+            <option value="dmg1">DMG'A</option><option value="dmg1c">DMG'A%</option>
+            <option value="dmg2">DMG'H</option>
+            <option value="dmg2c">DMG'H%</option>
+            <option value="dmg3">DMG'T</option>
+            <option value="dmg3c">DMG'T%</option>
+            <option value="hp">HP</option>
+            <option value="hpc">HP%</option>
+            <option value="mp">MP</option>
+            <option value="mpc">MP%</option>
+            <option value="sort">Sort</option>
+            <option value="sortc">Sort%</option>
+        </select> + <input class="run" type="text" name="run3" id="run3" value="" /></h4>
+        <h4>4: <select id="rune" name="rune">
+            <option value="none">Nenhuma</option>
+            <option value="accuracy">accuracy</option>
+            <option value="blade">Blade</option>
+            <option value="despair">Despair</option>
+            <option value="destroy">Destroy</option>
+            <option value="determination">Determi nation</option>
+            <option value="enchance">Enchance</option>
+            <option value="endure">Endure</option>
+            <option value="energy">Energy</option>
+            <option value="fatal">Fatal</option>
+            <option value="fight">Fight</option>
+            <option value="focus">Focus</option>
+            <option value="guard">Guard</option>
+            <option value="nemesis">Nemesis</option>
+            <option value="Rage">Rage</option>
+            <option value="revenge">Revenge</option>
+            <option value="shield">Shield</option>
+            <option value="swift">Swift</option>
+            <option value="tolerance">Tolerance</option>
+            <option value="violent">Violent</option>
+            <option value="will">Will</option>
+          </select> | <select id="at" name="at"><option value="none">Nenhuma</option>
+            <option value="dmg1">DMG'A</option><option value="dmg1c">DMG'A%</option>
+            <option value="dmg2">DMG'H</option>
+            <option value="dmg2c">DMG'H%</option>
+            <option value="dmg3">DMG'T</option>
+            <option value="dmg3c">DMG'T%</option>
+            <option value="hp">HP</option>
+            <option value="hpc">HP%</option>
+            <option value="mp">MP</option>
+            <option value="mpc">MP%</option>
+            <option value="sort">Sort</option>
+            <option value="sortc">Sort%</option>
+        </select> + <input class="run" type="text" name="run4" id="run4" value="" /></h4>
+        <h4>5: <select id="rune" name="rune">
+            <option value="none">Nenhuma</option>
+            <option value="accuracy">accuracy</option>
+            <option value="blade">Blade</option>
+            <option value="despair">Despair</option>
+            <option value="destroy">Destroy</option>
+            <option value="determination">Determi nation</option>
+            <option value="enchance">Enchance</option>
+            <option value="endure">Endure</option>
+            <option value="energy">Energy</option>
+            <option value="fatal">Fatal</option>
+            <option value="fight">Fight</option>
+            <option value="focus">Focus</option>
+            <option value="guard">Guard</option>
+            <option value="nemesis">Nemesis</option>
+            <option value="Rage">Rage</option>
+            <option value="revenge">Revenge</option>
+            <option value="shield">Shield</option>
+            <option value="swift">Swift</option>
+            <option value="tolerance">Tolerance</option>
+            <option value="violent">Violent</option>
+            <option value="will">Will</option>
+          </select> | <select id="at" name="at"><option value="none">Nenhuma</option>
+            <option value="dmg1">DMG'A</option><option value="dmg1c">DMG'A%</option>
+            <option value="dmg2">DMG'H</option>
+            <option value="dmg2c">DMG'H%</option>
+            <option value="dmg3">DMG'T</option>
+            <option value="dmg3c">DMG'T%</option>
+            <option value="hp">HP</option>
+            <option value="hpc">HP%</option>
+            <option value="mp">MP</option>
+            <option value="mpc">MP%</option>
+            <option value="sort">Sort</option>
+            <option value="sortc">Sort%</option>
+        </select> + <input class="run" type="text" name="run5" id="run5" value="" /></h4>
+        <h4>6: <select id="rune" name="rune">
+            <option value="none">Nenhuma</option>
+            <option value="accuracy">accuracy</option>
+            <option value="blade">Blade</option>
+            <option value="despair">Despair</option>
+            <option value="destroy">Destroy</option>
+            <option value="determination">Determi nation</option>
+            <option value="enchance">Enchance</option>
+            <option value="endure">Endure</option>
+            <option value="energy">Energy</option>
+            <option value="fatal">Fatal</option>
+            <option value="fight">Fight</option>
+            <option value="focus">Focus</option>
+            <option value="guard">Guard</option>
+            <option value="nemesis">Nemesis</option>
+            <option value="Rage">Rage</option>
+            <option value="revenge">Revenge</option>
+            <option value="shield">Shield</option>
+            <option value="swift">Swift</option>
+            <option value="tolerance">Tolerance</option>
+            <option value="violent">Violent</option>
+            <option value="will">Will</option>
+          </select> | <select id="at" name="at"><option value="none">Nenhuma</option>
+            <option value="dmg1">DMG'A</option><option value="dmg1c">DMG'A%</option>
+            <option value="dmg2">DMG'H</option>
+            <option value="dmg2c">DMG'H%</option>
+            <option value="dmg3">DMG'T</option>
+            <option value="dmg3c">DMG'T%</option>
+            <option value="hp">HP</option>
+            <option value="hpc">HP%</option>
+            <option value="mp">MP</option>
+            <option value="mpc">MP%</option>
+            <option value="sort">Sort</option>
+            <option value="sortc">Sort%</option>
+        </select> + <input class="run" type="text" name="run6" id="run6" value="" /></h4>
+        <div>
+            <h2 class="grid-title">Resistências</h2>
+            <div class="resList" id="resList">
+                <br>
+                <table border="1" class="res">
+                    <tr>
+                        <img src="imagens/fogo5.png" class="imgresfo">
+                          <td class="elem">Ígneo</td>
+                        <img src="imagens/agua4.png" class="imgresag">
+                        <td class="elem">Hydro</td>
+                        <img src="imagens/sagrado2.webp" class="imgressag" id="open-modal3">
+                        <td class="elem">Sagrado</td>
+                        <img src="imagens/morte11.png" class="imgresmor" id="open-modal4">
+                        <td class="elem">Morte</td>
+                    </tr>
+                    <tr>
+                        <td>-25%</td>
+                        <td>0%</td>
+                        <td>0%</td>
+                        <td>-50%</td>
+                    </tr>
+                    </table>
+                    <table>
+                    <tr>
+                        <img src="imagens/fisico.png" class="imgresfis" id="open-modal5">
+                        <td class="elem">Físico</td>
+                        <img src="imagens/veneno.png" class="imgresven" id="open-modal6">
+                        <td 
+                        class="elem">Veneno</td>
+                        <img src="imagens/eterio.png" class="imgresete" id="open-modal7">
+                        <td class="elem">Etério</td>
+                        <img src="imagens/eletrico.png" class="imgresele" id="open-modal8">
+                        <td class="elem">Elétrico</td>
+                    </tr>
+                    <tr>
+                        <td>0%</td>
+                        <td>0%</td>
+                        <td>0%</td>
+                        <td>0%</td>
+                    </tr>
+                    </table>
+                    <table>
+                    <tr>
+                        <img src="imagens/sombra.png" class="imgressom" id="open-modal9">
+                        <td class="elem">Sombra</td>
+                        <img src="imagens/luz.png" class="imgresluz" id="open-modal10">
+                        <td class="elem">Luz</td>
+                        <img src="imagens/psiquico.png" class="imgrespsi" id="open-modal11">
+                        <td class="elem">Psíquico</td>
+                        <img src="imagens/espiritual.png" class="imgresesp" id="open-modal12">
+                        <td class="elem">Espiritual</td>
+                    </tr>
+                    <tr>
+                        <td>0%</td>
+                        <td>0%</td>
+                        <td>25%</td>
+                        <td>10%</td>
+                    </tr>
+                </table>
+                <table>
+                  <br>
+                  <tr class="semnada">
+                      <td class="elem1" id="open-modal"></td>
+                        <div id="fade" class="hide" ></div>
+                              <div id="modal" class="hide">
+                                <div class="modal-header">
+                                  <h2 class="modaltitle">Descontar dano</h2>
+                                  <img src="fechar.png" class="close" id="close-modal"> 
+                                </div>
+                                <div class="modal-body" >
+                                  <div class="container">
+                                      <div class="row">
+                                          <div class="col-md-6 mx-auto">
+                                                  <form id="discount-form">
+                                                      <div class="form-group">
+                                                          <div class="input-group">
+                                                              <input type="text" class="form-control" id="price" placeholder="Dano original">
+                                                          </div>
+                                                      </div>
+                                                      <select id="resist" name="resist" class="resist">
+                                                        <option value="none" >Nenhuma</option>
+                                                        <option value="fogo" id="fogo">ígneo</option>
+                                                        <option value="agua" id="agua">Hydro</option>
+                                                        <option value="sagrado" id="sagrado">Sagrado</option>
+                                                        <option value="morte" id="morte">Morte</option>
+                                                        <option value="físico" id="fisico">Físico</option>
+                                                        <option value="veneno" id="veneno">Veneno</option>
+                                                        <option value="ether" id="ether">Etério</option>
+                                                        <option value="eletrico" id="eletrico">Elétrico</option>
+                                                        <option value="sombra" id="sombra">Sombra</option>
+                                                        <option value="luz" id="luz">Luz</option>
+                                                        <option value="psiquico" id="psiquico">Psiquíco</option>
+                                                        <option value="espirito" id="espirito">Espírito</option>
+                                                      </select>
+                                                      <div class="form-group">
+                                                          <input type="submit" value="subtrair" class="btn">
+                                                      </div>
+                                                  </form>
+                              
+                                                  <!-- LOADER HERE -->
+                              
+                                                  <div id="loader">
+                                                      <span></span>
+                                                      <span></span>
+                                                      <span></span>
+                                                  </div>
+                              
+                                                  <!-- RESULTS -->
+                                                  <div id="results" class="pt-4">
+                                                      <div class="form-group">
+                                                          <div class="input-group">
+                                                              <span class="input-group-text">Dano final</span>
+                                                              <input type="text" class="form-control" id="discounted-price" disabled>
+                                                          </div>
+                                                      </div>
+                                                  </div>
+                                              </div>
+                                          </div>
+                                      </div>
+                                  </div>
+                                </div>
+                              </div>
+                  </tr>
+              </table>
+                <br>
+                <br>
+                
+                <div class="carrossel owl-carousel">
+                  <div class="conquista">
+                      <div class="conquistaCaixa">
+                        <br><br>
+                        <h2>Habilidades</h2>
+                        <br>
+                        <button onclick="leiaMais1()" id="btnLeiaMais1" class="btnLeiaMais1">Geas</button>
+                        <span id="tresPontos1"></span><span id="mostrarMais1" class="hability"><br><br>O olho de Lorian se torna roxo por alguns instantes, recebendo a capacidade de dar <strong>uma</strong> ordem para qualquer pessoa, e ela terá de realiza-la.<br>
+                        <br><p class="habilitysec">Passiva</p></span>
+                        <hr/>
+                        <button onclick="leiaMais2()" id="btnLeiaMais2" class="btnLeiaMais2">Manipulação de mana</button>
+                <span id="tresPontos2"></span><span id="mostrarMais2" class="hability"><br><br>Pode controlar a sua mana livremente em qualquer estado.
+                <br><br><p class="habilitysec">Passiva</p></span>
+                <hr/>
+                <button onclick="leiaMais3()" id="btnLeiaMais3" class="btnLeiaMais3">Coração das cartas</button>
+              <span id="tresPontos3"></span><span id="mostrarMais3" class="hability"><br><br>A habilidade que envolve "sorte", traz a tona o que precisa em um momento certo.
+                <br><br><p class="habilitysec">Passiva</p></span>
+              <hr/>
+              <button onclick="leiaMais4()" id="btnLeiaMais4" class="btnLeiaMais4">Mundo das trevas</button>
+            <span id="tresPontos4"></span><span id="mostrarMais4" class="hability"><br><br>Pode convocar o mundo das trevas para a realização de um acordo ou apostas onde todos os envolvidos se submeterão à uma regra imposta, sobre o risco de um preço também decidido préviamente.<br>
+            <br><p class="habilitysec">Passiva</p></span>
+            <hr/>
+                      </div>
+                  </div>
+        </div>
+            </div>
+          </div>
+
+        
+        </div>
+      </div>
+      <div class="character">
+        <div class="characterHeader">
+          
+        </div>
+
+        <div class="bars">
+          <h4>Vida</h4>
+          <div class="bar">
+            <div class="lifeBar" style="width: 0%">
+              <p class="barcount" id="lifeCount"></p>
+            </div>
+          </div>
+
+          <h4>Mana</h4>
+          <div class="sanity">
+            <div class="contentSanityBar">
+              <div class="sanityBar" style="width: 0%">
+                <p class="barcount" id="sanityCount"></p>
+              </div>
+            </div>
+          </div>
+        </div>
+<br>
+      <div class="attributes border">
+        <h2 class="grid-title">ATRIBUTOS</h2>
+        <hr />
+
+        <div class="attributesList" id="attributesList"></div>
+      </div>
+      <br>
+      <div class="expertise border">
+        <br>
+        <h2>C.A</h2>
+        <hr />
+        <br>
+        <table border="1" class="ca">
+            <tr>
+                <img src="imagens/esquiva.png" class="imgresqui">
+                <td class="caat">Esquiva: 20</td>
+                <img src="imagens/bloqueio.png" class="imgbloq">
+                <td class="caat">Bloqueio: 10</td>
+            </tr>
+            <tr>
+                <td>Bônus extra: 0</td>
+                <td>Armadura Extra: 0</td>
+            </tr>
+            </table>
+            <br>
+            <br>
+            <br>
+            <h2>Velocidade</h2>
+            <hr >
+            <br>
+            <table border="1" class="speed">
+              <tr>
+                  <img src="imagens/corrida.png" class="imgspeed">
+                  <td class="verozidade">Velocidade: 110</td>
+                  <img src="imagens/Zona" class="imgzona">
+                  <td class="verozidade">Zona: curta </td>
+              </tr>
+              </table>
+      </div>
+      <br>
+      <br>
+      <div class="expertise border">
+        <br>
+        <h2>Maestria</h2>
+        <hr />
+        <br>
+        <table class="maesp">
+          <tr>
+              <img src="imagens/machado.png" class="imgmaesal">
+              <td class="maes">Arma longa</td>
+              <img src="imagens/faca.png" class="imgmaesac">
+              <td 
+              class="maes">Arma curta</td>
+              <img src="imagens/soco.png" class="imgmaesfis">
+              <td class="maes">Físico</td>
+          </tr>
+          <tr>
+              <td>0</td>
+              <td>0</td>
+              <td>0</td>
+          </tr>
+          </table>
+          <br>
+          <table class="maesp">
+          <tr>
+              <img src="imagens/pistole.png" class="imgmaesaf">
+              <td class="maes">Arma de fogo</td>
+              <img src="imagens/arco.png" class="imgmaesaa">
+              <td class="maes">Arma arcaica</td>
+              <img src="imagens/lança.png" class="imgmaeslan">
+              <td class="maes">Lança</td>
+          </tr>
+          <tr>
+              <td>25</td>
+              <td>0</td>
+              <td>0</td>
+          </tr>
+      </table>
+      <br>
+      <table class="maesp">
+        <tr>
+            <img src="imagens/cana.png" class="imgmaesaf">
+            <td class="maes">Canalizador</td>
+            <img src="imagens/gadanha1.png" class="imgmaesaa">
+            <td class="maes">Gadanhas</td>
+            <img src="imagens/pecu.png" class="imgmaeslan">
+            <td class="maes">Peculiaridade</td>
+        </tr>
+        <tr>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+        </tr>
+    </table>
+      </div>
+      <br>
+      <div class="border">
+        <div class="combatHeader">
+          <h2 class="grid-title">Bençãos</h2>
+        </div>
+        <hr />
+        <br>
+        <button onclick="leiaMais1a()" id="btnLeiaMais1a" class="btnLeiaMais">Instinto dracônico</button>
+                  <span id="tresPontos1a"></span><span id="mostrarMais1a" class="bens"><br><br>Recebe +10% de P.M, Consegue sentir e rastrear dragões,<br> consegue identificar a tipologia/elemento da mana de qualquer<br> um, bem como suas fraquezas, aumenta a raio de visão.<br>
+                  <br></span>
+                  <hr/>
+        <div class="carrossel owl-carousel">
+          <div class="conquista">
+              <div class="conquistaCaixa">
+              </div>
+              
+          </div>
+</div>
+        <br>
+      </div>
+    </div>
+
+    <div class="modal-overlay active">
+            <div class="modal">
+                <h2>MODIFICAR VIDA</h2>
+                <hr>
+                <form id="changeLife">
+                    <span class="modalspan">Atual</span>
+                    <input class="modalinput" type="number" name="current" id="lifeCurrent" min="0">
+
+                    <span class="modalspan">Máximo</span>
+                    <input class="modalinput" type="number" name="max" id="lifeMax" min="0">
+                    <input class="modalbutton" type="submit" value="Salvar">
+                </form>
+            </div>
+        </div>
+
+    <script src="fichagg.js"></script>
+  </body>
+</html>
