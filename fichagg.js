@@ -1,5 +1,5 @@
 const data = {
-  cristal: 3.700,
+  cristal: 3700,
   star: 1,
   classe: 1,
   age: 18,
