@@ -19,7 +19,7 @@
     <!-- modal -->
     <div id="diceAttributes" class="modal">
       <div class="modal-content">
-        <img class="modalDice" src="dado.png" alt="Dado" />
+        <img class="modalDice" src="./img/dado.png" alt="Dado" />
         <h2 id="diceNumber"></h2>
         <p id="diceType"></p>
       </div>
@@ -91,7 +91,7 @@
           <h4>Habilidade</h4>
           <br>
           <br>
-          <img src="soul1.png" class="imgsoul">
+          <img src="imagens/soul1.png" class="imgsoul">
           <h2>Soul resonance</h2>
           <br>
           <h4>Passiva:</h4>
@@ -99,7 +99,7 @@
           <h4>Ativa:</h4>
           <h2>Runas</h2>
           <br>
-          <img class="runaimg" src="Rune_slots.webp"/>
+          <img class="runaimg" src="imagens/Rune_slots.webp"/>
           <br>
           <h4>1: <select id="rune" name="rune">
             <option value="none">Nenhuma</option>
@@ -317,13 +317,13 @@
                 <br>
                 <table border="1" class="res">
                     <tr>
-                        <img src="fogo5.png" class="imgresfo">
+                        <img src="imagens/fogo5.png" class="imgresfo">
                           <td class="elem">Ígneo</td>
-                        <img src="agua4.png" class="imgresag">
+                        <img src="imagens/agua4.png" class="imgresag">
                         <td class="elem">Hydro</td>
-                        <img src="sagrado2.webp" class="imgressag" id="open-modal3">
+                        <img src="imagens/sagrado2.webp" class="imgressag" id="open-modal3">
                         <td class="elem">Sagrado</td>
-                        <img src="morte11.png" class="imgresmor" id="open-modal4">
+                        <img src="imagens/morte11.png" class="imgresmor" id="open-modal4">
                         <td class="elem">Morte</td>
                     </tr>
                     <tr>
@@ -335,14 +335,14 @@
                     </table>
                     <table>
                     <tr>
-                        <img src="fisico.png" class="imgresfis" id="open-modal5">
+                        <img src="imagens/fisico.png" class="imgresfis" id="open-modal5">
                         <td class="elem">Físico</td>
-                        <img src="veneno.png" class="imgresven" id="open-modal6">
+                        <img src="imagens/veneno.png" class="imgresven" id="open-modal6">
                         <td 
                         class="elem">Veneno</td>
-                        <img src="eterio.png" class="imgresete" id="open-modal7">
+                        <img src="imagens/eterio.png" class="imgresete" id="open-modal7">
                         <td class="elem">Etério</td>
-                        <img src="eletrico.png" class="imgresele" id="open-modal8">
+                        <img src="imagens/eletrico.png" class="imgresele" id="open-modal8">
                         <td class="elem">Elétrico</td>
                     </tr>
                     <tr>
@@ -354,13 +354,13 @@
                     </table>
                     <table>
                     <tr>
-                        <img src="sombra.png" class="imgressom" id="open-modal9">
+                        <img src="imagens/sombra.png" class="imgressom" id="open-modal9">
                         <td class="elem">Sombra</td>
-                        <img src="luz.png" class="imgresluz" id="open-modal10">
+                        <img src="imagens/luz.png" class="imgresluz" id="open-modal10">
                         <td class="elem">Luz</td>
-                        <img src="psiquico.png" class="imgrespsi" id="open-modal11">
+                        <img src="imagens/psiquico.png" class="imgrespsi" id="open-modal11">
                         <td class="elem">Psíquico</td>
-                        <img src="espiritual.png" class="imgresesp" id="open-modal12">
+                        <img src="imagens/espiritual.png" class="imgresesp" id="open-modal12">
                         <td class="elem">Espiritual</td>
                     </tr>
                     <tr>
@@ -370,71 +370,6 @@
                         <td>10%</td>
                     </tr>
                 </table>
-                <table>
-                  <br>
-                  <tr class="semnada">
-                      <td class="elem1" id="open-modal"></td>
-                        <div id="fade" class="hide" ></div>
-                              <div id="modal" class="hide">
-                                <div class="modal-header">
-                                  <h2 class="modaltitle">Descontar dano</h2>
-                                  <img src="fechar.png" class="close" id="close-modal"> 
-                                </div>
-                                <div class="modal-body" >
-                                  <div class="container">
-                                      <div class="row">
-                                          <div class="col-md-6 mx-auto">
-                                                  <form id="discount-form">
-                                                      <div class="form-group">
-                                                          <div class="input-group">
-                                                              <input type="text" class="form-control" id="price" placeholder="Dano original">
-                                                          </div>
-                                                      </div>
-                                                      <select id="resist" name="resist" class="resist">
-                                                        <option value="none" >Nenhuma</option>
-                                                        <option value="fogo" id="fogo">ígneo</option>
-                                                        <option value="agua" id="agua">Hydro</option>
-                                                        <option value="sagrado" id="sagrado">Sagrado</option>
-                                                        <option value="morte" id="morte">Morte</option>
-                                                        <option value="físico" id="fisico">Físico</option>
-                                                        <option value="veneno" id="veneno">Veneno</option>
-                                                        <option value="ether" id="ether">Etério</option>
-                                                        <option value="eletrico" id="eletrico">Elétrico</option>
-                                                        <option value="sombra" id="sombra">Sombra</option>
-                                                        <option value="luz" id="luz">Luz</option>
-                                                        <option value="psiquico" id="psiquico">Psiquíco</option>
-                                                        <option value="espirito" id="espirito">Espírito</option>
-                                                      </select>
-                                                      <div class="form-group">
-                                                          <input type="submit" value="subtrair" class="btn">
-                                                      </div>
-                                                  </form>
-                              
-                                                  <!-- LOADER HERE -->
-                              
-                                                  <div id="loader">
-                                                      <span></span>
-                                                      <span></span>
-                                                      <span></span>
-                                                  </div>
-                              
-                                                  <!-- RESULTS -->
-                                                  <div id="results" class="pt-4">
-                                                      <div class="form-group">
-                                                          <div class="input-group">
-                                                              <span class="input-group-text">Dano final</span>
-                                                              <input type="text" class="form-control" id="discounted-price" disabled>
-                                                          </div>
-                                                      </div>
-                                                  </div>
-                                              </div>
-                                          </div>
-                                      </div>
-                                  </div>
-                                </div>
-                              </div>
-                  </tr>
-              </table>
                 <br>
                 <br>
                 
@@ -506,9 +441,9 @@
         <br>
         <table border="1" class="ca">
             <tr>
-                <img src="esquiva.png" class="imgresqui">
+                <img src="imagens/esquiva.png" class="imgresqui">
                 <td class="caat">Esquiva: 20</td>
-                <img src="bloqueio.png" class="imgbloq">
+                <img src="imagens/bloqueio.png" class="imgbloq">
                 <td class="caat">Bloqueio: 10</td>
             </tr>
             <tr>
@@ -524,9 +459,9 @@
             <br>
             <table border="1" class="speed">
               <tr>
-                  <img src="corrida.png" class="imgspeed">
+                  <img src="imagens/corrida.png" class="imgspeed">
                   <td class="verozidade">Velocidade: 110</td>
-                  <img src="Zona" class="imgzona">
+                  <img src="imagens/Zona" class="imgzona">
                   <td class="verozidade">Zona: curta </td>
               </tr>
               </table>
@@ -540,12 +475,12 @@
         <br>
         <table class="maesp">
           <tr>
-              <img src="machado.png" class="imgmaesal">
+              <img src="imagens/machado.png" class="imgmaesal">
               <td class="maes">Arma longa</td>
-              <img src="faca.png" class="imgmaesac">
+              <img src="imagens/faca.png" class="imgmaesac">
               <td 
               class="maes">Arma curta</td>
-              <img src="soco.png" class="imgmaesfis">
+              <img src="imagens/soco.png" class="imgmaesfis">
               <td class="maes">Físico</td>
           </tr>
           <tr>
@@ -557,11 +492,11 @@
           <br>
           <table class="maesp">
           <tr>
-              <img src="pistole.png" class="imgmaesaf">
+              <img src="imagens/pistole.png" class="imgmaesaf">
               <td class="maes">Arma de fogo</td>
-              <img src="arco.png" class="imgmaesaa">
+              <img src="imagens/arco.png" class="imgmaesaa">
               <td class="maes">Arma arcaica</td>
-              <img src="lança.png" class="imgmaeslan">
+              <img src="imagens/lança.png" class="imgmaeslan">
               <td class="maes">Lança</td>
           </tr>
           <tr>
@@ -573,11 +508,11 @@
       <br>
       <table class="maesp">
         <tr>
-            <img src="cana.png" class="imgmaesaf">
+            <img src="imagens/cana.png" class="imgmaesaf">
             <td class="maes">Canalizador</td>
-            <img src="gadanha1.png" class="imgmaesaa">
+            <img src="imagens/gadanha1.png" class="imgmaesaa">
             <td class="maes">Gadanhas</td>
-            <img src="pecu.png" class="imgmaeslan">
+            <img src="imagens/pecu.png" class="imgmaeslan">
             <td class="maes">Peculiaridade</td>
         </tr>
         <tr>
@@ -623,7 +558,92 @@
                 </form>
             </div>
         </div>
-
+        <div class="fab"  ontouchstart="">
+          <button class="main" onclick="openModal('dv-modal1')" >
+          </button>
+        </div>
+        <div id="dv-modal1" class="modal">
+          <div class="modal-content-inv">
+            <div class="modal-header">
+              <img src="fechar.png" class="close" id="close-modal" onclick="closeModall('dv-modal1')">
+            <h1>Inventario</h1>
+            </div>
+            <div class="modal-body">
+                <div class="modal-armas">
+                  <br>
+                  <h1 class="stitulo-armas">Armas</h1>
+                  <br>
+                  <h2 class="titulo-armas">Nenhum</h2>
+                  <hr/>
+                  <br>
+                  <h2 class="titulo-armas">Nenhum</h2>
+                  <hr/>
+                  <br>
+                  <h2 class="titulo-armas">Nenhum</h2>
+                  <hr/>
+                  <br>
+                  <h2 class="titulo-armas">Nenhum</h2>
+                  <hr/>
+                 
+                  <br>
+                  <h2 class="titulo-armas">Nenhum</h2>
+                  <hr/>
+                  <br>
+                  <h2 class="titulo-armas">Nenhum</h2>
+                  <hr/>
+                </div>
+                <br><br>
+                <div class="outros">
+                  <h1 class="stitulo-armas">outros</h1>
+                  <br><br>
+                  <h2 class="titulo-armas">Orb de absorção / 01x</h2>
+                  <hr/>
+                  <p class="armas-info"> Um orb arquitetado por Kurumi hellsing enquanto governanta do egito, na qual ordenou ao povo escravizado ajudassem-na nesse projeto, ja que precisava de sacrifícios... este ítem absorve e guarda qualquer elemento ou energia posto nele (ps: Não pode ser usado em batalha). Possui uma carga ainda indeterminada.</p>
+                  <br>
+                  <h2 class="titulo-armas">Nenhum / 0x</h2>
+                  <hr/>
+                  <p class="items"></p>
+                  <br>
+                  <h2 class="titulo-armas">Nenhum / 0x</h2>
+                  <hr/>
+                  <p class="items"></p>
+                  <br>
+                  <h2 class="titulo-armas">Nenhum / 0x</h2>
+                  <hr/>
+                  <p class="items"></p>
+                  <br>
+                  <h2 class="titulo-armas">Nenhum / 0x</h2>
+                  <hr/>
+                  <p class="items"></p>
+                  <br>
+                  <h2 class="titulo-armas">Nenhum / 0x</h2>
+                  <hr/>
+                  <p class="items"></p>
+                  <br>
+                  <h2 class="titulo-armas">Nenhum / 0x</h2>
+                  <hr/>
+                  <p class="items"></p>
+                  <br>
+                  <h2 class="titulo-armas">Nenhum / 0x</h2>
+                  <hr/>
+                  <p class="items"></p>
+                  <br>
+                  <h2 class="titulo-armas">Nenhum / 0x</h2>
+                  <hr/>
+                  <p class="items"></p>
+                  <br>
+                  <h2 class="titulo-armas">Nenhum / 0x</h2>
+                  <hr/>
+                  <p class="items"></p>
+                  <br>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn-inv" onclick="closeModall('dv-modal1')">Fechar</button>
+            </div>
+        </div>
+        </div>
+    </div>
     <script src="fichagg.js"></script>
   </body>
 </html>
