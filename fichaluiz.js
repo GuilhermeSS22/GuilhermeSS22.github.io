@@ -1,17 +1,17 @@
 const data = {
-  cristal: 0,
+  cristal: 500,
   star: 1,
-  classe: 1,
+  classe: 2,
   age: 27,
   sex: 'male',
 
   life: {
-    current: 150,
-    max: 15*10 * 1,
+    current: 280,
+    max: 14*10 * 2,
   },
   sanity: {
-    current: 130,
-    max: 13*10*1,
+    current: 240,
+    max: 12*10*2,
   },
 
   weapons: [
@@ -20,31 +20,31 @@ const data = {
   attributes: [
     {
       type: 'P.Mágico',
-      amount: 17,
-    },
-    {
-      type: 'Constituição',
       amount: 15,
     },
     {
+      type: 'Constituição',
+      amount: 14,
+    },
+    {
       type: 'Destreza',
-      amount: 18,
+      amount: 16,
     },
     {
       type: 'Sabedoria',
-      amount: 13,
+      amount: 12,
     },
     {
       type: 'Força',
-      amount: 11,
+      amount: 10,
     },
     {
       type: 'Inteligência',
-      amount: 13,
+      amount: 12,
     },
     {
       type: 'Carisma',
-      amount: 11,
+      amount: 10,
     },
     {
       type: 'Sorte',
@@ -52,7 +52,7 @@ const data = {
     },
     {
       type: 'Sanidade',
-      amount: 55,
+      amount: 11,
     },
   ],
 }
@@ -706,6 +706,21 @@ function leiaMais36() {
       mostrarMais36.style.display = 'inline';
       btnLeiaMais36.innerHTML = 'Pseudo Espírito de Afinidade';
   }
+}
+  function leiaMais37() {
+    const tresPontos37 = document.getElementById('tresPontos37');
+    const mostrarMais37 = document.getElementById('mostrarMais37');
+    const btnLeiaMais37 = document.getElementById('btnLeiaMais37');
+  
+    if (tresPontos32a7.style.display === 'none') {
+        tresPontos37.style.display = 'inline';
+        mostrarMais37.style.display = 'none';
+        btnLeiaMais37.innerHTML = 'F.Rashomon';
+    } else {
+        tresPontos37.style.display = 'none';
+        mostrarMais37.style.display = 'inline';
+        btnLeiaMais37.innerHTML = 'F.Rashomon';
+    }
 }
 //bençãos//
 function leiaMais1a() {
@@ -1399,3 +1414,19 @@ const toggleModal = () => {
 [openModalButton, closeModalButton, fade].forEach((el) => {
   el.addEventListener("click", () => toggleModal());
 });
+
+   //modal//
+   function openModal(mn){
+    let modal = document.getElementById(mn);
+
+    if (typeof modal == 'undefined' || modal === null) return;
+
+    modal.style.display = 'block';
+}
+function closeModall(mn){
+    let modal = document.getElementById(mn);
+
+    if (typeof modal == 'undefined' || modal === null) return;
+
+    modal.style.display = 'none';
+}
