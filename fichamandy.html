@@ -1,0 +1,885 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+    <link rel="stylesheet" href="fichamandy.css" />
+
+    <title>Mahlu Cour</title>
+  </head>
+  <body>
+    <h1 class="title">Mahlu Cour</h1>
+
+<!--modal de vida-->
+    <div id="lifeModal" class="modal with-input">
+      <div class="modal-content">
+        <h2>MODIFICAR VIDA</h2>
+        <hr />
+        <form class="formModal" id="changeLife">
+          <h3>Atual</h3>
+          <input type="number" name="current" id="lifeCurrent" min="0" />
+          <h3>Máximo</h3>
+          <input type="number" name="max" id="lifeMax" min="0" />
+          <input type="submit" value="Salvar" />
+        </form>
+      </div>
+    </div>
+<!--modal de mana-->
+    <div id="sanityModal" class="modal with-input">
+      <div class="modal-content">
+        <h2>MODIFICAR MANA</h2>
+        <hr />
+        <form class="formModal" id="changeSanity">
+          <h3>Atual</h3>
+          <input
+            type="number"
+            name="sanityCurrent"
+            id="sanityCurrent"
+            min="0"
+          />
+          <h3>Máximo</h3>
+          <input type="number" name="sanityMax" id="sanityMax" min="0" />
+          <input type="submit" value="Salvar" />
+        </form>
+      </div>
+    </div>
+        </form>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="details border">
+        <h2 class="grid-title">DETALHES PESSOAIS</h2>
+        <hr />
+
+        <div class="inputs">
+          <h4>Crystal coin</h4>
+          <input type="text" name="cristal" id="cristal" value="" />
+          <h4>Estrelas</h4>
+          <input type="text" name="star" id="star" value="" />
+          <h4>Classe</h4>
+          <input type="text" name="classe" id="classe" value="" />
+          <h4>Idade</h4>
+          <input type="text" name="age" id="age" value="" />
+          <h4>Sexo</h4>
+          <select id="sex" name="sex">
+            <option value="male">Masculino</option>
+            <option value="female">Feminino</option>
+            <option value="other">Outros</option>
+          </select>
+          <br>
+          <h2>Alma</h2>
+          <br>
+          <h3>Cor da alma: roxa</h3>
+          <h4>Habilidade</h4>
+          <br>
+          <br>
+          <div>
+            <img src="imagens/soul1.png" class="imgsoul">
+          <h2>Soul resonance</h2>
+          <br>
+          <h4>Passiva:</h4>
+          <br>
+          Pode realizar um ataque com uma arma diferente para cada 100 de Des.
+          <br>
+          <br>
+          <h4>Ativa:</h4>
+          <br>
+          Infusão de sangue é uma melhoria para sua arma, com o custo de 10% da sua vida máxima, você cobre uma arma com seu sangue e seleciona um alvo, quanto mais específico mais forte, esse efeito não pode ser removido, mas reseta ao início de cada mesa. Quando utilizado você ganha os seguintes efeitos que podem ser stackados:<br>
+          <br>Raça: +5% da vida do alvo fixo como dano.
+          <br>Classe: +5% da vida do alvo fixo como dano, vantagem em dados de acerto.
+          <br>Nome: Vantagem no dado de dano, causa ferida ebânea por 8 turnos.
+          <br>Fraqueza: +5% da vida do alvo como dano fixo como dano, todos os ataques são críticos.
+</div>
+<br>
+<br>
+<!--runas-->
+<div>
+          <h2>Runas</h2>
+          <br>
+          <img class="runaimg" src="imagens/Rune_slots.webp"/>
+          <br>
+          <h4>1: <select id="rune" name="rune">
+            <option value="none">Nenhuma</option>
+            <option value="accuracy">accuracy </option>
+            <option value="blade">Blade </option>
+            <option value="despair">Despair </option>
+            <option value="destroy">Destroy</option>
+            <option value="determination">Determination </option>
+            <option value="enchance">Enchance</option>
+            <option value="endure">Endure </option>
+            <option value="energy">Energy </option>
+            <option value="fatal">Fatal</option>
+            <option value="fight">Fight</option>
+            <option value="focus">Focus</option>
+            <option value="guard">Guard</option>
+            <option value="nemesis">Nemesis</option>
+            <option value="Rage">Rage </option>
+            <option value="revenge">Revenge </option>
+            <option value="shield">Shield </option>
+            <option value="swift">Swift</option>
+            <option value="tolerance">Tolerance</option>
+            <option value="violent">Violent </option>
+            <option value="will">Will </option>
+          </select> | <select id="at" name="at"><option value="none">Nenhuma</option>
+            <option value="dmg1">DMG'A</option><option value="dmg1c">DMG'A%</option>
+            <option value="dmg2">DMG'H</option>
+            <option value="dmg2c">DMG'H%</option>
+            <option value="dmg3">DMG'T</option>
+            <option value="dmg3c">DMG'T%</option>
+            <option value="hp">HP</option>
+            <option value="hpc">HP%</option>
+            <option value="mp">MP</option>
+            <option value="mpc">MP%</option>
+            <option value="sort">Sort</option>
+            <option value="sortc">Sort%</option>
+        </select> + <input class="run" type="text" name="run1" id="run1" value="" /></h4>
+        <h4>2: <select id="rune" name="rune">
+            <option value="none">Nenhuma</option>
+            <option value="accuracy">accuracy</option>
+            <option value="blade">Blade</option>
+            <option value="despair">Despair</option>
+            <option value="destroy">Destroy</option>
+            <option value="determination">Determi nation</option>
+            <option value="enchance">Enchance</option>
+            <option value="endure">Endure</option>
+            <option value="energy">Energy</option>
+            <option value="fatal">Fatal</option>
+            <option value="fight">Fight</option>
+            <option value="focus">Focus</option>
+            <option value="guard">Guard</option>
+            <option value="nemesis">Nemesis</option>
+            <option value="Rage">Rage</option>
+            <option value="revenge">Revenge</option>
+            <option value="shield">Shield</option>
+            <option value="swift">Swift</option>
+            <option value="tolerance">Tolerance</option>
+            <option value="violent">Violent</option>
+            <option value="will">Will</option>
+          </select> | <select id="at" name="at"><option value="none">Nenhuma</option>
+            <option value="dmg1">DMG'A</option><option value="dmg1c">DMG'A%</option>
+            <option value="dmg2">DMG'H</option>
+            <option value="dmg2c">DMG'H%</option>
+            <option value="dmg3">DMG'T</option>
+            <option value="dmg3c">DMG'T%</option>
+            <option value="hp">HP</option>
+            <option value="hpc">HP%</option>
+            <option value="mp">MP</option>
+            <option value="mpc">MP%</option>
+            <option value="sort">Sort</option>
+            <option value="sortc">Sort%</option>
+        </select> + <input class="run" type="text" name="run2" id="run2" value="" /></h4>
+        <h4>3: <select id="rune" name="rune">
+            <option value="none">Nenhuma</option>
+            <option value="accuracy">accuracy</option>
+            <option value="blade">Blade</option>
+            <option value="despair">Despair</option>
+            <option value="destroy">Destroy</option>
+            <option value="determination">Determi nation</option>
+            <option value="enchance">Enchance</option>
+            <option value="endure">Endure</option>
+            <option value="energy">Energy</option>
+            <option value="fatal">Fatal</option>
+            <option value="fight">Fight</option>
+            <option value="focus">Focus</option>
+            <option value="guard">Guard</option>
+            <option value="nemesis">Nemesis</option>
+            <option value="Rage">Rage</option>
+            <option value="revenge">Revenge</option>
+            <option value="shield">Shield</option>
+            <option value="swift">Swift</option>
+            <option value="tolerance">Tolerance</option>
+            <option value="violent">Violent</option>
+            <option value="will">Will</option>
+          </select> | <select id="at" name="at"><option value="none">Nenhuma</option>
+            <option value="dmg1">DMG'A</option><option value="dmg1c">DMG'A%</option>
+            <option value="dmg2">DMG'H</option>
+            <option value="dmg2c">DMG'H%</option>
+            <option value="dmg3">DMG'T</option>
+            <option value="dmg3c">DMG'T%</option>
+            <option value="hp">HP</option>
+            <option value="hpc">HP%</option>
+            <option value="mp">MP</option>
+            <option value="mpc">MP%</option>
+            <option value="sort">Sort</option>
+            <option value="sortc">Sort%</option>
+        </select> + <input class="run" type="text" name="run3" id="run3" value="" /></h4>
+        <h4>4: <select id="rune" name="rune">
+            <option value="none">Nenhuma</option>
+            <option value="accuracy">accuracy</option>
+            <option value="blade">Blade</option>
+            <option value="despair">Despair</option>
+            <option value="destroy">Destroy</option>
+            <option value="determination">Determi nation</option>
+            <option value="enchance">Enchance</option>
+            <option value="endure">Endure</option>
+            <option value="energy">Energy</option>
+            <option value="fatal">Fatal</option>
+            <option value="fight">Fight</option>
+            <option value="focus">Focus</option>
+            <option value="guard">Guard</option>
+            <option value="nemesis">Nemesis</option>
+            <option value="Rage">Rage</option>
+            <option value="revenge">Revenge</option>
+            <option value="shield">Shield</option>
+            <option value="swift">Swift</option>
+            <option value="tolerance">Tolerance</option>
+            <option value="violent">Violent</option>
+            <option value="will">Will</option>
+          </select> | <select id="at" name="at"><option value="none">Nenhuma</option>
+            <option value="dmg1">DMG'A</option><option value="dmg1c">DMG'A%</option>
+            <option value="dmg2">DMG'H</option>
+            <option value="dmg2c">DMG'H%</option>
+            <option value="dmg3">DMG'T</option>
+            <option value="dmg3c">DMG'T%</option>
+            <option value="hp">HP</option>
+            <option value="hpc">HP%</option>
+            <option value="mp">MP</option>
+            <option value="mpc">MP%</option>
+            <option value="sort">Sort</option>
+            <option value="sortc">Sort%</option>
+        </select> + <input class="run" type="text" name="run4" id="run4" value="" /></h4>
+        <h4>5: <select id="rune" name="rune">
+            <option value="none">Nenhuma</option>
+            <option value="accuracy">accuracy</option>
+            <option value="blade">Blade</option>
+            <option value="despair">Despair</option>
+            <option value="destroy">Destroy</option>
+            <option value="determination">Determi nation</option>
+            <option value="enchance">Enchance</option>
+            <option value="endure">Endure</option>
+            <option value="energy">Energy</option>
+            <option value="fatal">Fatal</option>
+            <option value="fight">Fight</option>
+            <option value="focus">Focus</option>
+            <option value="guard">Guard</option>
+            <option value="nemesis">Nemesis</option>
+            <option value="Rage">Rage</option>
+            <option value="revenge">Revenge</option>
+            <option value="shield">Shield</option>
+            <option value="swift">Swift</option>
+            <option value="tolerance">Tolerance</option>
+            <option value="violent">Violent</option>
+            <option value="will">Will</option>
+          </select> | <select id="at" name="at"><option value="none">Nenhuma</option>
+            <option value="dmg1">DMG'A</option><option value="dmg1c">DMG'A%</option>
+            <option value="dmg2">DMG'H</option>
+            <option value="dmg2c">DMG'H%</option>
+            <option value="dmg3">DMG'T</option>
+            <option value="dmg3c">DMG'T%</option>
+            <option value="hp">HP</option>
+            <option value="hpc">HP%</option>
+            <option value="mp">MP</option>
+            <option value="mpc">MP%</option>
+            <option value="sort">Sort</option>
+            <option value="sortc">Sort%</option>
+        </select> + <input class="run" type="text" name="run5" id="run5" value="" /></h4>
+        <h4>6: <select id="rune" name="rune">
+            <option value="none">Nenhuma</option>
+            <option value="accuracy">accuracy</option>
+            <option value="blade">Blade</option>
+            <option value="despair">Despair</option>
+            <option value="destroy">Destroy</option>
+            <option value="determination">Determi nation</option>
+            <option value="enchance">Enchance</option>
+            <option value="endure">Endure</option>
+            <option value="energy">Energy</option>
+            <option value="fatal">Fatal</option>
+            <option value="fight">Fight</option>
+            <option value="focus">Focus</option>
+            <option value="guard">Guard</option>
+            <option value="nemesis">Nemesis</option>
+            <option value="Rage">Rage</option>
+            <option value="revenge">Revenge</option>
+            <option value="shield">Shield</option>
+            <option value="swift">Swift</option>
+            <option value="tolerance">Tolerance</option>
+            <option value="violent">Violent</option>
+            <option value="will">Will</option>
+          </select> | <select id="at" name="at"><option value="none">Nenhuma</option>
+            <option value="dmg1">DMG'A</option><option value="dmg1c">DMG'A%</option>
+            <option value="dmg2">DMG'H</option>
+            <option value="dmg2c">DMG'H%</option>
+            <option value="dmg3">DMG'T</option>
+            <option value="dmg3c">DMG'T%</option>
+            <option value="hp">HP</option>
+            <option value="hpc">HP%</option>
+            <option value="mp">MP</option>
+            <option value="mpc">MP%</option>
+            <option value="sort">Sort</option>
+            <option value="sortc">Sort%</option>
+        </select> + <input class="run" type="text" name="run6" id="run6" value="" /></h4>
+       </div>
+        <div>
+            <h2 class="grid-title">Resistências</h2>
+            <div class="resList" id="resList">
+                <br>
+                <table border="1" class="res">
+                    <tr>
+                        <img src="imagens/fogo5.png" class="imgresfo">
+                          <td class="elem">Ígneo</td>
+                        <img src="imagens/agua4.png" class="imgresag">
+                        <td class="elem">Hydro</td>
+                        <img src="imagens/sagrado2.webp" class="imgressag" id="open-modal3">
+                        <td class="elem">Sagrado</td>
+                        <img src="imagens/morte11.png" class="imgresmor" id="open-modal4">
+                        <td class="elem">Morte</td>
+                    </tr>
+                    <tr>
+                        <td>-25%</td>
+                        <td>0%</td>
+                        <td>-100%</td>
+                        <td>50%</td>
+                    </tr>
+                    </table>
+                    <table>
+                    <tr>
+                        <img src="imagens/fisico.png" class="imgresfis" id="open-modal5">
+                        <td class="elem">Físico</td>
+                        <img src="imagens/veneno.png" class="imgresven" id="open-modal6">
+                        <td 
+                        class="elem">Veneno</td>
+                        <img src="imagens/eterio.png" class="imgresete" id="open-modal7">
+                        <td class="elem">Etério</td>
+                        <img src="imagens/eletrico.png" class="imgresele" id="open-modal8">
+                        <td class="elem">Elétrico</td>
+                    </tr>
+                    <tr>
+                        <td>50%</td>
+                        <td>100%</td>
+                        <td>0%</td>
+                        <td>0%</td>
+                    </tr>
+                    </table>
+                    <table>
+                    <tr>
+                        <img src="imagens/sombra.png" class="imgressom" id="open-modal9">
+                        <td class="elem">Sombra</td>
+                        <img src="imagens/luz.png" class="imgresluz" id="open-modal10">
+                        <td class="elem">Luz</td>
+                        <img src="imagens/psiquico.png" class="imgrespsi" id="open-modal11">
+                        <td class="elem">Psíquico</td>
+                        <img src="imagens/espiritual.png" class="imgresesp" id="open-modal12">
+                        <td class="elem">Espiritual</td>
+                    </tr>
+                    <tr>
+                        <td>0%</td>
+                        <td>0%</td>
+                        <td>25%</td>
+                        <td>0%</td>
+                    </tr>
+                </table>
+                <br>
+                <br>
+                
+                <div class="carrossel owl-carousel">
+                  <div class="conquista">
+                    <!--habilidades-->
+                      <div class="conquistaCaixa">
+                        <h2>Habilidades</h2>
+                        <br>
+                        <button onclick="leiaMais1()" id="btnLeiaMais1" class="btnLeiaMais1">Anti-diabetes</button>
+                        <span id="tresPontos1"></span><span id="mostrarMais1" class="hability"><br><br>Não sofre de efeitos coláterais vindos de alta concentração de glicose.<br>
+                        <br><p class="habilitysec">Passiva</p></span>
+                        <hr/>
+                        <button onclick="leiaMais2()" id="btnLeiaMais2" class="btnLeiaMais2">Haki de armamento</button>
+                <span id="tresPontos2"></span><span id="mostrarMais2" class="hability"><br><br>Pode envolver qualquer coisa que encoste com uma aura invisivel que fortalece o que ou quem foi afetado.<br><br>
+                  Bônus: +10 no dano | +10 no bloqueio
+                <br><br><p class="habilitysec">Passiva</p></span>
+                <hr/>
+                <button onclick="leiaMais3()" id="btnLeiaMais3" class="btnLeiaMais3">Haki de observação</button>
+              <span id="tresPontos3"></span><span id="mostrarMais3" class="hability"><br><br>Pode pressentir intenções e pessoas a sua volta, podendo assim pressentir possiveis ataques.
+                <br><br>Bônus: +10 na esquiva.<br><br><p class="habilitysec">Passiva</p></span>
+              <hr/>
+              <button onclick="leiaMais4()" id="btnLeiaMais4" class="btnLeiaMais4">Imunidade a ilusões</button>
+            <span id="tresPontos4"></span><span id="mostrarMais4" class="hability"><br><br>Ilusões de nível médio não funcionam em sua pessoa.<br>
+            <br><p class="habilitysec">Passiva</p></span>
+            <hr/>
+            <button onclick="leiaMais5()" id="btnLeiaMais5" class="btnLeiaMais5">Habilidades mentais</button>
+            <span id="tresPontos5"></span><span id="mostrarMais5" class="hability"><br><br>Pode mover telepáticamente as coisas e pode se comunicar com os outros mentalmente.<br>
+            <br><p class="habilitysec">Passiva</p></span>
+            <hr/>
+            <button onclick="leiaMais6()" id="btnLeiaMais6" class="btnLeiaMais6">Intangibilidade</button>
+            <span id="tresPontos6"></span><span id="mostrarMais6" class="hability"><br><br>Pode se tornar intangivel.<br><br>
+              Bônus: +10 em esquiva.<br>
+            <br><p class="habilitysec">Passiva</p></span>
+            <hr/>
+            <button onclick="leiaMais7()" id="btnLeiaMais7" class="btnLeiaMais7">Transformação em fumaça</button>
+            <span id="tresPontos7"></span><span id="mostrarMais7" class="hability"><br><br>Pode se tornar fumaça.<br><br>
+              Bônus: +10 em esquiva.<br>
+            <br><p class="habilitysec">Passiva</p></span>
+            <hr/>
+            <button onclick="leiaMais8()" id="btnLeiaMais8" class="btnLeiaMais8">Manipulçao de mana</button>
+            <span id="tresPontos8"></span><span id="mostrarMais8" class="hability"><br><br>Pode controlar a mana como bem entender, assim como transformar-la em alguns elementos.<br>
+            <br><p class="habilitysec">Passiva</p></span>
+            <hr/>
+            <button onclick="leiaMais9()" id="btnLeiaMais9" class="btnLeiaMais9">Oni giri</button>
+            <span id="tresPontos9"></span><span id="mostrarMais9" class="hability"><br><br>É a técnica mais usada, a mais básica do Santoryuu. Posiciona-se suas espadas nas mãos e na boca e corre na direção do inimigo com uma velocidade tão alta que só o vemos quando ele já parado depois de atingir o inimigo.<br><br>
+              Dano:130% de dano.<br>
+              Custo: 5<br>
+              Alvo: único
+            <br>
+            <br><p class="habilitysec">Ativa</p></span>
+            <hr/>
+            <button onclick="leiaMais10()" id="btnLeiaMais10" class="btnLeiaMais10">Enbima yonezu oni giri</button>
+            <span id="tresPontos10"></span><span id="mostrarMais10" class="hability"><br><br>É quase igual ao Oni Giri, porém nessa técnica Zoro usa mais força e gira as espadas enquanto corre contra os adversários, permitindo que atinja não só um inimigo, como vários.<br><br>
+              Dano: 70%<br>
+              Custa: 10<br>
+              Alvo: Grupos<br>
+            <br><p class="habilitysec">Ativa</p></span>
+            <hr/>
+            <button onclick="leiaMais11()" id="btnLeiaMais11" class="btnLeiaMais11">Tora gari</button>
+            <span id="tresPontos11"></span><span id="mostrarMais11" class="hability"><br><br>Ataque simples, porém bem poderoso, parecido com o Oni Giri, mas com um alinhamento diferente das espadas e aparentemente o ataque é focado nas espadas dos braços, capazes de derrubar dois inimigos de uma vez. O foco é derrubar.<br><br>
+              Dano: 90%<br>
+              Custa: 10<br>
+              Alvo: Grupos pequenos<br>
+            <br><p class="habilitysec">Ativa</p></span>
+            <hr/>
+            <button onclick="leiaMais12()" id="btnLeiaMais12" class="btnLeiaMais12">Ul-tora gari</button>
+            <span id="tresPontos12"></span><span id="mostrarMais12" class="hability"><br><br>Versão mais poderosa do Tora Gari desenvolvida por Zoro no seu treinamento com Mihawk.<br><br>
+              Dano: 110%<br>
+              Custa: 15<br>
+              Alvo: Grupos pequenos<br>
+            <br><p class="habilitysec">Ativa</p></span>
+            <hr/>
+            <button onclick="leiaMais13()" id="btnLeiaMais13" class="btnLeiaMais13">Toro nagashi</button>
+            <span id="tresPontos13"></span><span id="mostrarMais13" class="hability"><br><br>Técnica que mistura ataque e defesa. Normalmente os inimigos usam, no máximo, duas espadas (uma em cada mão), por isso Zoro as bloqueia usando suas duas espadas de mão e faz um movimento de ataque usando apenas a espada da boca. O adversário, se espadachim, não tem como se defender.<br><br>
+              Dano: 120%<br>
+              Custa: 20<br>
+              Alvo: Únicos<br>
+            <br><p class="habilitysec">Ativa</p></span>
+            <hr/>
+            <button onclick="leiaMais14()" id="btnLeiaMais14" class="btnLeiaMais14">Tatsumaki</button>
+            <span id="tresPontos14"></span><span id="mostrarMais14" class="hability"><br><br>Gira todas as suas espadas formando um tornado com forma de dragão. Quando atinge o inimigo inflige vários cortes em todas as direções imagináveis. Com essa técnica ele é capaz de abrir buracos em paredes e telhados também.<br><br>
+              Dano: 150%<br>
+              Custa: 35<br>
+              Alvo: Únicos<br>
+            <br><p class="habilitysec">Ativa</p></span>
+            <hr/>
+            <button onclick="leiaMais15()" id="btnLeiaMais15" class="btnLeiaMais15">Kokujo: o tatsumaki</button>
+            <span id="tresPontos15"></span><span id="mostrarMais15" class="hability"><br><br>Versão mais poderosa do Tatsumaki, criando um tornado bem maior e atingindo mais inimigos de uma vez.<br><br>
+              Dano: 250%<br>
+              Custa: 90<br>
+              Alvo: Pequenos grupos<br>
+            <br><p class="habilitysec">Ativa</p></span>
+            <hr/>
+            <button onclick="leiaMais16()" id="btnLeiaMais16" class="btnLeiaMais16">Karasume gari</button>
+            <span id="tresPontos16"></span><span id="mostrarMais16" class="hability"><br><br>É um ataque aéreo onde se executa vários golpes. Foi usado para cortar vários projéteis.<br><br>
+              Dano: 140%<br>
+              Custa: 20<br>
+              Alvo: Pequenos grupos<br>
+            <br><p class="habilitysec">Ativa</p></span>
+            <hr/>
+            <button onclick="leiaMais17()" id="btnLeiaMais17" class="btnLeiaMais17">Daibutsu giri</button>
+            <span id="tresPontos17"></span><span id="mostrarMais17" class="hability"><br><br>Série de ataques verticais enquanto se está caindo. Ele foi capaz de fatiar um prédio em vários pedaços com essa técnica.<br><br>
+              Dano: 160%<br>
+              Custa: 30<br>
+              Alvo: Pequenos grupos<br>
+            <br><p class="habilitysec">Ativa</p></span>
+            <hr/>
+            <button onclick="leiaMais18()" id="btnLeiaMais18" class="btnLeiaMais18">Santoryu ogi: sanzen senkai</button>
+            <span id="tresPontos18"></span><span id="mostrarMais18" class="hability"><br><br>Colocando suas três espadas em um ângulo (como uma estrela de três pontas) e as gira rapidamente, depois corre na direção do inimigo e o corta com esse movimento.<br><br>
+              Dano: 190%<br>
+              Custa: 50<br>
+              Alvo: Único<br>
+            <br><p class="habilitysec">Ativa</p></span>
+            <hr/>
+            <button onclick="leiaMais19()" id="btnLeiaMais19" class="btnLeiaMais19">Asura: ichibugin</button>
+            <span id="tresPontos19"></span><span id="mostrarMais19" class="hability"><br><br>Em forma Asura, avança sobre o alvo e lhe ataca usando todas as nove espadas ao mesmo tempo.<br><br>
+              Dano: 200%<br>
+              Custa: 55<br>
+              Alvo: Único<br>
+            <br><p class="habilitysec">Ativa</p></span>
+            <hr/>
+            <button onclick="leiaMais20()" id="btnLeiaMais20" class="btnLeiaMais20">Asura: makyusen</button>
+            <span id="tresPontos20"></span><span id="mostrarMais20" class="hability"><br><br>Parecido com a técnica anterior, porém a finalização é diferente, assim como a postura com que segura as espadas.<br><br>
+              Dano: 210%<br>
+              Custa: 60<br>
+              Alvo: Único<br>
+            <br><p class="habilitysec">Ativa</p></span>
+            <hr/>
+            <button onclick="leiaMais21()" id="btnLeiaMais21" class="btnLeiaMais21">Asura: ugui</button>
+            <span id="tresPontos21"></span><span id="mostrarMais21" class="hability"><br><br>Técnica que causa vários cortes simultâneos em ângulos diferentes.<br><br>
+              Dano: 225%<br>
+              Custa: 70<br>
+              Alvo: Único<br>
+            <br><p class="habilitysec">Ativa</p></span>
+            <hr/>
+            <button onclick="leiaMais22()" id="btnLeiaMais22" class="btnLeiaMais22">Reequip</button>
+            <span id="tresPontos22"></span><span id="mostrarMais22" class="hability"><br><br>Técnica que visa trocar de equipamento, tanto armadura quanto armas.<br><br>
+              Armadura do purgatório:<br>
+A armadura do Purgatório dá ao Maluh poder de dano necrótico, além de proteger do mesmo tipo de dano. A katana toma a forma negra, se tornando um espadão cheio de espinhos, assim como a armadura.
+Efeito:+10 no bloqueio, 100% de resistência a necrótico, +P.M como dano necrótico.<br><br>
+Armadura de Asa Negra:<br>
+O traje de estilo gótico cobre Maluh em uma armadura de placa preta e brota grandes asas de morcego de suas costas, dando-lhe a habilidade de voar por curtos períodos. A arma que Maluh usa é sobrecarregada, causando 100% de dano destrutivo, além de ser equipada com dois machados de mão com o mesmo poder da espada atual. A velocidade dele no ar e na terra aumenta.
+Efeito: +10 na esquiva e no bônus de destreza, 25% do dano causado é reduzido na mana e a outra 25% na vida ambos permantemente.
+<br><br>
+Armadura dos Mil Braços:<br> 
+Armadura que dá ao Maluh mais quatro braços mecânicos, que também copiam a espada atual, no caso suas katanas. O poder das espadas principais se torna astral, tendo o principal ataque como Dispersão de Espíritos, dispersa espíritos de todas as formas e tipos.
+Efeito: +10 no bloqueio, +P.M como dano cinético, pode realizar até 2 ataques com suas espadas em seu turno, poderes astrais não surtem efeitos em sua presença.
+<br><br>
+Armadura Planadora:
+<br>
+É uma armadura que dá a aparência de um Leopardo, ela aumenta a velocidade e a agilidade e destreza do usuário.
+Efeito: +20 na esquiva e +50% em destreza.
+<br><br>
+Armadura Ataraxia:<br>
+Além de aumentar sua habilidade com as espadas, adiciona mais oito espadas com poder cinético, controladas por telecinese. Suas katanas originais também ganham o poder cinético. Bom para lutar contra espíritos. Elas podem ser usadas para atacar de longe ou como escudo de perto.<br>
+Efeito: +10 no bloquio, +P.M como dano cinético, a cada turno pode escolher até 8 alvos extra para atacar, causando 50% de dano etério.
+<br>
+Skill: omnicut: corta um alvo em 8 direções diferentes em uma longa distância, podendo ser usado uma vez a cada 2 turnos.
+<br>
+Dano: 200% de dano etério.
+<br>
+Custo: 100 
+<br><br>
+Sea King:<br> 
+Sua Sea King Armor é um exemplo poderoso de uma armadura especializada, projetada para repelir e anular ataques baseados em magia de água. Também dá ao Maluh poderosa magia de água própria, equipando-o com duas espadas, uma feita de cristal e outra de água, que ele pode turbinar para lançar ataques de água.
+<br>
+Efeito:+50 de esquiva/bloqueio na água, 100% de resistência a ataques de água.
+<br>
+Skill:Áqua violence: cria poderosos impactos mágicos elementais de água. 
+<br>
+Dano: 250% de hydro
+<br>
+Custo: 140
+<br><br>
+Thunder Emperor:
+<br> 
+Este traje dá ao Maluh a habilidade de reduzir o dano causado pela magia luminosa e elétrica. A armadura vem equipada com a Lança do Relâmpago, que lhe dá acesso a ataques ofensivos e defensivos devastadores de raio e luz. Além de sua lança absorver o ataque do oponente e atacar de volta para o mesmo com um giro gracioso da lança.
+<br>
+Efeito:100% de resistência a ataques elétricos, 50% de resistência a luz.
+<br>
+Skill:Thunder kingdom:cria um campo elétrico a sua volta, eletrocutando tudo a sua volta em um raio de 10m(não necessita acerto, apenas estar próximo). 
+<br>
+Dano: P.M
+<br>
+Custo: 40 por turno
+<br><br>
+Flame emperor:
+<br>
+Embutida com o poder do dragão, ela da imunidade ao fogo e funde os ataques das três katanas com fogo.
+<br>
+Efeito:100% de resistência a ataques de fogo, +P.M como dano de fogo.
+<br><br>
+Armadura de Roda do Céu: 
+<br> 
+Permite que ele convoque mais de 200 espadas e as lance usando uma variedade de feitiços, incluindo Circle Sword e Trinity Sword. A armadura cobre Maluh de prata da cabeça aos pés, efetivamente transformando-o em uma espada viva. Ele ainda vem equipado com enormes asas em forma de lâmina, dando a ela a habilidade de voar. Ela usa a telecinese e da ataques cinéticos.
+<br>
+Efeito:50% de resistência a ataques físicos, todos os seus ataques se tornam cinéticos, o bônus acaba se tornando P.M.
+<br>
+Skill:Circle Sword: faz com que espadas o circulem, dando uma certa proteção.
+<br>
+Dano: 50% de P.M / +15 de bloqueio.
+
+<br>
+Custo: 40 por turno
+<br>
+Skill: trnity sword: aumenta a potência de seus ataques, dando um efeito luminoso nas espadas quando se utiliza.
+<br>
+Dano: +P.M
+<br>
+Custo: 120 por ataque
+<br><br>
+Armadura Nakagami: 
+<br>
+
+Só pode ser usada uma vez em 10 anos. Em troca de drenar seu portador, a Armadura Nakagami dissipa completamente a magia externa. Ele também equipa o usuário com uma espada única que pode cortar qualquer coisa, até mesmo o espaço.
+<br>
+Efeito: ninguém a sua volta pode usar qualquer tipo de magia, além disso, seus ataques inutilizam a física ao seu redor, o bônus do dano da espada se torna equivalente à mana sacrificada.
+<br>
+(  /  )
+<br><br>
+Armadura de Adamantium:
+<br>
+É a armadura de Maluh que possui a melhor defesa.<br>
+Efeito: Imunidade 100% a dano físico e 50% de resistência aos elementos: Fogo, Gelo e Elétrico. Invoca dois escudos grandões.
+<br><br>
+Armadura Vampírica: 
+<br> 
+Uma armadura vermelha como sangue, elehante que vem com um par de asas negras embuídas. Além disso possui uma greatsword e uma katana ambos embuidos com sangue.
+<br>
+Efeito: -50% de resistencia à dano radiante, +50% de resistência à danos de;Morte, Sombra e espiritual.
+<br>
+Skill: Blood tendency: ao sacrificar 25% da vida máxima, ganha um aumento de 50% de ataque até o final do combate.
+<br>
+Skill: Blood life: ao atacar recupera 25% do dano como vida, além disso um acerto crítico recupera 100% d ataque como vida.
+<br>
+Skill: Blood end: ao sacrificar 90% da vida máxima causa como dano 300% da vida sacrificada como dano, além de causar gravura de sangue e extinção por 2 turnos.
+<br>
+Skill: Vampiric game: sempre que matar alguém com essa armadura recupera 100% da vida e ganha +10% de vida máxima permanentemente, além disso se matar com "blood end" ganha 25% da vida máxima e uma skill do alvo morto.<br>
+            <p class="habilitysec">Passiva</p></span>
+            <hr/>
+            <button onclick="leiaMais23()" id="btnLeiaMais6" class="btnLeiaMais23">Santoryuu</button>
+            <span id="tresPontos23"></span><span id="mostrarMais23" class="hability"><br><br>Pode somar até três bônus de espadas diferentes.<br><br>
+            <br><p class="habilitysec">Passiva</p></span>
+            <hr/>
+                      </div>
+                  </div>
+        </div>
+        
+            </div>
+          </div>
+
+        
+        </div>
+      </div>
+      <div class="character">
+        <div class="characterHeader">  
+        </div>
+
+        <div class="bars">
+          <h4>Vida</h4>
+          <div class="bar">
+            <div class="lifeBar" style="width: 0%">
+              <p class="barcount" id="lifeCount"></p>
+            </div>
+          </div>
+
+          <h4>Mana</h4>
+          <div class="sanity">
+            <div class="contentSanityBar">
+              <div class="sanityBar" style="width: 0%">
+                <p class="barcount" id="sanityCount"></p>
+              </div>
+            </div>
+          </div>
+        </div>
+<br>
+      <div class="attributes border">
+        <h2 class="grid-title">ATRIBUTOS</h2>
+        <hr />
+
+        <div class="attributesList" id="attributesList"></div>
+      </div>
+      <br>
+      
+      <br>
+      <br>
+      <div class="expertise border">
+        <br>
+        <h2>C.A</h2>
+        <hr />
+        <br>
+        <table border="1" class="ca">
+            <tr>
+                <img src="imagens/esquiva.png" class="imgresqui">
+                <td class="caat">Esquiva: 142</td>
+                <img src="imagens/bloqueio.png" class="imgbloq">
+                <td class="caat">Bloqueio: 142</td>
+            </tr>
+            <tr>
+                <td>Bônus extra: 0</td>
+                <td>Armadura Extra: 0</td>
+            </tr>
+            </table>
+            <br>
+            <br>
+            <br>
+            <h2>Velocidade</h2>
+            <hr >
+            <br>
+            <table border="1" class="speed">
+              <tr>
+                  <img src="imagens/corrida.png" class="imgspeed">
+                  <td class="verozidade">Velocidade: 132</td>
+                  <img src="imagens/Zona" class="imgzona">
+                  <td class="verozidade">Zona: curta</td>
+              </tr>
+              </table>
+      </div>
+      <br>
+      <br>
+      <div class="expertise border">
+        <br>
+        <h2>Maestria</h2>
+        <hr />
+        <br>
+        <table class="maesp">
+          <tr>
+              <img src="imagens/machado.png" class="imgmaesal">
+              <td class="maes">Arma longa</td>
+              <img src="imagens/faca.png" class="imgmaesac">
+              <td 
+              class="maes">Arma curta</td>
+              <img src="imagens/soco.png" class="imgmaesfis">
+              <td class="maes">Físico</td>
+          </tr>
+          <tr>
+              <td>42</td>
+              <td>52</td>
+              <td>42</td>
+          </tr>
+          </table>
+          <br>
+          <table class="maesp">
+          <tr>
+              <img src="imagens/pistole.png" class="imgmaesaf">
+              <td class="maes">Arma de fogo</td>
+              <img src="imagens/arco.png" class="imgmaesaa">
+              <td class="maes">Arma arcaica</td>
+              <img src="imagens/lança.png" class="imgmaeslan">
+              <td class="maes">Lança</td>
+          </tr>
+          <tr>
+              <td>42</td>
+              <td>42</td>
+              <td>42</td>
+          </tr>
+      </table>
+      <br>
+      <table class="maesp">
+        <tr>
+            <img src="imagens/cana.png" class="imgmaesaf">
+            <td class="maes">Canalizador</td>
+            <img src="imagens/gadanha1.png" class="imgmaesaa">
+            <td class="maes">Gadanhas</td>
+            <img src="imagens/pecu.png" class="imgmaeslan">
+            <td class="maes">Peculiaridade</td>
+        </tr>
+        <tr>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+        </tr>
+    </table>
+      </div>
+      <br>
+      <div class="border">
+        <div class="combatHeader">
+          <h2 class="grid-title">Bençãos</h2>
+        </div>
+        <hr />
+        <br>
+        <button onclick="leiaMais1a()" id="btnLeiaMais1a" class="btnLeiaMais">Instinto dracônico</button>
+                  <span id="tresPontos1a"></span><span id="mostrarMais1a" class="bens"><br><br>Recebe +10% de P.M, Consegue sentir e rastrear dragões,<br> consegue identificar a tipologia/elemento da mana de qualquer<br> um, bem como suas fraquezas, aumenta a raio de visão.<br>
+                  <br></span>
+                  <hr/>
+        <div class="carrossel owl-carousel">
+          <div class="conquista">
+              <div class="conquistaCaixa">
+              </div>
+              
+          </div>
+</div>
+        <br>
+      </div>
+    </div>
+
+    <div class="modal-overlay active">
+            <div class="modal">
+                <h2>MODIFICAR VIDA</h2>
+                <hr>
+                <form id="changeLife">
+                    <span class="modalspan">Atual</span>
+                    <input class="modalinput" type="number" name="current" id="lifeCurrent" min="0">
+
+                    <span class="modalspan">Máximo</span>
+                    <input class="modalinput" type="number" name="max" id="lifeMax" min="0">
+                    <input class="modalbutton" type="submit" value="Salvar">
+                </form>
+            </div>
+        </div>
+
+        <div class="fab"  ontouchstart="">
+          <button class="main" onclick="openModal('dv-modal1')" >
+          </button>
+        </div>
+
+        <div id="dv-modal1" class="modal">
+          <div class="modal-content-inv">
+            <div class="modal-header">
+            <img src="fechar.png" class="close" id="close-modal" onclick="closeModall('dv-modal1')">
+            <h1>Inventario</h1>
+            </div>
+            <div class="modal-body">
+                <div class="modal-armas">
+                  <br>
+                  <h1 class="stitulo-armas">Armas</h1>
+                  <br>
+                  <h2 class="titulo-armas">Wado ichimonji {espada}:</h2>
+                  <hr/>
+                  <p class="armas-info">Dano: +70 de dano sempre que for usada.</p>
+                  <br>
+                  <h2 class="titulo-armas">Yoto benisakura {espada}:</h2>
+                  <hr/>
+                  <p class="armas-info">Dano: +50 de dano verdadeiro sempre que for usada.
+                  <br>
+                  Skill: Pode sacrificar sua C.A para aumentar o dano da espada (para cada 10 pontos de esquiva e bloqueio sacrificados ganha +5 no dano).</p>
+                  <br>
+                  <h2 class="titulo-armas">Yubashiri {espada}:</h2>
+                  <hr/>
+                  <p class="armas-info">Dano: +10 de dano sempre que for usada.</p>
+                  <br>
+                  <h2 class="titulo-armas">Sandai kitetsu {espada}:</h2>
+                  <hr/>
+                  <p class="armas-info">Dano: +40 de dano sempre que for usada.</p>
+                  <br>
+                  <h2 class="titulo-armas">Katana de aço negro (Mardori) {espada}:</h2>
+                  <hr/>
+                  <p class="armas-info">Dano: +30 de dano sempre que for usada.</p>
+                  <br>
+                  <h2 class="titulo-armas">Odachi de aço negro (Mardori) {espada}:</h2>
+                  <hr/>
+                  <p class="armas-info">Dano: +60 de dano quando usada.</p>
+                </div>
+                <br><br>
+                <div class="outros">
+                  <h1 class="stitulo-armas">outros</h1>
+                  <br><br>
+                  <h2 class="titulo-armas">Nenhum / 0x</h2>
+                  <hr/>
+                  <p class="items"></p>
+                  <br>
+                  <h2 class="titulo-armas">Nenhum / 0x</h2>
+                  <hr/>
+                  <p class="items"></p>
+                  <br>
+                  <h2 class="titulo-armas">Nenhum / 0x</h2>
+                  <hr/>
+                  <p class="items"></p>
+                  <br>
+                  <h2 class="titulo-armas">Nenhum / 0x</h2>
+                  <hr/>
+                  <p class="items"></p>
+                  <br>
+                  <h2 class="titulo-armas">Nenhum / 0x</h2>
+                  <hr/>
+                  <p class="items"></p>
+                  <br>
+                  <h2 class="titulo-armas">Nenhum / 0x</h2>
+                  <hr/>
+                  <p class="items"></p>
+                  <br>
+                  <h2 class="titulo-armas">Nenhum / 0x</h2>
+                  <hr/>
+                  <p class="items"></p>
+                  <br>
+                  <h2 class="titulo-armas">Nenhum / 0x</h2>
+                  <hr/>
+                  <p class="items"></p>
+                  <br>
+                  <h2 class="titulo-armas">Nenhum / 0x</h2>
+                  <hr/>
+                  <p class="items"></p>
+                  <br>
+                  <h2 class="titulo-armas">Nenhum / 0x</h2>
+                  <hr/>
+                  <p class="items"></p>
+                  <br>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn-inv" onclick="closeModall('dv-modal1')">Fechar</button>
+            </div>
+        </div>
+        </div>
+    <script src="fichamandy.js"></script>
+  </body>
+</html>
