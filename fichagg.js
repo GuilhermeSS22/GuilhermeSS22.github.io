@@ -1,5 +1,5 @@
 const data = {
-  cristal: 3700,
+  cristal: 3.700,
   star: 1,
   classe: 1,
   age: 18,
@@ -1414,3 +1414,18 @@ const toggleModal = () => {
 [openModalButton, closeModalButton, fade].forEach((el) => {
   el.addEventListener("click", () => toggleModal());
 });
+   //modal//
+   function openModal(mn){
+    let modal = document.getElementById(mn);
+
+    if (typeof modal == 'undefined' || modal === null) return;
+
+    modal.style.display = 'block';
+}
+function closeModall(mn){
+    let modal = document.getElementById(mn);
+
+    if (typeof modal == 'undefined' || modal === null) return;
+
+    modal.style.display = 'none';
+}
