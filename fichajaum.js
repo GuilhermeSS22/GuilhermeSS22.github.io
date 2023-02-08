@@ -6,12 +6,12 @@ const data = {
   sex: 'male',
 
   life: {
-    current: 200,
-    max: 20*10 * 1,
+    current: 260,
+    max: 26*10 * 1,
   },
   sanity: {
-    current: 200,
-    max: 20*10*1,
+    current: 140,
+    max: 14*10*1,
   },
 
   weapons: [
@@ -20,31 +20,31 @@ const data = {
   attributes: [
     {
       type: 'P.Mágico',
-      amount: 1,
+      amount: 1 + 4,
     },
     {
       type: 'Constituição',
-      amount: 20,
+      amount: 20 + 4 + 2,
     },
     {
       type: 'Destreza',
-      amount: 20,
+      amount: 20 + 4 + 2,
     },
     {
       type: 'Sabedoria',
-      amount: 12,
+      amount: 12 + 4,
     },
     {
       type: 'Força',
-      amount: 20,
+      amount: 20 + 4 + 2,
     },
     {
       type: 'Inteligência',
-      amount: 10,
+      amount: 10 + 4,
     },
     {
       type: 'Carisma',
-      amount: 16,
+      amount: 16 + 4,
     },
     {
       type: 'Sorte',
