@@ -1,5 +1,5 @@
 const data = {
-  cristal: 1200,
+  cristal: 6700,
   star: 1,
   classe: 1,
   age: 26,
@@ -294,11 +294,11 @@ function leiaMais9() {
   if (tresPontos9.style.display === 'none') {
       tresPontos9.style.display = 'inline';
       mostrarMais9.style.display = 'none';
-      btnLeiaMais9.innerHTML = 'Absorption curse';
+      btnLeiaMais9.innerHTML = '8 portões';
   } else {
       tresPontos9.style.display = 'none';
       mostrarMais9.style.display = 'inline';
-      btnLeiaMais9.innerHTML = 'Absorption curse';
+      btnLeiaMais9.innerHTML = '8 portões';
   }
 }
 function leiaMais10() {
