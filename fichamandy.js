@@ -725,11 +725,11 @@ function leiaMais1a() {
   if (tresPontos1a.style.display === 'none') {
       tresPontos1a.style.display = 'inline';
       mostrarMais1a.style.display = 'none';
-      btnLeiaMais1a.innerHTML = 'Anti-diabetes';
+      btnLeiaMais1a.innerHTML = 'Doce pesadelo';
   } else {
       tresPontos1a.style.display = 'none';
       mostrarMais1a.style.display = 'inline';
-      btnLeiaMais1a.innerHTML = 'Anti-diabetes';
+      btnLeiaMais1a.innerHTML = 'Doce pesadelo';
   }
 }
 function leiaMais2a() {
@@ -740,11 +740,11 @@ const btnLeiaMais2a = document.getElementById('btnLeiaMais2a');
 if (tresPontos2a.style.display === 'none') {
     tresPontos2a.style.display = 'inline';
     mostrarMais2a.style.display = 'none';
-    btnLeiaMais2a.innerHTML = 'Garantia de Flecha';
+    btnLeiaMais2a.innerHTML = 'A mente de um maluco';
 } else {
     tresPontos2a.style.display = 'none';
     mostrarMais2a.style.display = 'inline';
-    btnLeiaMais2a.innerHTML = 'Garantia de Flecha';
+    btnLeiaMais2a.innerHTML = 'A mente de um maluco';
 }
 }
 function leiaMais3a() {
