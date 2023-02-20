@@ -1,5 +1,5 @@
 const data = {
-  cristal: 3.700,
+  cristal: 3700,
   star: 1,
   classe: 1,
   age: 18,
@@ -746,11 +746,11 @@ const btnLeiaMais2a = document.getElementById('btnLeiaMais2a');
 if (tresPontos2a.style.display === 'none') {
     tresPontos2a.style.display = 'inline';
     mostrarMais2a.style.display = 'none';
-    btnLeiaMais2a.innerHTML = 'Garantia de Flecha';
+    btnLeiaMais2a.innerHTML = 'O Verdadeiro rei';
 } else {
     tresPontos2a.style.display = 'none';
     mostrarMais2a.style.display = 'inline';
-    btnLeiaMais2a.innerHTML = 'Garantia de Flecha';
+    btnLeiaMais2a.innerHTML = 'O Verdadeiro rei';
 }
 }
 function leiaMais3a() {
@@ -761,11 +761,11 @@ const btnLeiaMais3a = document.getElementById('btnLeiaMais3a');
 if (tresPontos3a.style.display === 'none') {
     tresPontos3a.style.display = 'inline';
     mostrarMais3a.style.display = 'none';
-    btnLeiaMais3a.innerHTML = 'Resistência a Mágica';
+    btnLeiaMais3a.innerHTML = 'O real da mana';
 } else {
     tresPontos3a.style.display = 'none';
     mostrarMais3a.style.display = 'inline';
-    btnLeiaMais3a.innerHTML = 'Resistência a Mágica';
+    btnLeiaMais3a.innerHTML = 'O real da mana';
 }
 }
 function leiaMais4a() {
@@ -776,11 +776,11 @@ const btnLeiaMais4a = document.getElementById('btnLeiaMais4a');
 if (tresPontos4a.style.display === 'none') {
     tresPontos4a.style.display = 'inline';
     mostrarMais4a.style.display = 'none';
-    btnLeiaMais4a.innerHTML = 'Evitar Fogo';
+    btnLeiaMais4a.innerHTML = 'Onde o coração desejar';
 } else {
     tresPontos4a.style.display = 'none';
     mostrarMais4a.style.display = 'inline';
-    btnLeiaMais4a.innerHTML = 'Evitar Fogo';
+    btnLeiaMais4a.innerHTML = 'Onde o coração desejar';
 }
 }
 function leiaMais5a() {
