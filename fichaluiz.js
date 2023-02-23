@@ -6,12 +6,12 @@ const data = {
   sex: 'male',
 
   life: {
-    current: 1134,
-    max: 27 *10 *4 *1.05,
+    current: 113,
+    max: 27 *10 *4 ,
   },
   sanity: {
-    current: 1000,
-    max: 25 *10 *4 *1.0,
+    current: 100,
+    max: 25 *10 *4 ,
   },
 
   weapons: [
