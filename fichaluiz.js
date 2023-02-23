@@ -1,17 +1,17 @@
 const data = {
   cristal: 500,
   star: 1,
-  classe: 2,
-  age: 27,
+  classe: 4,
+  age: 20,
   sex: 'male',
 
   life: {
     current: 420,
-    max: 14*10 *3,
+    max: 14*10 *4.05,
   },
   sanity: {
     current: 360,
-    max: 12*10*3,
+    max: 12*10*4,
   },
 
   weapons: [
@@ -20,39 +20,39 @@ const data = {
   attributes: [
     {
       type: 'P.Mágico',
-      amount: 15,
+      amount: 26,
     },
     {
       type: 'Constituição',
-      amount: 14,
+      amount: 25,
     },
     {
       type: 'Destreza',
-      amount: 16,
+      amount: 27,
     },
     {
       type: 'Sabedoria',
-      amount: 12,
+      amount: 23,
     },
     {
       type: 'Força',
-      amount: 10,
+      amount: 21,
     },
     {
       type: 'Inteligência',
-      amount: 12,
+      amount: 23,
     },
     {
       type: 'Carisma',
-      amount: 10,
+      amount: 21,
     },
     {
       type: 'Sorte',
-      amount: 16,
+      amount: 27,
     },
     {
       type: 'Sanidade',
-      amount: 11,
+      amount: 80,
     },
   ],
 }
