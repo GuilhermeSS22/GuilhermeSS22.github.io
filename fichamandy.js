@@ -12,7 +12,7 @@ const data = {
       max: 75 *10 * 3,
     },
     sanity: {
-      current: 2531.25,
+      current: 2231,
       max: 75 *10 * 3 *1.125,
     },
     //valores de atributos//
@@ -515,11 +515,11 @@ function leiaMais24() {
   if (tresPontos24.style.display === 'none') {
       tresPontos24.style.display = 'inline';
       mostrarMais24.style.display = 'none';
-      btnLeiaMais24.innerHTML = 'Capture bomb';
+      btnLeiaMais24.innerHTML = 'Majestade vampíirica';
   } else {
       tresPontos24.style.display = 'none';
       mostrarMais24.style.display = 'inline';
-      btnLeiaMais24.innerHTML = 'Capture bomb';
+      btnLeiaMais24.innerHTML = 'Majestade vampíirica';
   }
 }
 function leiaMais25() {
