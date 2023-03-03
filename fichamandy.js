@@ -2,7 +2,7 @@
 const data = {
     cristal: 6900,
     star: 3,
-    classe: 2,
+    classe: 3,
     level: 37,
     age: 21,
     sex: 'male',
