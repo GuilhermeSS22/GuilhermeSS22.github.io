@@ -1,165 +1,171 @@
-//valores de vida/mana e detalhes pessoais//
 const data = {
-    cristal: 6900,
-    star: 1,
-    classe: 2,
-    age: 21,
-    sex: 'male',
-  
-    life: {
-      current: 640,
-      max: 32*10 * 2,
+  cristal: 500,
+  star: 1,
+  classe: 4,
+  age: 20,
+  sex: 'male',
+
+  life: {
+    current: 1134,
+    max: 27 * 10 * 4 *1.05,
+  },
+  sanity: {
+    current: 1000,
+    max: 25 *10 *4 *1.0,
+  },
+
+  weapons: [
+    
+  ],
+  attributes: [
+    {
+      type: 'P.Mágico',
+      amount: 26 *1.10,
     },
-    sanity: {
-      current: 440,
-      max: 22*10*2,
+    {
+      type: 'Constituição',
+      amount: 25 *1.10,
     },
-    //valores de atributos//
-    attributes: [
-      {
-        type: 'P.Mágico',
-        amount: 20,
-      },
-      {
-        type: 'Constituição',
-        amount: 32,
-      },
-      {
-        type: 'Destreza',
-        amount: 32,
-      },
-      {
-        type: 'Sabedoria',
-        amount: 20,
-      },
-      {
-        type: 'Força',
-        amount: 29,
-      },
-      {
-        type: 'Inteligência',
-        amount: 22,
-      },
-      {
-        type: 'Carisma',
-        amount: 16,
-      },
-      {
-        type: 'Sorte',
-        amount: 20,
-      },
-      {
-        type: 'Sanidade',
-        amount: 80,
-      },
-    ],
+    {
+      type: 'Destreza',
+      amount: 27 *1.10,
+    },
+    {
+      type: 'Sabedoria',
+      amount: 23 *1.10,
+    },
+    {
+      type: 'Força',
+      amount: 21 *1.10,
+    },
+    {
+      type: 'Inteligência',
+      amount: 23 *1.10,
+    },
+    {
+      type: 'Carisma',
+      amount: 21 *1.10,
+    },
+    {
+      type: 'Sorte',
+      amount: 27 *1.10,
+    },
+    {
+      type: 'Sanidade',
+      amount: 80 *1.10,
+    },
+  ],
+}
+
+
+data.attributes.map((attribute, index) => {
+  addAttribute(attribute, index)
+})
+
+$('#cristal').val(data.cristal)
+$('#classe').val(data.classe)
+$('#star').val(data.star)
+$('#age').val(data.age)
+$('#sex').val(data.sex)
+$('.lifeBar').css('width', `${calculateBar(data.life.current, data.life.max)}%`)
+$('#lifeCount').text(`${data.life.current}/${data.life.max}`)
+$('#lifeCurrent').val(data.life.current)
+$('#lifeMax').val(data.life.max)
+
+$('.sanityBar').css(
+  'width',
+  `${calculateBar(data.sanity.current, data.sanity.max)}%`
+)
+$('#sanityCount').text(`${data.sanity.current}/${data.sanity.max}`)
+$('#sanityCurrent').val(data.sanity.current)
+$('#sanityMax').val(data.sanity.max)
+
+
+const lifeModal = $('#lifeModal')
+const sanityModal = $('#sanityModal')
+
+$('.lifeBar').click(function () {
+  console.log(this)
+  lifeModal.css('display', 'block')
+})
+
+$('.sanityBar').click(function () {
+  console.log(this)
+  sanityModal.css('display', 'block')
+})
+
+$('#changeLife').submit(function (event) {
+  let current = Number($('#lifeCurrent').val())
+  const max = Number($('#lifeMax').val())
+
+  if (current > max) {
+    alert('A vida atual não pode ser maior que a maxima!')
+    current = max
   }
-  
-  
-  data.attributes.map((attribute, index) => {
-    addAttribute(attribute, index)
-  })
-  
-  $('#cristal').val(data.cristal)
-  $('#classe').val(data.classe)
-  $('#star').val(data.star)
-  $('#age').val(data.age)
-  $('#sex').val(data.sex)
-  $('.lifeBar').css('width', `${calculateBar(data.life.current, data.life.max)}%`)
-  $('#lifeCount').text(`${data.life.current}/${data.life.max}`)
-  $('#lifeCurrent').val(data.life.current)
-  $('#lifeMax').val(data.life.max)
-//barra de sanidade//
-  $('.sanityBar').css(
-    'width',
-    `${calculateBar(data.sanity.current, data.sanity.max)}%`
-  )
-  $('#sanityCount').text(`${data.sanity.current}/${data.sanity.max}`)
-  $('#sanityCurrent').val(data.sanity.current)
-  $('#sanityMax').val(data.sanity.max)
-  
-  //variaveis de vida e mana//
-  const lifeModal = $('#lifeModal')
-  const sanityModal = $('#sanityModal')
-  
-  $('.lifeBar').click(function () {
-    console.log(this)
-    lifeModal.css('display', 'block')
-  })
-  
-  $('.sanityBar').click(function () {
-    console.log(this)
-    sanityModal.css('display', 'block')
-  })
-  //alterar barra de vida//
-  $('#changeLife').submit(function (event) {
-    let current = Number($('#lifeCurrent').val())
-    const max = Number($('#lifeMax').val())
-    if (current > max) {
-      alert('A vida atual não pode ser maior que a maxima!')
-      current = max
-    } 
-    data.life.current = current
-    data.life.max = max
-    $('.lifeBar').css('width', `${calculateBar(current, max)}%`)
-    $('#lifeCount').text(`${current}/${max}`)   
-  
-    closeModal('#lifeModal')
-    event.preventDefault()
-  })
-  //alterar barra de mana
-  $('#changeSanity').submit(function (event) {
-    let current = Number($('#sanityCurrent').val())
-    const max = Number($('#sanityMax').val())
-  
-    if (current > max) {
-      alert('A mana atual não pode ser maior que a maxima!')
-      current = max
-    }
-  
-    data.sanity.current = current
-    data.sanity.max = max
-    $('.sanityBar').css('width', `${calculateBar(current, max)}%`)
-    $('#sanityCount').text(`${current}/${max}`)
-  
-    closeModal('#sanityModal')
-    event.preventDefault()
-  })
-  //calcular barras//
-  function calculateBar(current, max) {
-    if (current > max) {
-      return 100
-    } else if (current < 0) {
-      return 0
-    } else {
-      const value = (100 / max) * current
-      const string = value.toString().split('.')[0]
-      const percentage = Number(string)
-      return percentage
-    }
+
+  data.life.current = current
+  data.life.max = max
+  $('.lifeBar').css('width', `${calculateBar(current, max)}%`)
+  $('#lifeCount').text(`${current}/${max}`)
+
+  closeModal('#lifeModal')
+  event.preventDefault()
+})
+
+$('#changeSanity').submit(function (event) {
+  let current = Number($('#sanityCurrent').val())
+  const max = Number($('#sanityMax').val())
+
+  if (current > max) {
+    alert('A mana atual não pode ser maior que a maxima!')
+    current = max
   }
-  //abrir modal de vida/mana//
-  function openModal(modal) {
-    const Modal = $(modal)
-    Modal.css('display', 'block')
+
+  data.sanity.current = current
+  data.sanity.max = max
+  $('.sanityBar').css('width', `${calculateBar(current, max)}%`)
+  $('#sanityCount').text(`${current}/${max}`)
+
+  closeModal('#sanityModal')
+  event.preventDefault()
+})
+
+function calculateBar(current, max) {
+  if (current > max) {
+    return 100
+  } else if (current < 0) {
+    return 0
+  } else {
+    const value = (100 / max) * current
+    const string = value.toString().split('.')[0]
+    const percentage = Number(string)
+    return percentage
   }
-  //fechar modal de via/mana//
-  function closeModal(modal) {
-    const Modal = $(modal)
-    Modal.css('display', 'none')
-  }
-  //atributos//
-  function addAttribute(attribute, id) {
-    const newAttribute = $(`<div class="attribute" id="attribute_${id}">
-      <a onclick="rollAtribute('${attribute.type}', ${attribute.amount})">
-      </a>
-      <h3>${attribute.type}</h3>
-      <input type="text" name="appearance" value="${attribute.amount}" id="attribute_input_${id}" disabled>
-    </div>`)
-    $('#attributesList').append(newAttribute)
-  }
-  
-//habilidade//
+}
+
+function openModal(modal) {
+  const Modal = $(modal)
+  Modal.css('display', 'block')
+}
+
+function closeModal(modal) {
+  const Modal = $(modal)
+  Modal.css('display', 'none')
+}
+function addAttribute(attribute, id) {
+  const newAttribute = $(`<div class="attribute" id="attribute_${id}">
+    <a onclick="rollAtribute('${attribute.type}', ${attribute.amount})">
+    </a>
+    <h3>${attribute.type}</h3>
+    <input type="text" name="appearance" value="${attribute.amount}" id="attribute_input_${id}" disabled>
+  </div>`)
+  $('#attributesList').append(newAttribute)
+}
+
+function deleteWeapon(id) {
+  $(`tr#${id}`).remove()
+}
+//botão da habilidade//
 function leiaMais1() {
     const tresPontos1 = document.getElementById('tresPontos1');
     const mostrarMais1 = document.getElementById('mostrarMais1');
@@ -168,11 +174,11 @@ function leiaMais1() {
     if (tresPontos1.style.display === 'none') {
         tresPontos1.style.display = 'inline';
         mostrarMais1.style.display = 'none';
-        btnLeiaMais1.innerHTML = 'Anti-diabetes';
+        btnLeiaMais1.innerHTML = 'Primeiro selo';
     } else {
         tresPontos1.style.display = 'none';
         mostrarMais1.style.display = 'inline';
-        btnLeiaMais1.innerHTML = 'Anti-diabetes';
+        btnLeiaMais1.innerHTML = 'Primeiro selo';
     }
 }
 function leiaMais2() {
@@ -183,11 +189,11 @@ function leiaMais2() {
   if (tresPontos2.style.display === 'none') {
       tresPontos2.style.display = 'inline';
       mostrarMais2.style.display = 'none';
-      btnLeiaMais2.innerHTML = 'Haki de armamento';
+      btnLeiaMais2.innerHTML = 'Segundo selo';
   } else {
       tresPontos2.style.display = 'none';
       mostrarMais2.style.display = 'inline';
-      btnLeiaMais2.innerHTML = 'Haki de armamento';
+      btnLeiaMais2.innerHTML = 'Segundo selo';
   }
 }
 function leiaMais3() {
@@ -198,11 +204,11 @@ function leiaMais3() {
   if (tresPontos3.style.display === 'none') {
       tresPontos3.style.display = 'inline';
       mostrarMais3.style.display = 'none';
-      btnLeiaMais3.innerHTML = 'Haki de observação';
+      btnLeiaMais3.innerHTML = 'terceiro selo';
   } else {
       tresPontos3.style.display = 'none';
       mostrarMais3.style.display = 'inline';
-      btnLeiaMais3.innerHTML = 'Haki de observação';
+      btnLeiaMais3.innerHTML = 'terceiro selo';
   }
 }
 function leiaMais4() {
@@ -213,11 +219,11 @@ function leiaMais4() {
   if (tresPontos4.style.display === 'none') {
       tresPontos4.style.display = 'inline';
       mostrarMais4.style.display = 'none';
-      btnLeiaMais4.innerHTML = 'Imunidade a ilusões';
+      btnLeiaMais4.innerHTML = 'Maldição da bomba';
   } else {
       tresPontos4.style.display = 'none';
       mostrarMais4.style.display = 'inline';
-      btnLeiaMais4.innerHTML = 'Imunidade a ilusões';
+      btnLeiaMais4.innerHTML = 'Maldição da bomba';
   }
 }
 function leiaMais5() {
@@ -228,11 +234,11 @@ function leiaMais5() {
   if (tresPontos5.style.display === 'none') {
       tresPontos5.style.display = 'inline';
       mostrarMais5.style.display = 'none';
-      btnLeiaMais5.innerHTML = 'Habilidades mentais';
+      btnLeiaMais5.innerHTML = 'Tenga goken';
   } else {
       tresPontos5.style.display = 'none';
       mostrarMais5.style.display = 'inline';
-      btnLeiaMais5.innerHTML = 'Habilidades mentais';
+      btnLeiaMais5.innerHTML = 'Tenga goken';
   }
 }
 function leiaMais6() {
@@ -243,11 +249,11 @@ function leiaMais6() {
   if (tresPontos6.style.display === 'none') {
       tresPontos6.style.display = 'inline';
       mostrarMais6.style.display = 'none';
-      btnLeiaMais6.innerHTML = 'Intangibilidade';
+      btnLeiaMais6.innerHTML = 'Tenchi Kaimei';
   } else {
       tresPontos6.style.display = 'none';
       mostrarMais6.style.display = 'inline';
-      btnLeiaMais6.innerHTML = 'Intangibilidade';
+      btnLeiaMais6.innerHTML = 'Tenchi Kaimei';
   }
 }
 function leiaMais7() {
@@ -258,11 +264,11 @@ function leiaMais7() {
   if (tresPontos7.style.display === 'none') {
       tresPontos7.style.display = 'inline';
       mostrarMais7.style.display = 'none';
-      btnLeiaMais7.innerHTML = 'Transformação em fumaça';
+      btnLeiaMais7.innerHTML = 'Devil slayer de gelo';
   } else {
       tresPontos7.style.display = 'none';
       mostrarMais7.style.display = 'inline';
-      btnLeiaMais7.innerHTML = 'Transformação em fumaça';
+      btnLeiaMais7.innerHTML = 'Devil slayer de gelo';
   }
 }
 function leiaMais8() {
@@ -273,11 +279,11 @@ function leiaMais8() {
   if (tresPontos8.style.display === 'none') {
       tresPontos8.style.display = 'inline';
       mostrarMais8.style.display = 'none';
-      btnLeiaMais8.innerHTML = 'Manipulçao de mana';
+      btnLeiaMais8.innerHTML = 'Maldição dos espinhos';
   } else {
       tresPontos8.style.display = 'none';
       mostrarMais8.style.display = 'inline';
-      btnLeiaMais8.innerHTML = 'Manipulçao de mana';
+      btnLeiaMais8.innerHTML = 'Maldição dos espinhos';
   }
 }
 function leiaMais9() {
@@ -288,11 +294,11 @@ function leiaMais9() {
   if (tresPontos9.style.display === 'none') {
       tresPontos9.style.display = 'inline';
       mostrarMais9.style.display = 'none';
-      btnLeiaMais9.innerHTML = 'Oni giri';
+      btnLeiaMais9.innerHTML = 'Absorption curse';
   } else {
       tresPontos9.style.display = 'none';
       mostrarMais9.style.display = 'inline';
-      btnLeiaMais9.innerHTML = 'Oni giri';
+      btnLeiaMais9.innerHTML = 'Absorption curse';
   }
 }
 function leiaMais10() {
@@ -303,11 +309,11 @@ function leiaMais10() {
   if (tresPontos10.style.display === 'none') {
       tresPontos10.style.display = 'inline';
       mostrarMais10.style.display = 'none';
-      btnLeiaMais10.innerHTML = 'Enbima yonezu oni giri';
+      btnLeiaMais10.innerHTML = 'Aprimoramento';
   } else {
       tresPontos10.style.display = 'none';
       mostrarMais10.style.display = 'inline';
-      btnLeiaMais10.innerHTML = 'Enbima yonezu oni giri';
+      btnLeiaMais10.innerHTML = 'Aprimoramento';
   }
 }
 function leiaMais11() {
@@ -318,11 +324,11 @@ function leiaMais11() {
   if (tresPontos11.style.display === 'none') {
       tresPontos11.style.display = 'inline';
       mostrarMais11.style.display = 'none';
-      btnLeiaMais11.innerHTML = 'Tora gari';
+      btnLeiaMais11.innerHTML = 'Calamity Curse';
   } else {
       tresPontos11.style.display = 'none';
       mostrarMais11.style.display = 'inline';
-      btnLeiaMais11.innerHTML = 'Tora gari';
+      btnLeiaMais11.innerHTML = 'Calamity Curse';
   }
 }
 function leiaMais12() {
@@ -333,11 +339,11 @@ function leiaMais12() {
   if (tresPontos12.style.display === 'none') {
       tresPontos12.style.display = 'inline';
       mostrarMais12.style.display = 'none';
-      btnLeiaMais12.innerHTML = 'Ul-tora gari';
+      btnLeiaMais12.innerHTML = 'Macro';
   } else {
       tresPontos12.style.display = 'none';
       mostrarMais12.style.display = 'inline';
-      btnLeiaMais12.innerHTML = 'Ul-tora gari';
+      btnLeiaMais12.innerHTML = 'Macro';
   }
 }
 function leiaMais13() {
@@ -348,11 +354,11 @@ function leiaMais13() {
   if (tresPontos13.style.display === 'none') {
       tresPontos13.style.display = 'inline';
       mostrarMais13.style.display = 'none';
-      btnLeiaMais13.innerHTML = 'Toro nagashi';
+      btnLeiaMais13.innerHTML = 'Conexão';
   } else {
       tresPontos13.style.display = 'none';
       mostrarMais13.style.display = 'inline';
-      btnLeiaMais13.innerHTML = 'Toro nagashi';
+      btnLeiaMais13.innerHTML = 'Conexão';
   }
 }
 function leiaMais14() {
@@ -363,11 +369,11 @@ function leiaMais14() {
   if (tresPontos14.style.display === 'none') {
       tresPontos14.style.display = 'inline';
       mostrarMais14.style.display = 'none';
-      btnLeiaMais14.innerHTML = 'Tatsumaki';
+      btnLeiaMais14.innerHTML = 'Demon eyes';
   } else {
       tresPontos14.style.display = 'none';
       mostrarMais14.style.display = 'inline';
-      btnLeiaMais14.innerHTML = 'Tatsumaki';
+      btnLeiaMais14.innerHTML = 'Demon eyes';
   }
 }
 function leiaMais15() {
@@ -378,11 +384,11 @@ function leiaMais15() {
   if (tresPontos15.style.display === 'none') {
       tresPontos15.style.display = 'inline';
       mostrarMais15.style.display = 'none';
-      btnLeiaMais15.innerHTML = 'Kokujo: o tatsumaki';
+      btnLeiaMais15.innerHTML = 'Necromancer';
   } else {
       tresPontos15.style.display = 'none';
       mostrarMais15.style.display = 'inline';
-      btnLeiaMais15.innerHTML = 'Kokujo: o tatsumaki';
+      btnLeiaMais15.innerHTML = 'Necromancer';
   }
 }
 function leiaMais16() {
@@ -393,11 +399,11 @@ function leiaMais16() {
   if (tresPontos16.style.display === 'none') {
       tresPontos16.style.display = 'inline';
       mostrarMais16.style.display = 'none';
-      btnLeiaMais16.innerHTML = 'Karasume gari';
+      btnLeiaMais16.innerHTML = 'Memento mori';
   } else {
       tresPontos16.style.display = 'none';
       mostrarMais16.style.display = 'inline';
-      btnLeiaMais16.innerHTML = 'Karasume gari';
+      btnLeiaMais16.innerHTML = 'Memento mori';
   }
 }
 function leiaMais17() {
@@ -408,11 +414,11 @@ function leiaMais17() {
   if (tresPontos17.style.display === 'none') {
       tresPontos17.style.display = 'inline';
       mostrarMais17.style.display = 'none';
-      btnLeiaMais17.innerHTML = 'Daibutsu giri';
+      btnLeiaMais17.innerHTML = 'Telepatia';
   } else {
       tresPontos17.style.display = 'none';
       mostrarMais17.style.display = 'inline';
-      btnLeiaMais17.innerHTML = 'Daibutsu giri';
+      btnLeiaMais17.innerHTML = 'Telepatia';
   }
 }
 function leiaMais18() {
@@ -423,11 +429,11 @@ function leiaMais18() {
   if (tresPontos18.style.display === 'none') {
       tresPontos18.style.display = 'inline';
       mostrarMais18.style.display = 'none';
-      btnLeiaMais18.innerHTML = 'Santoryu ogi: sanzen senkai';
+      btnLeiaMais18.innerHTML = 'Alegria';
   } else {
       tresPontos18.style.display = 'none';
       mostrarMais18.style.display = 'inline';
-      btnLeiaMais18.innerHTML = 'Santoryu ogi: sanzen senkai';
+      btnLeiaMais18.innerHTML = 'Alegria';
   }
 }
 function leiaMais19() {
@@ -438,11 +444,11 @@ function leiaMais19() {
   if (tresPontos19.style.display === 'none') {
       tresPontos19.style.display = 'inline';
       mostrarMais19.style.display = 'none';
-      btnLeiaMais19.innerHTML = 'Asura: ichibugin';
+      btnLeiaMais19.innerHTML = 'Flor da Prisão';
   } else {
       tresPontos19.style.display = 'none';
       mostrarMais19.style.display = 'inline';
-      btnLeiaMais19.innerHTML = 'Asura: ichibugin';
+      btnLeiaMais19.innerHTML = 'Flor da Prisão';
   }
 }
 function leiaMais20() {
@@ -453,11 +459,11 @@ function leiaMais20() {
   if (tresPontos20.style.display === 'none') {
       tresPontos20.style.display = 'inline';
       mostrarMais20.style.display = 'none';
-      btnLeiaMais20.innerHTML = 'Asura: makyusen';
+      btnLeiaMais20.innerHTML = 'Explosão';
   } else {
       tresPontos20.style.display = 'none';
       mostrarMais20.style.display = 'inline';
-      btnLeiaMais20.innerHTML = 'Asura: makyusen';
+      btnLeiaMais20.innerHTML = 'Explosão';
   }
 }
 function leiaMais21() {
@@ -468,11 +474,11 @@ function leiaMais21() {
   if (tresPontos21.style.display === 'none') {
       tresPontos21.style.display = 'inline';
       mostrarMais21.style.display = 'none';
-      btnLeiaMais21.innerHTML = 'Asura: ugui';
+      btnLeiaMais21.innerHTML = 'Dea Yggdrasil';
   } else {
       tresPontos21.style.display = 'none';
       mostrarMais21.style.display = 'inline';
-      btnLeiaMais21.innerHTML = 'Asura: ugui';
+      btnLeiaMais21.innerHTML = 'Dea Yggdrasil';
   }
 }
 function leiaMais22() {
@@ -483,11 +489,11 @@ function leiaMais22() {
   if (tresPontos22.style.display === 'none') {
       tresPontos22.style.display = 'inline';
       mostrarMais22.style.display = 'none';
-      btnLeiaMais22.innerHTML = 'Reequip';
+      btnLeiaMais22.innerHTML = 'Organic Link Magic';
   } else {
       tresPontos22.style.display = 'none';
       mostrarMais22.style.display = 'inline';
-      btnLeiaMais22.innerHTML = 'Reequip';
+      btnLeiaMais22.innerHTML = 'Organic Link Magic';
   }
 }
 function leiaMais23() {
@@ -498,11 +504,11 @@ function leiaMais23() {
   if (tresPontos23.style.display === 'none') {
       tresPontos23.style.display = 'inline';
       mostrarMais23.style.display = 'none';
-      btnLeiaMais23.innerHTML = 'Santoryuu';
+      btnLeiaMais23.innerHTML = 'Aprimoramento por segundo';
   } else {
       tresPontos23.style.display = 'none';
       mostrarMais23.style.display = 'inline';
-      btnLeiaMais23.innerHTML = 'Santoryuu';
+      btnLeiaMais23.innerHTML = 'Aprimoramento por segundo';
   }
 }
 function leiaMais24() {
@@ -725,11 +731,11 @@ function leiaMais1a() {
   if (tresPontos1a.style.display === 'none') {
       tresPontos1a.style.display = 'inline';
       mostrarMais1a.style.display = 'none';
-      btnLeiaMais1a.innerHTML = 'Doce pesadelo';
+      btnLeiaMais1a.innerHTML = 'Evitar Flecha';
   } else {
       tresPontos1a.style.display = 'none';
       mostrarMais1a.style.display = 'inline';
-      btnLeiaMais1a.innerHTML = 'Doce pesadelo';
+      btnLeiaMais1a.innerHTML = 'Evitar Flecha';
   }
 }
 function leiaMais2a() {
@@ -740,11 +746,11 @@ const btnLeiaMais2a = document.getElementById('btnLeiaMais2a');
 if (tresPontos2a.style.display === 'none') {
     tresPontos2a.style.display = 'inline';
     mostrarMais2a.style.display = 'none';
-    btnLeiaMais2a.innerHTML = 'A mente de um maluco';
+    btnLeiaMais2a.innerHTML = 'Garantia de Flecha';
 } else {
     tresPontos2a.style.display = 'none';
     mostrarMais2a.style.display = 'inline';
-    btnLeiaMais2a.innerHTML = 'A mente de um maluco';
+    btnLeiaMais2a.innerHTML = 'Garantia de Flecha';
 }
 }
 function leiaMais3a() {
@@ -1107,6 +1113,7 @@ if (tresPontos26a.style.display === 'none') {
     btnLeiaMais26a.innerHTML = 'Benção da cozinha';
 }
 }
+
 function leiaMais27a() {
 const tresPontos27a = document.getElementById('tresPontos27a');
 const mostrarMais27a = document.getElementById('mostrarMais27a');
@@ -1272,24 +1279,144 @@ function leiaMais38a() {
         btnLeiaMais38a.innerHTML = 'Benção da indestrutibilidade ';
     }
     }
-    //inventário//
-    function leiaMais1b() {
-        const tresPontos1b = document.getElementById('tresPontos1b');
-        const mostrarMais1b = document.getElementById('mostrarMais1b');
-        const btnLeiaMais1b = document.getElementById('btnLeiaMais1b');
-    
-        if (tresPontos1b.style.display === 'none') {
-            tresPontos1b.style.display = 'inline';
-            mostrarMais1b.style.display = 'none';
-            btnLeiaMais1b.innerHTML = 'Armas';
+    function leiaMais37a() {
+        const tresPontos37a = document.getElementById('tresPontos37a');
+        const mostrarMais37a = document.getElementById('mostrarMais37a');
+        const btnLeiaMais37a = document.getElementById('btnLeiaMais37a');
+        
+        if (tresPontos37a.style.display === 'none') {
+            tresPontos37a.style.display = 'inline';
+            mostrarMais37a.style.display = 'none';
+            btnLeiaMais37a.innerHTML = 'Proteção Divina da Vestimenta';
         } else {
-            tresPontos1b.style.display = 'none';
-            mostrarMais1b.style.display = 'inline';
-            btnLeiaMais1b.innerHTML = 'Armas';
+            tresPontos37a.style.display = 'none';
+            mostrarMais37a.style.display = 'inline';
+            btnLeiaMais37a.innerHTML = 'Proteção Divina da Vestimenta';
         }
+        }
+
+        // document.getElementById('discount-form').addEventListener('submit', calculateDiscount);
+
+ document.getElementById('discount-form').addEventListener('submit', function(e) {
+
+    // Hide Results
+    document.getElementById('results').style.display = 'none';
+
+    // Show Loader
+    document.getElementById('loader').style.display = 'block';
+
+
+    setTimeout(calculateDiscount, 700);
+
+    e.preventDefault();
+ });
+
+ 
+// Calculate Results
+function calculateDiscount() {
+ 
+    // UI variables
+    const actualPrice = document.getElementById('price');
+    const discount = fogo
+    let discountedResult = document.getElementById('discounted-price');
+
+    var fogo = 80
+    var agua = 80
+    var sagrado = 80
+    var morte = -50
+    var veneno = 80
+    var fisico = 80
+    var ether = 80
+    var eletrico = 80
+    var sombra = 80
+    var luz = 80
+    var psiquico = 80
+    var espiritual = 80
+
+    const priceInput = parseFloat(actualPrice.value);
+    const discountInput = parseFloat(discount.value);
+
+    // console.log(priceInput);
+    // console.log(discountInput);
+
+
+    // Complete Formula to find discount
+    const x = priceInput * (discount / 100);
+    
+    // Subtract the discount from the orignal file
+    const discountedPrice = priceInput - x;
+    // console.log(`Discounted Result: ${discountedPrice}`);
+    if(isFinite(discountedPrice)) {
+        discountedResult.value = discountedPrice.toFixed(2);
+
+        // Show Reult
+        document.getElementById('results').style.display = 'block';
+
+        // Hide Loader
+        document.getElementById('loader').style.display = 'none';
+        
+        //    console.log(`Discounted Result: ${discountedResult}`);
+    } else {
+        // console.log('Please check your number');
+        showError('Please check your numbers');
+
+        
     }
-    //modal//
-function openModal(mn){
+
+    // e.preventDefault();
+}
+
+
+// Show Error 
+
+function showError(error) {
+
+            // Hide Reult
+            document.getElementById('results').style.display = 'none';
+
+            // Hide Loader
+            document.getElementById('loader').style.display = 'none';
+ 
+    // Create a div
+    const errorDiv = document.createElement('div');
+
+    // Get Elements
+    const card = document.querySelector('.card');
+    const heading = document.querySelector('.heading');
+
+    // Create a class
+    errorDiv.className = 'alert alert-danger';
+    // Create textnode and append to div
+    errorDiv.appendChild(document.createTextNode(error));
+
+    // Insert error above heading
+    card.insertBefore(errorDiv, heading);
+
+    // Clear error after 3 sec
+    setTimeout(clearError, 3000);
+}
+
+
+// Clear Error Function
+function clearError() {
+    document.querySelector('.alert').remove();
+}
+const openModalButton = document.querySelector("#open-modal");
+const closeModalButton = document.querySelector("#close-modal");
+const modal = document.querySelector("#modal");
+const fade = document.querySelector("#fade");
+
+const toggleModal = () => {
+  modal.classList.toggle("hide");
+  fade.classList.toggle("show");
+};
+
+[openModalButton, closeModalButton, fade].forEach((el) => {
+  el.addEventListener("click", () => toggleModal());
+});
+
+   //modal//
+   function openModal(mn){
     let modal = document.getElementById(mn);
 
     if (typeof modal == 'undefined' || modal === null) return;
