@@ -12,7 +12,7 @@ const data = {
       max: 75 *10 * 3,
     },
     sanity: {
-      current: 2250,
+      current: 2531.25,
       max: 75 *10 * 3 *1.125,
     },
     //valores de atributos//
