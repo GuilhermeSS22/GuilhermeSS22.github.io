@@ -731,11 +731,11 @@ function leiaMais1a() {
   if (tresPontos1a.style.display === 'none') {
       tresPontos1a.style.display = 'inline';
       mostrarMais1a.style.display = 'none';
-      btnLeiaMais1a.innerHTML = 'Coração aquecido';
+      btnLeiaMais1a.innerHTML = 'Apreciado por Deus';
   } else {
       tresPontos1a.style.display = 'none';
       mostrarMais1a.style.display = 'inline';
-      btnLeiaMais1a.innerHTML = 'Coração aquecido';
+      btnLeiaMais1a.innerHTML = 'Apreciado por Deus';
   }
 }
 function leiaMais2a() {
