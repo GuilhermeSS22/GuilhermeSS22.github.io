@@ -1,0 +1,1178 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+body {
+    background: #0a0b0c;
+    color: #fff;
+    font-family: 'Itim', sans-serif;
+}
+
+hr {
+    border-top: 1px solid #bd05d9;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
+    box-shadow: 0px 0px 13px #bd05d9;
+}
+
+h1 {
+    text-align: center;
+}
+
+h2 {
+    text-align: center;
+}
+
+h3 {
+    text-align: center;
+}
+
+h4 {
+    text-align: left;
+}
+
+h1.title {
+    margin-top: 40px;
+    margin-bottom: 30px;
+}
+
+h2.grid-title {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+/*magica*/
+.container {
+    display: grid;
+    grid-template-areas: 
+    'details details details character'
+    'attributes attributes attributes expertise'
+    'combat combat combat combat';
+    grid-gap: 30px;
+
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+.border {
+    border-radius: 9px;
+    border: solid;
+    border-width: 0.1px;
+    border-color: #bd05d9;
+    box-shadow: 0px 0px 9px #bd05d9;
+}
+
+.box {
+    background: #000;
+}
+
+.details { 
+    grid-area: details;
+    height: auto;
+}
+
+.details h2 {
+    border-bottom: #bd05d9 solid 1px;
+    box-shadow: 0px 0px 0px #bd05d9;
+}
+.character { 
+    grid-area: character;
+    width: 420px;
+}
+
+.characterHeader {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 20px;
+}
+
+.characterPhoto {
+    border: solid;
+    border-width: 2px;
+    border-color: #bd05d9;
+    border-radius: 50%;
+}
+
+.dice {
+    height: 80px;
+    margin-top: 18px;
+}
+
+.attributes { 
+    grid-area: attributes;
+}
+
+.expertise { 
+    grid-area: expertise;
+    height: 400px;
+}
+
+.expertise2 { 
+    grid-area: expertise2;
+    height: 400px;
+}
+
+.combat {
+    grid-area: combat;
+    height: 400px;
+}
+.combat .grid-title {
+    flex: 1;
+}
+
+.combat .combatHeader {
+    display: flex;
+    flex-direction: row;
+    justify-self: center;
+}
+
+.combat .combatHeader button {
+    align-self: center;
+    width: 25px;
+    height: 25px;
+    color: #fff;
+    font-size: 22px;
+    background: #0a0b0c;
+    border: 0.1px solid #bd05d9;
+    margin-right: 50px;
+    box-shadow: 0px 0px 13px #bd05d9;
+}
+
+
+.inputs {
+    display: flex;
+    flex-direction: column;
+
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+input {
+    border: none;
+    border-bottom: 2px solid#bd05d9;
+    box-shadow: 0 4px 6px -3px #bd05d9;
+    padding: 3px 4px;
+    margin-bottom: 10px;
+    background-color: #0a0b0c;
+    color: #fff;
+    text-shadow: 0px 0px 23px #bd05d9;
+    font-family: 'Itim', sans-serif;
+}
+
+input:focus {
+    outline: none;
+}
+
+select {
+    border: none;
+    border-bottom: #bd05d9 2px solid;
+    padding: 3px 4px;
+    margin-bottom: 10px;
+    background-color: #0a0b0c;
+    color: #fff;
+    box-shadow: 0 4px 6px -3px #bd05d9;
+    font-family: 'Itim', sans-serif;
+}
+
+select:hover {
+    border: none;
+    background-color: #0a0b0c;
+    border-bottom: #bd05d9 2px solid;
+    box-shadow: 0 4px 6px -3px #bd05d9;
+    font-family: 'Itim', sans-serif;
+    padding: 3px 4px;
+}
+
+select:focus {
+    outline: none;
+}
+
+/* INICIO BARS */
+
+.bars {
+    padding-top: 12px;
+}
+
+.bar {
+    width: 100%;
+    background-color: grey;
+    margin-bottom: 10px;
+    margin-top: 5px;
+    overflow: hidden;
+    border-radius: 7px;
+}
+
+.barcount {
+    width: 100%;
+    margin-left: 10px;
+}
+
+.contentSanityBar {
+    align-self: end;
+    width: 100%;
+    background-color: grey;
+    margin-bottom: 10px;
+    margin-top: 5px;
+    border-radius: 7px;
+}
+.sanity {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+}
+
+
+.bars .checkboxs {
+    text-align: center;
+}
+
+.bars .checkboxs label {
+    margin-right: 10px;
+}
+
+.lifeBar {
+    /* width: 50%; */
+    height: 25px;
+    background-color: #640101;
+    transition: width 2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-radius: 3px;
+}
+
+.sanityBar {
+    width: 50%;
+    height: 25px;
+    background-color: #13cedc;
+    transition: width 2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-radius: 4px;
+}
+
+/* FIM BARS */
+
+.extra {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 15px;
+    padding: 1px 15px;
+}
+
+.extra p {
+    text-align: center;
+    font-weight: bold;
+}
+
+.extra input {
+    width: 50%;
+    text-align: center;
+    font-size: 18px;
+    align-self: center;
+}
+
+.extra .damage {
+    display: flex;
+    flex-direction: column;
+    width: 100px;
+}
+
+.extra .body {
+    display: flex;
+    flex-direction: column;
+    width: 100px;
+}
+
+.extra .exposure {
+    display: flex;
+    flex-direction: column;
+    width: 100px;
+}
+
+.attributes .attributesList {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+.attributes .attribute {
+    display: flex;
+    flex-direction: column;
+    margin: 14px;
+    width: 85px;
+}
+
+.attribute img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: 35px;
+}
+
+.attribute a {
+    cursor: pointer;
+    -webkit-transition: -webkit-transform .8s ease-in-out;
+    transition: transform .8s ease-in-out;
+}
+
+.attribute a:hover {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+}
+  
+.attribute input {
+    width: 50%;
+    text-align: center;
+    font-size: 18px;
+    align-self: center;
+}
+
+.resistencesList {
+    max-height: 90px;
+}
+
+.resistences .resistencesList {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+.resistences .resistence {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    width: 80px;
+    max-height: 90px;
+}
+.resistence img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: 35px;
+}
+
+.resistence input {
+    width: 20%;
+    text-align: center;
+    font-size: 18px;
+    align-self: center;
+    max-height: 90px;
+}
+
+
+/* The Modal (background) */
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0,0,0);
+  background-color: rgb(0 0 0 / 62%);
+}
+
+.modalbutton {
+    border-radius: 20px;
+    border: #bd05d9 2px solid;
+}
+
+.formModal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.modal-content {
+  background-color: #0a0b0c;
+  text-align: center;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #bd05d9;
+  box-shadow: 0px 0px 8px #bd05d9;
+  width: 20%;
+  border-radius: 20px;
+}
+
+.modal-content h2 {
+    font-size: 30px;
+}
+
+.modal-content p {
+    font-size: 25px;
+}
+
+.modal-content input {
+    font-size: 20px;
+    text-align: center;
+}
+
+.modal-content input[type=submit] {
+    margin-top: 12px;
+    margin-bottom: 0px;
+    border: 1px solid;
+    padding: 1px 20px 1px;
+}
+
+.with-input .modal-content {
+    width: 40%;
+}
+
+.with-input#addWeaponModal .modal-content {
+    width: 70%;
+}
+
+.modalDice {
+    height: 35px;
+    -webkit-transition: -webkit-transform .8s ease-in-out;
+    transition: transform .8s ease-in-out;
+}
+
+@media only screen and (min-width: 1000px) {
+    .container {
+        width: 65%;
+    }
+}
+
+@media only screen and (min-width: 1342px) {
+    .container {
+        width: 62%;
+    }
+}
+
+@media only screen and (min-width: 1500px) {
+    .container {
+        width: 50%;
+    }
+}
+
+@media only screen and (min-width: 1920px) {
+    .container {
+        width: 40%;
+    }
+}
+
+input[type="checkbox"] {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+}
+  
+input[type="checkbox"] + label {
+    position: relative;
+    cursor: pointer;
+    padding-left: 20px;
+}
+
+input[type="checkbox"] + label:before {
+    content: "";
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    left: 0;
+    bottom: 2px;
+    border: solid 0.1px #bd05d9;
+    box-shadow: 0 4px 6px -3px #bd05d9;
+    vertical-align: bottom;
+    border-radius: 2px;
+}
+
+input[type="checkbox"]:checked + label:after {
+    content: "";
+    position: absolute;
+    left: 4px;
+    bottom: 6px;
+    width: 4px;
+    height: 7px;
+    border: solid #bd05d9;
+    box-shadow: 0 4px 6px -3px #bd05d9;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+.runaimg {
+    width: 50%;
+    padding-left: 85px;
+}
+
+.run {
+    width: 45px;
+}
+
+/*resistencia*/
+
+td {
+    border-bottom: #bd05d9 solid 1px;
+    box-shadow: 0 3px 5px -3px #bd05d9;
+    padding-left: 20px;
+    text-align: center;
+    width: 90px;
+}
+tr {
+    margin: 2px;
+    padding-left: 20px;
+    text-align: left;
+    width: 120px;
+}
+
+.imgresfo{
+    width: 13px;
+    position: relative;
+    left: 50px;
+}
+
+.imgresag{
+    width: 19px;
+    position: relative;
+    left: 117px;
+}
+
+.imgressag{
+    width: 13px;
+    position: relative;
+    left: 190px;
+}
+.imgresmor{
+    width: 19px;
+    position: relative;
+    left: 260px;
+}
+
+.imgresfis{
+    width: 20px;
+    position: relative;
+    left: 45px;
+}
+.imgresven{
+    width: 20px;
+    position: relative;
+    left: 115px;
+}
+.imgresete{
+    width: 20px;
+    position: relative;
+    left: 180px;
+}
+
+.imgresele{
+    width: 22px;
+    position: relative;
+    left: 245px;
+}
+.imgressom{
+    width: 20px;
+    position: relative;
+    left: 46px;
+}
+.imgresluz{
+    width: 24px;
+    position: relative;
+    left: 110px;
+}
+.imgrespsi{
+    width: 24px;
+    position: relative;
+    left: 165px;
+}
+.imgresesp{
+    width: 24px;
+    position: relative;
+    left: 237px;
+}
+/*C.A*/
+.ca {
+    width: 400px;
+    position: relative;
+    left: 10px;
+    text-align: center;
+    font-size: 20px;
+}
+.caat {
+    text-align: center;
+    position: relative;
+    bottom: 30px;
+}
+.imgresqui{
+    width: 32px;
+    position: relative;
+    left: 100px;
+    bottom: 24px;
+}
+.imgbloq{
+    width: 32px;
+    position: relative;
+    left: 270px;
+    bottom: 24px;
+}
+.imgspeed{
+    width: 40px;
+    position: relative;
+    left: 105px;
+    bottom: 16px;
+}
+.imgzona{
+    width: 40px;
+    position: relative;
+    left: 255px;
+    bottom: 16px;
+}
+.speed {
+    width: 400px;
+    position: relative;
+    left: 10px;
+    text-align: center;
+    font-size: 20px;
+}
+/*maestria*/
+.maesp {
+    width: 400px;
+    position: relative;
+    left: 10px;
+    text-align: center;
+    font-size: 18px;
+}
+.imgmaesal {
+    width: 30px;
+    position: relative;
+    left: 70px;
+    bottom: 10px;
+}
+.imgmaesac {
+    width: 30px;
+    position: relative;
+    left: 180px;
+    bottom: 10px;
+}
+.imgmaesfis {
+    width: 30px;
+    position: relative;
+    left: 280px;
+    bottom: 10px;
+}
+.imgmaesaf {
+    width: 30px;
+    position: relative;
+    left: 70px;
+}
+.imgmaesaa {
+    width: 30px;
+    position: relative;
+    left: 180px;
+}
+.imgmaeslan {
+    width: 30px;
+    position: relative;
+    left: 280px;
+}
+.imgsoul {
+    width: 30px;
+    position: relative;
+    left: 162px;
+}
+/*habilidades*/
+.btnLeiaMais1 {
+    font-size: 21px;
+    position: relative;
+    left: 132px;
+    background: none;
+    color: antiquewhite;
+}
+.btnLeiaMais2 {
+    font-size: 21px;
+    position: relative;
+    left: 130px;
+    background: none;
+    color: antiquewhite;
+}
+.btnLeiaMais3 {
+    font-size: 21px;
+    position: relative;
+    left: 116px;
+    background: none;
+    color: antiquewhite;
+}
+.btnLeiaMais4 {
+    font-size: 21px;
+    position: relative;
+    left: 129px;
+    background: none;
+    color: antiquewhite;
+}
+.btnLeiaMais5 {
+    font-size: 21px;
+    position: relative;
+    left: 147px;
+    background: none;
+    color: antiquewhite;
+}
+.btnLeiaMais6 {
+    font-size: 21px;
+    position: relative;
+    left: 74px;
+    background: none;
+    color: antiquewhite;
+}
+.btnLeiaMais7 {
+    font-size: 21px;
+    position: relative;
+    left: 107px;
+    background: none;
+    color: antiquewhite;
+}
+.btnLeiaMais8 {
+    font-size: 21px;
+    position: relative;
+    left: 142px;
+    background: none;
+    color: antiquewhite;
+}
+.btnLeiaMais9 {
+    font-size: 21px;
+    position: relative;
+    left: 110px;
+    background: none;
+    color: antiquewhite;
+}
+.btnLeiaMais10 {
+    font-size: 21px;
+    position: relative;
+    left: 100px;
+    background: none;
+    color: antiquewhite;
+}
+.btnLeiaMais11 {
+    font-size: 21px;
+    position: relative;
+    left: 105px;
+    background: none;
+    color: antiquewhite;
+}
+.btnLeiaMais12 {
+    font-size: 21px;
+    position: relative;
+    left: 127px;
+    background: none;
+    color: antiquewhite;
+}
+.btnLeiaMais13 {
+    font-size: 21px;
+    position: relative;
+    left: 87px;
+    background: none;
+    color: antiquewhite;
+}
+.btnLeiaMais14 {
+    font-size: 21px;
+    position: relative;
+    left: 150px;
+    background: none;
+    color: antiquewhite;
+}
+.btnLeiaMais15 {
+    font-size: 21px;
+    position: relative;
+    left: 115px;
+    background: none;
+    color: antiquewhite;
+}
+.btnLeiaMais16 {
+    font-size: 21px;
+    position: relative;
+    left: 110px;
+    background: none;
+    color: antiquewhite;
+}
+.btnLeiaMais17 {
+    font-size: 21px;
+    position: relative;
+    left: 138px;
+    background: none;
+    color: antiquewhite;
+}
+.btnLeiaMais18 {
+    font-size: 21px;
+    position: relative;
+    left: 147px;
+    background: none;
+    color: antiquewhite;
+}
+.btnLeiaMais19 {
+    font-size: 21px;
+    position: relative;
+    left: 114px;
+    background: none;
+    color: antiquewhite;
+}
+.btnLeiaMais20 {
+    font-size: 21px;
+    position: relative;
+    left: 135px;
+    background: none;
+    color: antiquewhite;
+}
+.btnLeiaMais21 {
+    font-size: 21px;
+    position: relative;
+    left: 112px;
+    background: none;
+    color: antiquewhite;
+}
+.btnLeiaMais22 {
+    font-size: 21px;
+    position: relative;
+    left: 83px;
+    background: none;
+    color: antiquewhite;
+}
+.btnLeiaMais23 {
+    font-size: 21px;
+    position: relative;
+    left: 40px;
+    background: none;
+    color: antiquewhite;
+}
+.btnLeiaMais24 {
+    font-size: 21px;
+    position: relative;
+    left: 111px;
+    background: none;
+    color: antiquewhite;
+}
+.btnLeiaMais25 {
+    font-size: 21px;
+    position: relative;
+    left: 130px;
+    background: none;
+    color: antiquewhite;
+}
+.btnLeiaMais26 {
+    font-size: 21px;
+    position: relative;
+    left: 145px;
+    background: none;
+    color: antiquewhite;
+}
+.btnLeiaMais27 {
+    font-size: 21px;
+    position: relative;
+    left: 65px;
+    background: none;
+    color: antiquewhite;
+}
+.btnLeiaMais28 {
+    font-size: 21px;
+    position: relative;
+    left: 67px;
+    background: none;
+    color: antiquewhite;
+}
+.btnLeiaMais29 {
+    font-size: 21px;
+    position: relative;
+    left: 63px;
+    background: none;
+    color: antiquewhite;
+}
+.btnLeiaMais30 {
+    font-size: 21px;
+    position: relative;
+    left: 5px;
+    background: none;
+    color: antiquewhite;
+}
+.btnLeiaMais31 {
+    font-size: 21px;
+    position: relative;
+    left: 143px;
+    background: none;
+    color: antiquewhite;
+}
+.btnLeiaMais32 {
+    font-size: 21px;
+    position: relative;
+    left: 63px;
+    background: none;
+    color: antiquewhite;
+}
+.btnLeiaMais33 {
+    font-size: 21px;
+    position: relative;
+    left: 110px;
+    background: none;
+    color: antiquewhite;
+}
+.btnLeiaMais34 {
+    font-size: 21px;
+    position: relative;
+    left: 30px;
+    background: none;
+    color: antiquewhite;
+}
+.btnLeiaMais35 {
+    font-size: 21px;
+    position: relative;
+    left: 91px;
+    background: none;
+    color: antiquewhite;
+}
+.btnLeiaMais36 {
+    font-size: 21px;
+    position: relative;
+    left: 45px;
+    background: none;
+    color: antiquewhite;
+}
+.btnLeiaMais37 {
+    font-size: 21px;
+    position: relative;
+    left: 115px;
+    background: none;
+    color: antiquewhite;
+}
+
+.habilitysec {
+    font-size: 16px;
+}
+.habilitycost {
+    width: 20px;
+}
+.habilityline {
+    font-size: 16px;
+    position: relative;
+    left: 10px;
+}
+.hability {
+    font-size: 16px;
+    display: none;
+    text-align: center;
+}
+#mostrarMais {
+    display:none;
+}
+button{
+    text-align: center;
+    text-decoration: none;
+}
+/*Ofícios*/
+.btnLeiaMais {
+    font-size: 21px;
+    position: relative;
+    left: 22px;
+    background: none;
+    color: antiquewhite;
+}
+.habilitysec2 {
+    font-size: 16px;
+    position: relative;
+    left: 30px;
+}
+.oficio1 {
+    font-size: 16px;
+    position: relative;
+    left: 80px;
+}
+    .bens {
+        font-size: 15px;
+        display: none;
+        position: relative;
+        left: 22px;
+    }
+    .input-group {
+        position: relative;
+        left: 10px;
+    }
+    .semnada {
+        position: relative;
+        left: 118px;
+    }
+
+    .resist {
+        position: relative;
+        left: 55px;
+    }
+              /*botão de inventário*/
+              .fab button{
+                cursor: pointer;
+                width: 48px;
+                height: 48px;
+                border-radius: 30px;
+                background-color: #0a0b0c;
+                border: none;
+                box-shadow: 0 1px 5px #bd05d9;
+                font-size: 24px;
+                color: white;
+                  
+                -webkit-transition: .2s ease-out;
+                -moz-transition: .2s ease-out;
+                transition: .2s ease-out;
+              }
+              
+              .fab button.main{
+                position: fixed;
+                width: 60px;
+                height: 60px;
+                border-radius: 30px;
+                background-color: #0a0b0c;
+                left: 40px;
+                bottom: 300px;
+                z-index: 20;
+              }
+              
+              .fab button.main:before{
+                content: '⏚';
+              }
+              
+              .fab ul{
+                position:absolute;
+                bottom: 0;
+                right: 0;
+                padding:0;
+                padding-right:5px;
+                margin:0;
+                list-style:none;
+                z-index:10;
+                
+                -webkit-transition: .2s ease-out;
+                -moz-transition: .2s ease-out;
+                transition: .2s ease-out;
+              }
+              
+              .fab ul li{
+                display: flex;
+                justify-content: flex-start;
+                position: relative;
+                margin-bottom: -10%;
+                opacity: 0;
+                
+                -webkit-transition: .3s ease-out;
+                -moz-transition: .3s ease-out;
+                transition: .3s ease-out;
+              }
+              
+              .fab ul li label{
+                margin-right:10px;
+                white-space: nowrap;
+                display: block;
+                margin-top: 10px;
+                padding: 5px 8px;
+                background-color: white;
+                box-shadow: 0 1px 3px rgba(0,0,0,.2);
+                border-radius:3px;
+                height: 18px;
+                font-size: 16px;
+                pointer-events: none;
+                opacity:0;
+                
+                -webkit-transition: .2s ease-out;
+                -moz-transition: .2s ease-out;
+                transition: .2s ease-out;
+              }
+              
+              .fab button.main:active,
+              .fab button.main:focus{
+                outline: none;
+                background-color: #0a0b0c;
+                box-shadow: 0 3px 12px #bd05d9;
+               }
+               
+              .fab button.main:active:before,
+              .fab button.main:focus:before{
+                content: '↑';
+              }
+              
+              .fab button.main:active + ul,
+              .fab button.main:focus + ul{
+                bottom: 70px;
+              }
+              
+              .fab button.main:active + ul li,
+              .fab button.main:focus + ul li{
+                margin-bottom: 10px;
+                opacity: 1;
+              }
+              
+              .fab button.main:active + ul li:hover label,
+              .fab button.main:focus + ul li:hover label{
+                opacity: 1;
+              }
+        
+              .modal{
+                background-color: rgba(0,0,0,.5);
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100vw;
+                height: 100vh;
+                display: none;
+            }
+            
+            .modal-content-inv{
+                margin: 0 auto;
+                margin-top: 5%;
+                max-width: 600px;
+                background-color: rgb(0, 0, 0);
+                padding: 0px;
+                box-shadow: 0px 0px 13px #bd05d9;
+                border-radius: 20px;
+            }
+            
+            .modal-header h1 {
+                font-weight: bold;
+                text-align: center;
+            }
+            
+            .modal-header, .modal-body, .modal-footer {
+                padding: 10px;
+            }
+        .modal-header {
+            border-bottom: 1px solid #bd05d9;
+          box-shadow: 0px 8px 8px -10px #bd05d9;
+          width: 40%;
+          left: 170px;
+          position: relative;
+        }
+            .btn-inv {
+                background-color: #000000;
+                color: #fff;
+                width: 90px;
+                height: 30px;
+                border-radius: 7px;
+                box-shadow: 0px 8px 15px -10px #bd05d9;
+                position: relative;
+                left: 243px;
+                font-size: 20px;
+                margin-top: 12px;
+            margin-bottom: 0px;
+            border: none;
+            }
+            
+        .armas-info {
+            margin-left: 35px;
+            max-width: 92%;
+        }
+        .titulo-armas {
+            margin-left: 35px;
+            position: relative;
+            text-align: left;
+        }
+        .close {
+            width: 30px;
+            height: 30px;
+            background-color: #bd05d9;
+            border-radius: 100%;
+            box-shadow: 0px 0px 8px #bd05d9;
+            position: relative;
+            left: 400px;
+            bottom: 20px;
+        }
