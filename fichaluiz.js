@@ -2,16 +2,17 @@ const data = {
   cristal: 500,
   star: 1,
   classe: 4,
+  level: 37,
   age: 20,
   sex: 'male',
 
   life: {
-    current: 1134,
-    max: 27 *10 *4 *1.05,
+    current: 2647,
+    max: 91 * 10 * 4 *1.05 - 340 - 835,
   },
   sanity: {
-    current: 1000,
-    max: 25 *10 *4 *1.0,
+    current: 3560,
+    max: 89 *10 *4 *1.0,
   },
 
   weapons: [
@@ -20,35 +21,35 @@ const data = {
   attributes: [
     {
       type: 'P.Mágico',
-      amount: 26 *1.10,
+      amount: 84 *1.10,
     },
     {
       type: 'Constituição',
-      amount: 25 *1.10,
+      amount: 83 *1.10,
     },
     {
       type: 'Destreza',
-      amount: 27 *1.10,
+      amount: 85 *1.10,
     },
     {
       type: 'Sabedoria',
-      amount: 23 *1.10,
+      amount: 81 *1.10,
     },
     {
       type: 'Força',
-      amount: 21 *1.10,
+      amount: 79 *1.10,
     },
     {
       type: 'Inteligência',
-      amount: 23 *1.10,
+      amount: 81 *1.10,
     },
     {
       type: 'Carisma',
-      amount: 21 *1.10,
+      amount: 79 *1.10,
     },
     {
       type: 'Sorte',
-      amount: 27 *1.10,
+      amount: 85 *1.10,
     },
     {
       type: 'Sanidade',
@@ -64,6 +65,7 @@ data.attributes.map((attribute, index) => {
 
 $('#cristal').val(data.cristal)
 $('#classe').val(data.classe)
+$('#level').val(data.level)
 $('#star').val(data.star)
 $('#age').val(data.age)
 $('#sex').val(data.sex)
@@ -712,7 +714,7 @@ function leiaMais36() {
     const mostrarMais37 = document.getElementById('mostrarMais37');
     const btnLeiaMais37 = document.getElementById('btnLeiaMais37');
   
-    if (tresPontos32a7.style.display === 'none') {
+    if (tresPontos37.style.display === 'none') {
         tresPontos37.style.display = 'inline';
         mostrarMais37.style.display = 'none';
         btnLeiaMais37.innerHTML = 'F.Rashomon';
@@ -722,6 +724,37 @@ function leiaMais36() {
         btnLeiaMais37.innerHTML = 'F.Rashomon';
     }
 }
+
+function leiaMais38() {
+  const tresPontos38 = document.getElementById('tresPontos38');
+  const mostrarMais38 = document.getElementById('mostrarMais38');
+  const btnLeiaMais38 = document.getElementById('btnLeiaMais38');
+
+  if (tresPontos38.style.display === 'none') {
+      tresPontos38.style.display = 'inline';
+      mostrarMais38.style.display = 'none';
+      btnLeiaMais38.innerHTML = 'Ananci soul: True god';
+  } else {
+      tresPontos38.style.display = 'none';
+      mostrarMais38.style.display = 'inline';
+      btnLeiaMais38.innerHTML = 'Ananci soul: True god';
+  }
+}
+function leiaMais39() {
+    const tresPontos39 = document.getElementById('tresPontos39');
+    const mostrarMais39 = document.getElementById('mostrarMais39');
+    const btnLeiaMais39 = document.getElementById('btnLeiaMais39');
+  
+    if (tresPontos39.style.display === 'none') {
+        tresPontos39.style.display = 'inline';
+        mostrarMais39.style.display = 'none';
+        btnLeiaMais39.innerHTML = 'Haniel (fragmento)';
+    } else {
+        tresPontos39.style.display = 'none';
+        mostrarMais39.style.display = 'inline';
+        btnLeiaMais39.innerHTML = 'Haniel (fragmento)';
+    }
+  }
 //bençãos//
 function leiaMais1a() {
   const tresPontos1a = document.getElementById('tresPontos1a');
@@ -1294,7 +1327,1314 @@ function leiaMais38a() {
             btnLeiaMais37a.innerHTML = 'Proteção Divina da Vestimenta';
         }
         }
-
+        function leiaMais39a() {
+            const tresPontos39a = document.getElementById('tresPontos39a');
+            const mostrarMais39a = document.getElementById('mostrarMais39a');
+            const btnLeiaMais39a = document.getElementById('btnLeiaMais39a');
+            
+            if (tresPontos39a.style.display === 'none') {
+                tresPontos39a.style.display = 'inline';
+                mostrarMais39a.style.display = 'none';
+                btnLeiaMais39a.innerHTML = 'Benção da indestrutibilidade ';
+            } else {
+                tresPontos39a.style.display = 'none';
+                mostrarMais39a.style.display = 'inline';
+                btnLeiaMais39a.innerHTML = 'Benção da indestrutibilidade ';
+            }
+            }
+            function leiaMais40a() {
+                const tresPontos40a = document.getElementById('tresPontos40a');
+                const mostrarMais40a = document.getElementById('mostrarMais40a');
+                const btnLeiaMais40a = document.getElementById('btnLeiaMais40a');
+                
+                if (tresPontos40a.style.display === 'none') {
+                    tresPontos40a.style.display = 'inline';
+                    mostrarMais40a.style.display = 'none';
+                    btnLeiaMais40a.innerHTML = 'Flagelo de glória ';
+                } else {
+                    tresPontos40a.style.display = 'none';
+                    mostrarMais40a.style.display = 'inline';
+                    btnLeiaMais40a.innerHTML = 'Flagelo de glória ';
+                }
+                }
+                function leiaMais41a() {
+                    const tresPontos41a = document.getElementById('tresPontos41a');
+                    const mostrarMais41a = document.getElementById('mostrarMais41a');
+                    const btnLeiaMais41a = document.getElementById('btnLeiaMais41a');
+                    
+                    if (tresPontos41a.style.display === 'none') {
+                        tresPontos41a.style.display = 'inline';
+                        mostrarMais41a.style.display = 'none';
+                        btnLeiaMais41a.innerHTML = 'Começo atrasado ';
+                    } else {
+                        tresPontos41a.style.display = 'none';
+                        mostrarMais41a.style.display = 'inline';
+                        btnLeiaMais41a.innerHTML = 'Começo atrasado ';
+                    }
+                    }
+    
+                    function leiaMais1b() {
+                        const tresPontos1b = document.getElementById('tresPontos1b');
+                        const mostrarMais1b = document.getElementById('mostrarMais1b');
+                        const btnLeiaMais1b = document.getElementById('btnLeiaMais1b');
+                      
+                        if (tresPontos1b.style.display === 'none') {
+                            tresPontos1b.style.display = 'inline';
+                            mostrarMais1b.style.display = 'none';
+                            btnLeiaMais1b.innerHTML = 'Evitar Flecha';
+                        } else {
+                            tresPontos1b.style.display = 'none';
+                            mostrarMais1b.style.display = 'inline';
+                            btnLeiaMais1b.innerHTML = 'Evitar Flecha';
+                        }
+                      }
+                      function leiaMais2b() {
+                      const tresPontos2b = document.getElementById('tresPontos2b');
+                      const mostrarMais2b = document.getElementById('mostrarMais2b');
+                      const btnLeiaMais2b = document.getElementById('btnLeiaMais2b');
+                      
+                      if (tresPontos2b.style.display === 'none') {
+                          tresPontos2b.style.display = 'inline';
+                          mostrarMais2b.style.display = 'none';
+                          btnLeiaMais2b.innerHTML = 'Garantia de Flecha';
+                      } else {
+                          tresPontos2b.style.display = 'none';
+                          mostrarMais2b.style.display = 'inline';
+                          btnLeiaMais2b.innerHTML = 'Garantia de Flecha';
+                      }
+                      }
+                      function leiaMais3b() {
+                      const tresPontos3b = document.getElementById('tresPontos3b');
+                      const mostrarMais3b = document.getElementById('mostrarMais3b');
+                      const btnLeiaMais3b = document.getElementById('btnLeiaMais3b');
+                      
+                      if (tresPontos3b.style.display === 'none') {
+                          tresPontos3b.style.display = 'inline';
+                          mostrarMais3b.style.display = 'none';
+                          btnLeiaMais3b.innerHTML = 'Resistência a Mágica';
+                      } else {
+                          tresPontos3b.style.display = 'none';
+                          mostrarMais3b.style.display = 'inline';
+                          btnLeiaMais3b.innerHTML = 'Resistência a Mágica';
+                      }
+                      }
+                      function leiaMais4b() {
+                      const tresPontos4b = document.getElementById('tresPontos4b');
+                      const mostrarMais4b = document.getElementById('mostrarMais4b');
+                      const btnLeiaMais4b = document.getElementById('btnLeiaMais4b');
+                      
+                      if (tresPontos4b.style.display === 'none') {
+                          tresPontos4b.style.display = 'inline';
+                          mostrarMais4b.style.display = 'none';
+                          btnLeiaMais4b.innerHTML = 'Evitar Fogo';
+                      } else {
+                          tresPontos4b.style.display = 'none';
+                          mostrarMais4b.style.display = 'inline';
+                          btnLeiaMais4b.innerHTML = 'Evitar Fogo';
+                      }
+                      }
+                      function leiaMais5b() {
+                      const tresPontos5b = document.getElementById('tresPontos5b');
+                      const mostrarMais5b = document.getElementById('mostrarMais5b');
+                      const btnLeiaMais5b = document.getElementById('btnLeiaMais5b');
+                      
+                      if (tresPontos5b.style.display === 'none') {
+                          tresPontos5b.style.display = 'inline';
+                          mostrarMais5b.style.display = 'none';
+                          btnLeiaMais5b.innerHTML = 'Absorção de impacto';
+                      } else {
+                          tresPontos5b.style.display = 'none';
+                          mostrarMais5b.style.display = 'inline';
+                          btnLeiaMais5b.innerHTML = 'Absorção de impacto';
+                      }
+                      }
+                      function leiaMais6b() {
+                      const tresPontos6b = document.getElementById('tresPontos6b');
+                      const mostrarMais6b = document.getElementById('mostrarMais6b');
+                      const btnLeiaMais6b = document.getElementById('btnLeiaMais6b');
+                      
+                      if (tresPontos6b.style.display === 'none') {
+                          tresPontos6b.style.display = 'inline';
+                          mostrarMais6b.style.display = 'none';
+                          btnLeiaMais6b.innerHTML = 'Resistir a dano físico';
+                      } else {
+                          tresPontos6b.style.display = 'none';
+                          mostrarMais6b.style.display = 'inline';
+                          btnLeiaMais6b.innerHTML = 'Resistir a dano físico';
+                      }
+                      }
+                      function leiaMais7b() {
+                      const tresPontos7b = document.getElementById('tresPontos7b');
+                      const mostrarMais7b = document.getElementById('mostrarMais7b');
+                      const btnLeiaMais7b = document.getElementById('btnLeiaMais7b');
+                      
+                      if (tresPontos7b.style.display === 'none') {
+                          tresPontos7b.style.display = 'inline';
+                          mostrarMais7b.style.display = 'none';
+                          btnLeiaMais7b.innerHTML = 'Água Refletida';
+                      } else {
+                          tresPontos7b.style.display = 'none';
+                          mostrarMais7b.style.display = 'inline';
+                          btnLeiaMais7b.innerHTML = 'Água Refletida';
+                      }
+                      }
+                      function leiaMais8b() {
+                      const tresPontos8b = document.getElementById('tresPontos8b');
+                      const mostrarMais8b = document.getElementById('mostrarMais8b');
+                      const btnLeiaMais8b = document.getElementById('btnLeiaMais8b');
+                      
+                      if (tresPontos8b.style.display === 'none') {
+                          tresPontos8b.style.display = 'inline';
+                          mostrarMais8b.style.display = 'none';
+                          btnLeiaMais8b.innerHTML = 'Imunidade a Escuridão';
+                      } else {
+                          tresPontos8b.style.display = 'none';
+                          mostrarMais8b.style.display = 'inline';
+                          btnLeiaMais8b.innerHTML = 'Imunidade a Escuridão';
+                      }
+                      }
+                      function leiaMais9b() {
+                      const tresPontos9b = document.getElementById('tresPontos9b');
+                      const mostrarMais9b = document.getElementById('mostrarMais9b');
+                      const btnLeiaMais9b = document.getElementById('btnLeiaMais9b');
+                      
+                      if (tresPontos9b.style.display === 'none') {
+                          tresPontos9b.style.display = 'inline';
+                          mostrarMais9b.style.display = 'none';
+                          btnLeiaMais9b.innerHTML = 'Compartilhamento de Luz';
+                      } else {
+                          tresPontos9b.style.display = 'none';
+                          mostrarMais9b.style.display = 'inline';
+                          btnLeiaMais9b.innerHTML = 'Compartilhamento de Luz';
+                      }
+                      }
+                      function leiaMais10b() {
+                      const tresPontos10b = document.getElementById('tresPontos10b');
+                      const mostrarMais10b = document.getElementById('mostrarMais10b');
+                      const btnLeiaMais10b = document.getElementById('btnLeiaMais10b');
+                      
+                      if (tresPontos10b.style.display === 'none') {
+                          tresPontos10b.style.display = 'inline';
+                          mostrarMais10b.style.display = 'none';
+                          btnLeiaMais10b.innerHTML = 'Rapidez';
+                      } else {
+                          tresPontos10b.style.display = 'none';
+                          mostrarMais10b.style.display = 'inline';
+                          btnLeiaMais10b.innerHTML = 'Rapidez';
+                      }
+                      }
+                      function leiaMais11b() {
+                      const tresPontos11b = document.getElementById('tresPontos11b');
+                      const mostrarMais11b = document.getElementById('mostrarMais11b');
+                      const btnLeiaMais11b = document.getElementById('btnLeiaMais11b');
+                      
+                      if (tresPontos11b.style.display === 'none') {
+                          tresPontos11b.style.display = 'inline';
+                          mostrarMais11b.style.display = 'none';
+                          btnLeiaMais11b.innerHTML = 'Mestre em Montaria';
+                      } else {
+                          tresPontos11b.style.display = 'none';
+                          mostrarMais11b.style.display = 'inline';
+                          btnLeiaMais11b.innerHTML = 'Mestre em Montaria';
+                      }
+                      }
+                      function leiaMais12b() {
+                      const tresPontos12b = document.getElementById('tresPontos12b');
+                      const mostrarMais12b = document.getElementById('mostrarMais12b');
+                      const btnLeiaMais12b = document.getElementById('btnLeiaMais12b');
+                      
+                      if (tresPontos12b.style.display === 'none') {
+                          tresPontos12b.style.display = 'inline';
+                          mostrarMais12b.style.display = 'none';
+                          btnLeiaMais12b.innerHTML = 'Iniciativa';
+                      } else {
+                          tresPontos12b.style.display = 'none';
+                          mostrarMais12b.style.display = 'inline';
+                          btnLeiaMais12b.innerHTML = 'Iniciativa';
+                      }
+                      }
+                      function leiaMais13b() {
+                      const tresPontos13b = document.getElementById('tresPontos13b');
+                      const mostrarMais13b = document.getElementById('mostrarMais13b');
+                      const btnLeiaMais13b = document.getElementById('btnLeiaMais13b');
+                      
+                      if (tresPontos13b.style.display === 'none') {
+                          tresPontos13b.style.display = 'inline';
+                          mostrarMais13b.style.display = 'none';
+                          btnLeiaMais13b.innerHTML = 'Imunidade a Ataques Seguidos';
+                      } else {
+                          tresPontos13b.style.display = 'none';
+                          mostrarMais13b.style.display = 'inline';
+                          btnLeiaMais13b.innerHTML = 'Imunidade a Ataques Seguidos';
+                      }
+                      }
+                      function leiaMais14b() {
+                      const tresPontos14b = document.getElementById('tresPontos14b');
+                      const mostrarMais14b = document.getElementById('mostrarMais14b');
+                      const btnLeiaMais14b = document.getElementById('btnLeiaMais14b');
+                      
+                      if (tresPontos14b.style.display === 'none') {
+                          tresPontos14b.style.display = 'inline';
+                          mostrarMais14b.style.display = 'none';
+                          btnLeiaMais14b.innerHTML = 'Benção da Chuva';
+                      } else {
+                          tresPontos14b.style.display = 'none';
+                          mostrarMais14b.style.display = 'inline';
+                          btnLeiaMais14b.innerHTML = 'Benção da Chuva';
+                      }
+                      }
+                      function leiaMais15b() {
+                      const tresPontos15b = document.getElementById('tresPontos15b');
+                      const mostrarMais15b = document.getElementById('mostrarMais15b');
+                      const btnLeiaMais15b = document.getElementById('btnLeiaMais15b');
+                      
+                      if (tresPontos15b.style.display === 'none') {
+                          tresPontos15b.style.display = 'inline';
+                          mostrarMais15b.style.display = 'none';
+                          btnLeiaMais15b.innerHTML = 'Benção da Manhã';
+                      } else {
+                          tresPontos15b.style.display = 'none';
+                          mostrarMais15b.style.display = 'inline';
+                          btnLeiaMais15b.innerHTML = 'Benção da Manhã';
+                      }
+                      }
+                      function leiaMais16b() {
+                      const tresPontos16b = document.getElementById('tresPontos16b');
+                      const mostrarMais16b = document.getElementById('mostrarMais16b');
+                      const btnLeiaMais16b = document.getElementById('btnLeiaMais16b');
+                      
+                      if (tresPontos16b.style.display === 'none') {
+                          tresPontos16b.style.display = 'inline';
+                          mostrarMais16b.style.display = 'none';
+                          btnLeiaMais16b.innerHTML = 'Ler Mentes';
+                      } else {
+                          tresPontos16b.style.display = 'none';
+                          mostrarMais16b.style.display = 'inline';
+                          btnLeiaMais16b.innerHTML = 'Ler Mentes';
+                      }
+                      }
+                      function leiaMais17b() {
+                      const tresPontos17b = document.getElementById('tresPontos17b');
+                      const mostrarMais17b = document.getElementById('mostrarMais17b');
+                      const btnLeiaMais17b = document.getElementById('btnLeiaMais17b');
+                      
+                      if (tresPontos17b.style.display === 'none') {
+                          tresPontos17b.style.display = 'inline';
+                          mostrarMais17b.style.display = 'none';
+                          btnLeiaMais17b.innerHTML = 'Maestria em ítens';
+                      } else {
+                          tresPontos17b.style.display = 'none';
+                          mostrarMais17b.style.display = 'inline';
+                          btnLeiaMais17b.innerHTML = 'Maestria em ítens';
+                      }
+                      }
+                      function leiaMais18b() {
+                      const tresPontos18b = document.getElementById('tresPontos18b');
+                      const mostrarMais18b = document.getElementById('mostrarMais18b');
+                      const btnLeiaMais18b = document.getElementById('btnLeiaMais18b');
+                      
+                      if (tresPontos18b.style.display === 'none') {
+                          tresPontos18b.style.display = 'inline';
+                          mostrarMais18b.style.display = 'none';
+                          btnLeiaMais18b.innerHTML = 'Maestria sem Armas';
+                      } else {
+                          tresPontos18b.style.display = 'none';
+                          mostrarMais18b.style.display = 'inline';
+                          btnLeiaMais18b.innerHTML = 'Maestria sem Armas';
+                      }
+                      }
+                      function leiaMais19b() {
+                      const tresPontos19b = document.getElementById('tresPontos19b');
+                      const mostrarMais19b = document.getElementById('mostrarMais19b');
+                      const btnLeiaMais19b = document.getElementById('btnLeiaMais19b');
+                      
+                      if (tresPontos19b.style.display === 'none') {
+                          tresPontos19b.style.display = 'inline';
+                          mostrarMais19b.style.display = 'none';
+                          btnLeiaMais19b.innerHTML = 'Benção do Deus da Guerra';
+                      } else {
+                          tresPontos19b.style.display = 'none';
+                          mostrarMais19b.style.display = 'inline';
+                          btnLeiaMais19b.innerHTML = 'Benção do Deus da Guerra';
+                      }
+                      }
+                      function leiaMais20b() {
+                      const tresPontos20b = document.getElementById('tresPontos20b');
+                      const mostrarMais20b = document.getElementById('mostrarMais20b');
+                      const btnLeiaMais20b = document.getElementById('btnLeiaMais20b');
+                      
+                      if (tresPontos20b.style.display === 'none') {
+                          tresPontos20b.style.display = 'inline';
+                          mostrarMais20b.style.display = 'none';
+                          btnLeiaMais20b.innerHTML = 'Benção da Água';
+                      } else {
+                          tresPontos20b.style.display = 'none';
+                          mostrarMais20b.style.display = 'inline';
+                          btnLeiaMais20b.innerHTML = 'Benção da Água';
+                      }
+                      }
+                      function leiaMais21b() {
+                      const tresPontos21b = document.getElementById('tresPontos21b');
+                      const mostrarMais21b = document.getElementById('mostrarMais21b');
+                      const btnLeiaMais21b = document.getElementById('btnLeiaMais21b');
+                      
+                      if (tresPontos21b.style.display === 'none') {
+                          tresPontos21b.style.display = 'inline';
+                          mostrarMais21b.style.display = 'none';
+                          btnLeiaMais21b.innerHTML = 'Benção da Névoa';
+                      } else {
+                          tresPontos21b.style.display = 'none';
+                          mostrarMais21b.style.display = 'inline';
+                          btnLeiaMais21b.innerHTML = 'Benção da Névoa';
+                      }
+                      }
+                      function leiaMais22b() {
+                      const tresPontos22b = document.getElementById('tresPontos22b');
+                      const mostrarMais22b = document.getElementById('mostrarMais22b');
+                      const btnLeiaMais22b = document.getElementById('btnLeiaMais22b');
+                      
+                      if (tresPontos22b.style.display === 'none') {
+                          tresPontos22b.style.display = 'inline';
+                          mostrarMais22b.style.display = 'none';
+                          btnLeiaMais22b.innerHTML = 'Benção da Nuvem';
+                      } else {
+                          tresPontos22b.style.display = 'none';
+                          mostrarMais22b.style.display = 'inline';
+                          btnLeiaMais22b.innerHTML = 'Benção da Nuvem';
+                      }
+                      }
+                      function leiaMais23b() {
+                      const tresPontos23b = document.getElementById('tresPontos23b');
+                      const mostrarMais23b = document.getElementById('mostrarMais23b');
+                      const btnLeiaMais23b = document.getElementById('btnLeiaMais23b');
+                      
+                      if (tresPontos23b.style.display === 'none') {
+                          tresPontos23b.style.display = 'inline';
+                          mostrarMais23b.style.display = 'none';
+                          btnLeiaMais23b.innerHTML = 'Benção do Relâmpago';
+                      } else {
+                          tresPontos23b.style.display = 'none';
+                          mostrarMais23b.style.display = 'inline';
+                          btnLeiaMais23b.innerHTML = 'Benção do Relâmpago';
+                      }
+                      }
+                      function leiaMais24b() {
+                      const tresPontos24b = document.getElementById('tresPontos24b');
+                      const mostrarMais24b = document.getElementById('mostrarMais24b');
+                      const btnLeiaMais24b = document.getElementById('btnLeiaMais24b');
+                      
+                      if (tresPontos24b.style.display === 'none') {
+                          tresPontos24b.style.display = 'inline';
+                          mostrarMais24b.style.display = 'none';
+                          btnLeiaMais24b.innerHTML = 'Conhecimento de Sódio';
+                      } else {
+                          tresPontos24b.style.display = 'none';
+                          mostrarMais24b.style.display = 'inline';
+                          btnLeiaMais24b.innerHTML = 'Conhecimento de Sódio';
+                      }
+                      }
+                      function leiaMais25b() {
+                      const tresPontos25b = document.getElementById('tresPontos25b');
+                      const mostrarMais25b = document.getElementById('mostrarMais25b');
+                      const btnLeiaMais25b = document.getElementById('btnLeiaMais25b');
+                      
+                      if (tresPontos25b.style.display === 'none') {
+                          tresPontos25b.style.display = 'inline';
+                          mostrarMais25b.style.display = 'none';
+                          btnLeiaMais25b.innerHTML = 'Rei do Gosto';
+                      } else {
+                          tresPontos25b.style.display = 'none';
+                          mostrarMais25b.style.display = 'inline';
+                          btnLeiaMais25b.innerHTML = 'Rei do Gosto';
+                      }
+                      }
+                      function leiaMais26b() {
+                      const tresPontos26b = document.getElementById('tresPontos26b');
+                      const mostrarMais26b = document.getElementById('mostrarMais26b');
+                      const btnLeiaMais26b = document.getElementById('btnLeiaMais26b');
+                      
+                      if (tresPontos26b.style.display === 'none') {
+                          tresPontos26b.style.display = 'inline';
+                          mostrarMais26b.style.display = 'none';
+                          btnLeiaMais26b.innerHTML = 'Benção da cozinha';
+                      } else {
+                          tresPontos26b.style.display = 'none';
+                          mostrarMais26b.style.display = 'inline';
+                          btnLeiaMais26b.innerHTML = 'Benção da cozinha';
+                      }
+                      }
+                      
+                      function leiaMais27b() {
+                      const tresPontos27b = document.getElementById('tresPontos27b');
+                      const mostrarMais27b = document.getElementById('mostrarMais27b');
+                      const btnLeiaMais27b = document.getElementById('btnLeiaMais27b');
+                      
+                      if (tresPontos27b.style.display === 'none') {
+                          tresPontos27b.style.display = 'inline';
+                          mostrarMais27b.style.display = 'none';
+                          btnLeiaMais27b.innerHTML = 'Design de Roupas';
+                      } else {
+                          tresPontos27b.style.display = 'none';
+                          mostrarMais27b.style.display = 'inline';
+                          btnLeiaMais27b.innerHTML = 'Design de Roupas';
+                      }
+                      }
+                      function leiaMais28b() {
+                      const tresPontos28b = document.getElementById('tresPontos28b');
+                      const mostrarMais28b = document.getElementById('mostrarMais28b');
+                      const btnLeiaMais28b = document.getElementById('btnLeiaMais28b');
+                      
+                      if (tresPontos28b.style.display === 'none') {
+                          tresPontos28b.style.display = 'inline';
+                          mostrarMais28b.style.display = 'none';
+                          btnLeiaMais28b.innerHTML = 'Maestria em Ensinar';
+                      } else {
+                          tresPontos28b.style.display = 'none';
+                          mostrarMais28b.style.display = 'inline';
+                          btnLeiaMais28b.innerHTML = 'Maestria em Ensinar';
+                      }
+                      }
+                      function leiaMais29b() {
+                      const tresPontos29b = document.getElementById('tresPontos29b');
+                      const mostrarMais29b = document.getElementById('mostrarMais29b');
+                      const btnLeiaMais29b = document.getElementById('btnLeiaMais29b');
+                      
+                      if (tresPontos29b.style.display === 'none') {
+                          tresPontos29b.style.display = 'inline';
+                          mostrarMais29b.style.display = 'none';
+                          btnLeiaMais29b.innerHTML = 'Mestre em Treinamento';
+                      } else {
+                          tresPontos29b.style.display = 'none';
+                          mostrarMais29b.style.display = 'inline';
+                          btnLeiaMais29b.innerHTML = 'Mestre em Treinamento';
+                      }
+                      }
+                      function leiaMais30b() {
+                      const tresPontos30b = document.getElementById('tresPontos30b');
+                      const mostrarMais30b = document.getElementById('mostrarMais30b');
+                      const btnLeiaMais30b = document.getElementById('btnLeiaMais30b');
+                      
+                      if (tresPontos30b.style.display === 'none') {
+                          tresPontos30b.style.display = 'inline';
+                          mostrarMais30b.style.display = 'none';
+                          btnLeiaMais30b.innerHTML = 'Imunidade a Veneno';
+                      } else {
+                          tresPontos30b.style.display = 'none';
+                          mostrarMais30b.style.display = 'inline';
+                          btnLeiaMais30b.innerHTML = 'Imunidade a Veneno';
+                      }
+                      }
+                      function leiaMais31b() {
+                      const tresPontos31b = document.getElementById('tresPontos31b');
+                      const mostrarMais31b = document.getElementById('mostrarMais31b');
+                      const btnLeiaMais31b = document.getElementById('btnLeiaMais31b');
+                      
+                      if (tresPontos31b.style.display === 'none') {
+                          tresPontos31b.style.display = 'inline';
+                          mostrarMais31b.style.display = 'none';
+                          btnLeiaMais31b.innerHTML = 'Imunidade a Doenças';
+                      } else {
+                          tresPontos31b.style.display = 'none';
+                          mostrarMais31b.style.display = 'inline';
+                          btnLeiaMais31b.innerHTML = 'Imunidade a Doenças';
+                      }
+                      }
+                      function leiaMais32b() {
+                      const tresPontos32b = document.getElementById('tresPontos32b');
+                      const mostrarMais32b = document.getElementById('mostrarMais32b');
+                      const btnLeiaMais32b = document.getElementById('btnLeiaMais32b');
+                      
+                      if (tresPontos32b.style.display === 'none') {
+                          tresPontos32b.style.display = 'inline';
+                          mostrarMais32b.style.display = 'none';
+                          btnLeiaMais32b.innerHTML = 'Sangramento Poderoso';
+                      } else {
+                          tresPontos32b.style.display = 'none';
+                          mostrarMais32b.style.display = 'inline';
+                          btnLeiaMais32b.innerHTML = 'Sangramento Poderoso';
+                      }
+                      }
+                      function leiaMais33b() {
+                      const tresPontos33b = document.getElementById('tresPontos33b');
+                      const mostrarMais33b = document.getElementById('mostrarMais33b');
+                      const btnLeiaMais33b = document.getElementById('btnLeiaMais33b');
+                      
+                      if (tresPontos33b.style.display === 'none') {
+                          tresPontos33b.style.display = 'inline';
+                          mostrarMais33b.style.display = 'none';
+                          btnLeiaMais33b.innerHTML = 'Benção da Fênix';
+                      } else {
+                          tresPontos33b.style.display = 'none';
+                          mostrarMais33b.style.display = 'inline';
+                          btnLeiaMais33b.innerHTML = 'Benção da Fênix';
+                      }
+                      }
+                      function leiaMais34b() {
+                      const tresPontos34b = document.getElementById('tresPontos34b');
+                      const mostrarMais34b = document.getElementById('mostrarMais34b');
+                      const btnLeiaMais34b = document.getElementById('btnLeiaMais34b');
+                      
+                      if (tresPontos34b.style.display === 'none') {
+                          tresPontos34b.style.display = 'inline';
+                          mostrarMais34b.style.display = 'none';
+                          btnLeiaMais34b.innerHTML = 'Julgamento';
+                      } else {
+                          tresPontos34b.style.display = 'none';
+                          mostrarMais34b.style.display = 'inline';
+                          btnLeiaMais34b.innerHTML = 'Julgamento';
+                      }
+                      }
+                      function leiaMais35b() {
+                      const tresPontos35b = document.getElementById('tresPontos35b');
+                      const mostrarMais35b = document.getElementById('mostrarMais35b');
+                      const btnLeiaMais35b = document.getElementById('btnLeiaMais35b');
+                      
+                      if (tresPontos35b.style.display === 'none') {
+                          tresPontos35b.style.display = 'inline';
+                          mostrarMais35b.style.display = 'none';
+                          btnLeiaMais35b.innerHTML = 'Benção do sol';
+                      } else {
+                          tresPontos35b.style.display = 'none';
+                          mostrarMais35b.style.display = 'inline';
+                          btnLeiaMais35b.innerHTML = 'Benção do sol';
+                      }
+                      }
+                      function leiaMais36b() {
+                      const tresPontos36b = document.getElementById('tresPontos36b');
+                      const mostrarMais36b = document.getElementById('mostrarMais36b');
+                      const btnLeiaMais36b = document.getElementById('btnLeiaMais36b');
+                      
+                      if (tresPontos36b.style.display === 'none') {
+                          tresPontos36b.style.display = 'inline';
+                          mostrarMais36b.style.display = 'none';
+                          btnLeiaMais36b.innerHTML = 'Benção da noite';
+                      } else {
+                          tresPontos36b.style.display = 'none';
+                          mostrarMais36b.style.display = 'inline';
+                          btnLeiaMais36b.innerHTML = 'Benção da noite';
+                      }
+                      }
+                      function leiaMais38b() {
+                          const tresPontos38b = document.getElementById('tresPontos38b');
+                          const mostrarMais38b = document.getElementById('mostrarMais38b');
+                          const btnLeiaMais38b = document.getElementById('btnLeiaMais38b');
+                          
+                          if (tresPontos38b.style.display === 'none') {
+                              tresPontos38b.style.display = 'inline';
+                              mostrarMais38b.style.display = 'none';
+                              btnLeiaMais38b.innerHTML = 'Benção da indestrutibilidade ';
+                          } else {
+                              tresPontos38b.style.display = 'none';
+                              mostrarMais38b.style.display = 'inline';
+                              btnLeiaMais38b.innerHTML = 'Benção da indestrutibilidade ';
+                          }
+                          }
+                          function leiaMais37b() {
+                              const tresPontos37b = document.getElementById('tresPontos37b');
+                              const mostrarMais37b = document.getElementById('mostrarMais37b');
+                              const btnLeiaMais37b = document.getElementById('btnLeiaMais37b');
+                              
+                              if (tresPontos37b.style.display === 'none') {
+                                  tresPontos37b.style.display = 'inline';
+                                  mostrarMais37b.style.display = 'none';
+                                  btnLeiaMais37b.innerHTML = 'Proteção Divina da Vestimenta';
+                              } else {
+                                  tresPontos37b.style.display = 'none';
+                                  mostrarMais37b.style.display = 'inline';
+                                  btnLeiaMais37b.innerHTML = 'Proteção Divina da Vestimenta';
+                              }
+                              }
+                              function leiaMais39b() {
+                                  const tresPontos39b = document.getElementById('tresPontos39b');
+                                  const mostrarMais39b = document.getElementById('mostrarMais39b');
+                                  const btnLeiaMais39b = document.getElementById('btnLeiaMais39b');
+                                  
+                                  if (tresPontos39b.style.display === 'none') {
+                                      tresPontos39b.style.display = 'inline';
+                                      mostrarMais39b.style.display = 'none';
+                                      btnLeiaMais39b.innerHTML = 'Benção da indestrutibilidade ';
+                                  } else {
+                                      tresPontos39b.style.display = 'none';
+                                      mostrarMais39b.style.display = 'inline';
+                                      btnLeiaMais39b.innerHTML = 'Benção da indestrutibilidade ';
+                                  }
+                                  }
+                                  function leiaMais40b() {
+                                      const tresPontos40b = document.getElementById('tresPontos40b');
+                                      const mostrarMais40b = document.getElementById('mostrarMais40b');
+                                      const btnLeiaMais40b = document.getElementById('btnLeiaMais40b');
+                                      
+                                      if (tresPontos40b.style.display === 'none') {
+                                          tresPontos40b.style.display = 'inline';
+                                          mostrarMais40b.style.display = 'none';
+                                          btnLeiaMais40b.innerHTML = 'Flagelo de glória ';
+                                      } else {
+                                          tresPontos40b.style.display = 'none';
+                                          mostrarMais40b.style.display = 'inline';
+                                          btnLeiaMais40b.innerHTML = 'Flagelo de glória ';
+                                      }
+                                      }
+                                      function leiaMais41b() {
+                                          const tresPontos41b = document.getElementById('tresPontos41b');
+                                          const mostrarMais41b = document.getElementById('mostrarMais41b');
+                                          const btnLeiaMais41b = document.getElementById('btnLeiaMais41b');
+                                          
+                                          if (tresPontos41b.style.display === 'none') {
+                                              tresPontos41b.style.display = 'inline';
+                                              mostrarMais41b.style.display = 'none';
+                                              btnLeiaMais41b.innerHTML = 'Começo atrasado ';
+                                          } else {
+                                              tresPontos41b.style.display = 'none';
+                                              mostrarMais41b.style.display = 'inline';
+                                              btnLeiaMais41b.innerHTML = 'Começo atrasado ';
+                                          }
+                                          }
+                                          function leiaMais42b() {
+                                            const tresPontos42b = document.getElementById('tresPontos42b');
+                                            const mostrarMais42b = document.getElementById('mostrarMais42b');
+                                            const btnLeiaMais42b = document.getElementById('btnLeiaMais42b');
+                                          
+                                            if (tresPontos42b.style.display === 'none') {
+                                                tresPontos42b.style.display = 'inline';
+                                                mostrarMais42b.style.display = 'none';
+                                                btnLeiaMais42b.innerHTML = 'Evitar Flecha';
+                                            } else {
+                                                tresPontos42b.style.display = 'none';
+                                                mostrarMais42b.style.display = 'inline';
+                                                btnLeiaMais42b.innerHTML = 'Evitar Flecha';
+                                            }
+                                          }
+                                          function leiaMais43b() {
+                                          const tresPontos43b = document.getElementById('tresPontos43b');
+                                          const mostrarMais43b = document.getElementById('mostrarMais43b');
+                                          const btnLeiaMais43b = document.getElementById('btnLeiaMais43b');
+                                          
+                                          if (tresPontos43b.style.display === 'none') {
+                                              tresPontos43b.style.display = 'inline';
+                                              mostrarMais43b.style.display = 'none';
+                                              btnLeiaMais43b.innerHTML = 'Garantia de Flecha';
+                                          } else {
+                                              tresPontos43b.style.display = 'none';
+                                              mostrarMais43b.style.display = 'inline';
+                                              btnLeiaMais43b.innerHTML = 'Garantia de Flecha';
+                                          }
+                                          }
+                                          function leiaMais44b() {
+                                          const tresPontos44b = document.getElementById('tresPontos44b');
+                                          const mostrarMais44b = document.getElementById('mostrarMais44b');
+                                          const btnLeiaMais44b = document.getElementById('btnLeiaMais44b');
+                                          
+                                          if (tresPontos44b.style.display === 'none') {
+                                              tresPontos44b.style.display = 'inline';
+                                              mostrarMais44b.style.display = 'none';
+                                              btnLeiaMais44b.innerHTML = 'Resistência a Mágica';
+                                          } else {
+                                              tresPontos44b.style.display = 'none';
+                                              mostrarMais44b.style.display = 'inline';
+                                              btnLeiaMais44b.innerHTML = 'Resistência a Mágica';
+                                          }
+                                          }
+                                          function leiaMais45b() {
+                                          const tresPontos45b = document.getElementById('tresPontos45b');
+                                          const mostrarMais45b = document.getElementById('mostrarMais45b');
+                                          const btnLeiaMais45b = document.getElementById('btnLeiaMais45b');
+                                          
+                                          if (tresPontos45b.style.display === 'none') {
+                                              tresPontos45b.style.display = 'inline';
+                                              mostrarMais45b.style.display = 'none';
+                                              btnLeiaMais45b.innerHTML = 'Evitar Fogo';
+                                          } else {
+                                              tresPontos45b.style.display = 'none';
+                                              mostrarMais45b.style.display = 'inline';
+                                              btnLeiaMais45b.innerHTML = 'Evitar Fogo';
+                                          }
+                                          }
+                                          function leiaMais46b() {
+                                          const tresPontos46b = document.getElementById('tresPontos46b');
+                                          const mostrarMais46b = document.getElementById('mostrarMais46b');
+                                          const btnLeiaMais46b = document.getElementById('btnLeiaMais46b');
+                                          
+                                          if (tresPontos46b.style.display === 'none') {
+                                              tresPontos46b.style.display = 'inline';
+                                              mostrarMais46b.style.display = 'none';
+                                              btnLeiaMais46b.innerHTML = 'Absorção de impacto';
+                                          } else {
+                                              tresPontos46b.style.display = 'none';
+                                              mostrarMais46b.style.display = 'inline';
+                                              btnLeiaMais46b.innerHTML = 'Absorção de impacto';
+                                          }
+                                          }
+                                          function leiaMais47b() {
+                                          const tresPontos47b = document.getElementById('tresPontos47b');
+                                          const mostrarMais47b = document.getElementById('mostrarMais47b');
+                                          const btnLeiaMais47b = document.getElementById('btnLeiaMais47b');
+                                          
+                                          if (tresPontos47b.style.display === 'none') {
+                                              tresPontos47b.style.display = 'inline';
+                                              mostrarMais47b.style.display = 'none';
+                                              btnLeiaMais47b.innerHTML = 'Resistir a dano físico';
+                                          } else {
+                                              tresPontos47b.style.display = 'none';
+                                              mostrarMais47b.style.display = 'inline';
+                                              btnLeiaMais47b.innerHTML = 'Resistir a dano físico';
+                                          }
+                                          }
+                                          function leiaMais48b() {
+                                          const tresPontos48b = document.getElementById('tresPontos48b');
+                                          const mostrarMais48b = document.getElementById('mostrarMais48b');
+                                          const btnLeiaMais48b = document.getElementById('btnLeiaMais48b');
+                                          
+                                          if (tresPontos48b.style.display === 'none') {
+                                              tresPontos48b.style.display = 'inline';
+                                              mostrarMais48b.style.display = 'none';
+                                              btnLeiaMais48b.innerHTML = 'Água Refletida';
+                                          } else {
+                                              tresPontos48b.style.display = 'none';
+                                              mostrarMais48b.style.display = 'inline';
+                                              btnLeiaMais48b.innerHTML = 'Água Refletida';
+                                          }
+                                          }
+                                          function leiaMais49b() {
+                                          const tresPontos49b = document.getElementById('tresPontos49b');
+                                          const mostrarMais49b = document.getElementById('mostrarMais49b');
+                                          const btnLeiaMais49b = document.getElementById('btnLeiaMais49b');
+                                          
+                                          if (tresPontos49b.style.display === 'none') {
+                                              tresPontos49b.style.display = 'inline';
+                                              mostrarMais49b.style.display = 'none';
+                                              btnLeiaMais49b.innerHTML = 'Imunidade a Escuridão';
+                                          } else {
+                                              tresPontos49b.style.display = 'none';
+                                              mostrarMais49b.style.display = 'inline';
+                                              btnLeiaMais49b.innerHTML = 'Imunidade a Escuridão';
+                                          }
+                                          }
+                                          function leiaMais50b() {
+                                          const tresPontos50b = document.getElementById('tresPontos50b');
+                                          const mostrarMais50b = document.getElementById('mostrarMais50b');
+                                          const btnLeiaMais50b = document.getElementById('btnLeiaMais50b');
+                                          
+                                          if (tresPontos50b.style.display === 'none') {
+                                              tresPontos50b.style.display = 'inline';
+                                              mostrarMais50b.style.display = 'none';
+                                              btnLeiaMais50b.innerHTML = 'Compartilhamento de Luz';
+                                          } else {
+                                              tresPontos50b.style.display = 'none';
+                                              mostrarMais50b.style.display = 'inline';
+                                              btnLeiaMais50b.innerHTML = 'Compartilhamento de Luz';
+                                          }
+                                          }
+                                          function leiaMais51b() {
+                                          const tresPontos51b = document.getElementById('tresPontos51b');
+                                          const mostrarMais51b = document.getElementById('mostrarMais51b');
+                                          const btnLeiaMais51b = document.getElementById('btnLeiaMais51b');
+                                          
+                                          if (tresPontos51b.style.display === 'none') {
+                                              tresPontos51b.style.display = 'inline';
+                                              mostrarMais51b.style.display = 'none';
+                                              btnLeiaMais51b.innerHTML = 'Rapidez';
+                                          } else {
+                                              tresPontos51b.style.display = 'none';
+                                              mostrarMais51b.style.display = 'inline';
+                                              btnLeiaMais51b.innerHTML = 'Rapidez';
+                                          }
+                                          }
+                                          function leiaMais52b() {
+                                          const tresPontos52b = document.getElementById('tresPontos52b');
+                                          const mostrarMais52b = document.getElementById('mostrarMais52b');
+                                          const btnLeiaMais52b = document.getElementById('btnLeiaMais52b');
+                                          
+                                          if (tresPontos52b.style.display === 'none') {
+                                              tresPontos52b.style.display = 'inline';
+                                              mostrarMais52b.style.display = 'none';
+                                              btnLeiaMais52b.innerHTML = 'Mestre em Montaria';
+                                          } else {
+                                              tresPontos52b.style.display = 'none';
+                                              mostrarMais52b.style.display = 'inline';
+                                              btnLeiaMais52b.innerHTML = 'Mestre em Montaria';
+                                          }
+                                          }
+                                          function leiaMais53b() {
+                                          const tresPontos53b = document.getElementById('tresPontos53b');
+                                          const mostrarMais53b = document.getElementById('mostrarMais53b');
+                                          const btnLeiaMais53b = document.getElementById('btnLeiaMais53b');
+                                          
+                                          if (tresPontos53b.style.display === 'none') {
+                                              tresPontos53b.style.display = 'inline';
+                                              mostrarMais53b.style.display = 'none';
+                                              btnLeiaMais53b.innerHTML = 'Iniciativa';
+                                          } else {
+                                              tresPontos53b.style.display = 'none';
+                                              mostrarMais53b.style.display = 'inline';
+                                              btnLeiaMais53b.innerHTML = 'Iniciativa';
+                                          }
+                                          }
+                                          function leiaMais54b() {
+                                          const tresPontos54b = document.getElementById('tresPontos54b');
+                                          const mostrarMais54b = document.getElementById('mostrarMais54b');
+                                          const btnLeiaMais54b = document.getElementById('btnLeiaMais54b');
+                                          
+                                          if (tresPontos54b.style.display === 'none') {
+                                              tresPontos54b.style.display = 'inline';
+                                              mostrarMais54b.style.display = 'none';
+                                              btnLeiaMais54b.innerHTML = 'Imunidade a Ataques Seguidos';
+                                          } else {
+                                              tresPontos54b.style.display = 'none';
+                                              mostrarMais54b.style.display = 'inline';
+                                              btnLeiaMais54b.innerHTML = 'Imunidade a Ataques Seguidos';
+                                          }
+                                          }
+                                          function leiaMais55b() {
+                                          const tresPontos55b = document.getElementById('tresPontos55b');
+                                          const mostrarMais55b = document.getElementById('mostrarMais55b');
+                                          const btnLeiaMais55b = document.getElementById('btnLeiaMais55b');
+                                          
+                                          if (tresPontos55b.style.display === 'none') {
+                                              tresPontos55b.style.display = 'inline';
+                                              mostrarMais55b.style.display = 'none';
+                                              btnLeiaMais55b.innerHTML = 'Benção da Chuva';
+                                          } else {
+                                              tresPontos55b.style.display = 'none';
+                                              mostrarMais55b.style.display = 'inline';
+                                              btnLeiaMais55b.innerHTML = 'Benção da Chuva';
+                                          }
+                                          }
+                                          function leiaMais56b() {
+                                          const tresPontos56b = document.getElementById('tresPontos56b');
+                                          const mostrarMais56b = document.getElementById('mostrarMais56b');
+                                          const btnLeiaMais56b = document.getElementById('btnLeiaMais56b');
+                                          
+                                          if (tresPontos56b.style.display === 'none') {
+                                              tresPontos56b.style.display = 'inline';
+                                              mostrarMais56b.style.display = 'none';
+                                              btnLeiaMais56b.innerHTML = 'Benção da Manhã';
+                                          } else {
+                                              tresPontos56b.style.display = 'none';
+                                              mostrarMais56b.style.display = 'inline';
+                                              btnLeiaMais56b.innerHTML = 'Benção da Manhã';
+                                          }
+                                          }
+                                          function leiaMais57b() {
+                                          const tresPontos57b = document.getElementById('tresPontos57b');
+                                          const mostrarMais57b = document.getElementById('mostrarMais57b');
+                                          const btnLeiaMais57b = document.getElementById('btnLeiaMais57b');
+                                          
+                                          if (tresPontos57b.style.display === 'none') {
+                                              tresPontos57b.style.display = 'inline';
+                                              mostrarMais57b.style.display = 'none';
+                                              btnLeiaMais57b.innerHTML = 'Ler Mentes';
+                                          } else {
+                                              tresPontos57b.style.display = 'none';
+                                              mostrarMais57b.style.display = 'inline';
+                                              btnLeiaMais57b.innerHTML = 'Ler Mentes';
+                                          }
+                                          }
+                                          function leiaMais58b() {
+                                          const tresPontos58b = document.getElementById('tresPontos58b');
+                                          const mostrarMais58b = document.getElementById('mostrarMais58b');
+                                          const btnLeiaMais58b = document.getElementById('btnLeiaMais58b');
+                                          
+                                          if (tresPontos58b.style.display === 'none') {
+                                              tresPontos58b.style.display = 'inline';
+                                              mostrarMais58b.style.display = 'none';
+                                              btnLeiaMais58b.innerHTML = 'Maestria em ítens';
+                                          } else {
+                                              tresPontos58b.style.display = 'none';
+                                              mostrarMais58b.style.display = 'inline';
+                                              btnLeiaMais58b.innerHTML = 'Maestria em ítens';
+                                          }
+                                          }
+                                          function leiaMais59b() {
+                                          const tresPontos59b = document.getElementById('tresPontos59b');
+                                          const mostrarMais59b = document.getElementById('mostrarMais59b');
+                                          const btnLeiaMais59b = document.getElementById('btnLeiaMais59b');
+                                          
+                                          if (tresPontos59b.style.display === 'none') {
+                                              tresPontos59b.style.display = 'inline';
+                                              mostrarMais59b.style.display = 'none';
+                                              btnLeiaMais59b.innerHTML = 'Maestria sem Armas';
+                                          } else {
+                                              tresPontos59b.style.display = 'none';
+                                              mostrarMais59b.style.display = 'inline';
+                                              btnLeiaMais59b.innerHTML = 'Maestria sem Armas';
+                                          }
+                                          }
+                                          function leiaMais60b() {
+                                          const tresPontos60b = document.getElementById('tresPontos60b');
+                                          const mostrarMais60b = document.getElementById('mostrarMais60b');
+                                          const btnLeiaMais60b = document.getElementById('btnLeiaMais60b');
+                                          
+                                          if (tresPontos60b.style.display === 'none') {
+                                              tresPontos60b.style.display = 'inline';
+                                              mostrarMais60b.style.display = 'none';
+                                              btnLeiaMais60b.innerHTML = 'Benção do Deus da Guerra';
+                                          } else {
+                                              tresPontos60b.style.display = 'none';
+                                              mostrarMais60b.style.display = 'inline';
+                                              btnLeiaMais60b.innerHTML = 'Benção do Deus da Guerra';
+                                          }
+                                          }
+                                          function leiaMais61b() {
+                                          const tresPontos61b = document.getElementById('tresPontos61b');
+                                          const mostrarMais61b = document.getElementById('mostrarMais61b');
+                                          const btnLeiaMais61b = document.getElementById('btnLeiaMais61b');
+                                          
+                                          if (tresPontos61b.style.display === 'none') {
+                                              tresPontos61b.style.display = 'inline';
+                                              mostrarMais61b.style.display = 'none';
+                                              btnLeiaMais61b.innerHTML = 'Benção da Água';
+                                          } else {
+                                              tresPontos61b.style.display = 'none';
+                                              mostrarMais61b.style.display = 'inline';
+                                              btnLeiaMais61b.innerHTML = 'Benção da Água';
+                                          }
+                                          }
+                                          function leiaMais62b() {
+                                          const tresPontos62b = document.getElementById('tresPontos62b');
+                                          const mostrarMais62b = document.getElementById('mostrarMais62b');
+                                          const btnLeiaMais62b = document.getElementById('btnLeiaMais62b');
+                                          
+                                          if (tresPontos62b.style.display === 'none') {
+                                              tresPontos62b.style.display = 'inline';
+                                              mostrarMais62b.style.display = 'none';
+                                              btnLeiaMais62b.innerHTML = 'Benção da Névoa';
+                                          } else {
+                                              tresPontos62b.style.display = 'none';
+                                              mostrarMais62b.style.display = 'inline';
+                                              btnLeiaMais62b.innerHTML = 'Benção da Névoa';
+                                          }
+                                          }
+                                          function leiaMais63b() {
+                                          const tresPontos63b = document.getElementById('tresPontos63b');
+                                          const mostrarMais63b = document.getElementById('mostrarMais63b');
+                                          const btnLeiaMais63b = document.getElementById('btnLeiaMais63b');
+                                          
+                                          if (tresPontos63b.style.display === 'none') {
+                                              tresPontos63b.style.display = 'inline';
+                                              mostrarMais63b.style.display = 'none';
+                                              btnLeiaMais63b.innerHTML = 'Benção da Nuvem';
+                                          } else {
+                                              tresPontos63b.style.display = 'none';
+                                              mostrarMais63b.style.display = 'inline';
+                                              btnLeiaMais63b.innerHTML = 'Benção da Nuvem';
+                                          }
+                                          }
+                                          function leiaMais64b() {
+                                          const tresPontos64b = document.getElementById('tresPontos64b');
+                                          const mostrarMais64b = document.getElementById('mostrarMais64b');
+                                          const btnLeiaMais64b = document.getElementById('btnLeiaMais64b');
+                                          
+                                          if (tresPontos64b.style.display === 'none') {
+                                              tresPontos64b.style.display = 'inline';
+                                              mostrarMais64b.style.display = 'none';
+                                              btnLeiaMais64b.innerHTML = 'Benção do Relâmpago';
+                                          } else {
+                                              tresPontos64b.style.display = 'none';
+                                              mostrarMais64b.style.display = 'inline';
+                                              btnLeiaMais64b.innerHTML = 'Benção do Relâmpago';
+                                          }
+                                          }
+                                          function leiaMais65b() {
+                                          const tresPontos65b = document.getElementById('tresPontos65b');
+                                          const mostrarMais65b = document.getElementById('mostrarMais65b');
+                                          const btnLeiaMais65b = document.getElementById('btnLeiaMais65b');
+                                          
+                                          if (tresPontos65b.style.display === 'none') {
+                                              tresPontos65b.style.display = 'inline';
+                                              mostrarMais65b.style.display = 'none';
+                                              btnLeiaMais65b.innerHTML = 'Conhecimento de Sódio';
+                                          } else {
+                                              tresPontos65b.style.display = 'none';
+                                              mostrarMais65b.style.display = 'inline';
+                                              btnLeiaMais65b.innerHTML = 'Conhecimento de Sódio';
+                                          }
+                                          }
+                                          function leiaMais66b() {
+                                          const tresPontos66b = document.getElementById('tresPontos66b');
+                                          const mostrarMais66b = document.getElementById('mostrarMais66b');
+                                          const btnLeiaMais66b = document.getElementById('btnLeiaMais66b');
+                                          
+                                          if (tresPontos66b.style.display === 'none') {
+                                              tresPontos66b.style.display = 'inline';
+                                              mostrarMais66b.style.display = 'none';
+                                              btnLeiaMais66b.innerHTML = 'Rei do Gosto';
+                                          } else {
+                                              tresPontos66b.style.display = 'none';
+                                              mostrarMais66b.style.display = 'inline';
+                                              btnLeiaMais66b.innerHTML = 'Rei do Gosto';
+                                          }
+                                          }
+                                          function leiaMais67b() {
+                                          const tresPontos67b = document.getElementById('tresPontos67b');
+                                          const mostrarMais67b = document.getElementById('mostrarMais67b');
+                                          const btnLeiaMais67b = document.getElementById('btnLeiaMais67b');
+                                          
+                                          if (tresPontos67b.style.display === 'none') {
+                                              tresPontos67b.style.display = 'inline';
+                                              mostrarMais67b.style.display = 'none';
+                                              btnLeiaMais67b.innerHTML = 'Benção da cozinha';
+                                          } else {
+                                              tresPontos67b.style.display = 'none';
+                                              mostrarMais67b.style.display = 'inline';
+                                              btnLeiaMais67b.innerHTML = 'Benção da cozinha';
+                                          }
+                                          }
+                                          
+                                          function leiaMais68b() {
+                                          const tresPontos68b = document.getElementById('tresPontos68b');
+                                          const mostrarMais68b = document.getElementById('mostrarMais68b');
+                                          const btnLeiaMais68b = document.getElementById('btnLeiaMais68b');
+                                          
+                                          if (tresPontos68b.style.display === 'none') {
+                                              tresPontos68b.style.display = 'inline';
+                                              mostrarMais68b.style.display = 'none';
+                                              btnLeiaMais68b.innerHTML = 'Design de Roupas';
+                                          } else {
+                                              tresPontos68b.style.display = 'none';
+                                              mostrarMais68b.style.display = 'inline';
+                                              btnLeiaMais68b.innerHTML = 'Design de Roupas';
+                                          }
+                                          }
+                                          function leiaMais69b() {
+                                          const tresPontos69b = document.getElementById('tresPontos69b');
+                                          const mostrarMais69b = document.getElementById('mostrarMais69b');
+                                          const btnLeiaMais69b = document.getElementById('btnLeiaMais69b');
+                                          
+                                          if (tresPontos69b.style.display === 'none') {
+                                              tresPontos69b.style.display = 'inline';
+                                              mostrarMais69b.style.display = 'none';
+                                              btnLeiaMais69b.innerHTML = 'Maestria em Ensinar';
+                                          } else {
+                                              tresPontos69b.style.display = 'none';
+                                              mostrarMais69b.style.display = 'inline';
+                                              btnLeiaMais69b.innerHTML = 'Maestria em Ensinar';
+                                          }
+                                          }
+                                          function leiaMais70b() {
+                                          const tresPontos70b = document.getElementById('tresPontos70b');
+                                          const mostrarMais70b = document.getElementById('mostrarMais70b');
+                                          const btnLeiaMais70b = document.getElementById('btnLeiaMais70b');
+                                          
+                                          if (tresPontos70b.style.display === 'none') {
+                                              tresPontos70b.style.display = 'inline';
+                                              mostrarMais70b.style.display = 'none';
+                                              btnLeiaMais70b.innerHTML = 'Mestre em Treinamento';
+                                          } else {
+                                              tresPontos70b.style.display = 'none';
+                                              mostrarMais70b.style.display = 'inline';
+                                              btnLeiaMais70b.innerHTML = 'Mestre em Treinamento';
+                                          }
+                                          }
+                                          function leiaMais71b() {
+                                          const tresPontos71b = document.getElementById('tresPontos71b');
+                                          const mostrarMais71b = document.getElementById('mostrarMais71b');
+                                          const btnLeiaMais71b = document.getElementById('btnLeiaMais71b');
+                                          
+                                          if (tresPontos71b.style.display === 'none') {
+                                              tresPontos71b.style.display = 'inline';
+                                              mostrarMais71b.style.display = 'none';
+                                              btnLeiaMais71b.innerHTML = 'Imunidade a Veneno';
+                                          } else {
+                                              tresPontos71b.style.display = 'none';
+                                              mostrarMais71b.style.display = 'inline';
+                                              btnLeiaMais71b.innerHTML = 'Imunidade a Veneno';
+                                          }
+                                          }
+                                          function leiaMais72b() {
+                                          const tresPontos72b = document.getElementById('tresPontos72b');
+                                          const mostrarMais72b = document.getElementById('mostrarMais72b');
+                                          const btnLeiaMais72b = document.getElementById('btnLeiaMais72b');
+                                          
+                                          if (tresPontos72b.style.display === 'none') {
+                                              tresPontos72b.style.display = 'inline';
+                                              mostrarMais72b.style.display = 'none';
+                                              btnLeiaMais72b.innerHTML = 'Imunidade a Doenças';
+                                          } else {
+                                              tresPontos72b.style.display = 'none';
+                                              mostrarMais72b.style.display = 'inline';
+                                              btnLeiaMais72b.innerHTML = 'Imunidade a Doenças';
+                                          }
+                                          }
+                                          function leiaMais73b() {
+                                          const tresPontos73b = document.getElementById('tresPontos73b');
+                                          const mostrarMais73b = document.getElementById('mostrarMais73b');
+                                          const btnLeiaMais73b = document.getElementById('btnLeiaMais73b');
+                                          
+                                          if (tresPontos73b.style.display === 'none') {
+                                              tresPontos73b.style.display = 'inline';
+                                              mostrarMais73b.style.display = 'none';
+                                              btnLeiaMais73b.innerHTML = 'Sangramento Poderoso';
+                                          } else {
+                                              tresPontos73b.style.display = 'none';
+                                              mostrarMais73b.style.display = 'inline';
+                                              btnLeiaMais73b.innerHTML = 'Sangramento Poderoso';
+                                          }
+                                          }
+                                          function leiaMais74b() {
+                                          const tresPontos74b = document.getElementById('tresPontos74b');
+                                          const mostrarMais74b = document.getElementById('mostrarMais74b');
+                                          const btnLeiaMais74b = document.getElementById('btnLeiaMais74b');
+                                          
+                                          if (tresPontos74b.style.display === 'none') {
+                                              tresPontos74b.style.display = 'inline';
+                                              mostrarMais74b.style.display = 'none';
+                                              btnLeiaMais74b.innerHTML = 'Benção da Fênix';
+                                          } else {
+                                              tresPontos74b.style.display = 'none';
+                                              mostrarMais74b.style.display = 'inline';
+                                              btnLeiaMais74b.innerHTML = 'Benção da Fênix';
+                                          }
+                                          }
+                                          function leiaMais75b() {
+                                          const tresPontos75b = document.getElementById('tresPontos75b');
+                                          const mostrarMais75b = document.getElementById('mostrarMais75b');
+                                          const btnLeiaMais75b = document.getElementById('btnLeiaMais75b');
+                                          
+                                          if (tresPontos75b.style.display === 'none') {
+                                              tresPontos75b.style.display = 'inline';
+                                              mostrarMais75b.style.display = 'none';
+                                              btnLeiaMais75b.innerHTML = 'Julgamento';
+                                          } else {
+                                              tresPontos75b.style.display = 'none';
+                                              mostrarMais75b.style.display = 'inline';
+                                              btnLeiaMais75b.innerHTML = 'Julgamento';
+                                          }
+                                          }
+                                          function leiaMais76b() {
+                                          const tresPontos76b = document.getElementById('tresPontos76b');
+                                          const mostrarMais76b = document.getElementById('mostrarMais76b');
+                                          const btnLeiaMais76b = document.getElementById('btnLeiaMais76b');
+                                          
+                                          if (tresPontos76b.style.display === 'none') {
+                                              tresPontos76b.style.display = 'inline';
+                                              mostrarMais76b.style.display = 'none';
+                                              btnLeiaMais76b.innerHTML = 'Benção do sol';
+                                          } else {
+                                              tresPontos76b.style.display = 'none';
+                                              mostrarMais76b.style.display = 'inline';
+                                              btnLeiaMais76b.innerHTML = 'Benção do sol';
+                                          }
+                                          }
+                                          function leiaMais77b() {
+                                          const tresPontos77b = document.getElementById('tresPontos77b');
+                                          const mostrarMais77b = document.getElementById('mostrarMais77b');
+                                          const btnLeiaMais77b = document.getElementById('btnLeiaMais77b');
+                                          
+                                          if (tresPontos77b.style.display === 'none') {
+                                              tresPontos77b.style.display = 'inline';
+                                              mostrarMais77b.style.display = 'none';
+                                              btnLeiaMais77b.innerHTML = 'Benção da noite';
+                                          } else {
+                                              tresPontos77b.style.display = 'none';
+                                              mostrarMais77b.style.display = 'inline';
+                                              btnLeiaMais77b.innerHTML = 'Benção da noite';
+                                          }
+                                          }
+                                          function leiaMais78b() {
+                                              const tresPontos78b = document.getElementById('tresPontos78b');
+                                              const mostrarMais78b = document.getElementById('mostrarMais78b');
+                                              const btnLeiaMais78b = document.getElementById('btnLeiaMais78b');
+                                              
+                                              if (tresPontos78b.style.display === 'none') {
+                                                  tresPontos78b.style.display = 'inline';
+                                                  mostrarMais78b.style.display = 'none';
+                                                  btnLeiaMais78b.innerHTML = 'Benção da indestrutibilidade ';
+                                              } else {
+                                                  tresPontos78b.style.display = 'none';
+                                                  mostrarMais78b.style.display = 'inline';
+                                                  btnLeiaMais78b.innerHTML = 'Benção da indestrutibilidade ';
+                                              }
+                                              }
+                                              function leiaMais79b() {
+                                                  const tresPontos79b = document.getElementById('tresPontos79b');
+                                                  const mostrarMais79b = document.getElementById('mostrarMais79b');
+                                                  const btnLeiaMais79b = document.getElementById('btnLeiaMais79b');
+                                                  
+                                                  if (tresPontos79b.style.display === 'none') {
+                                                      tresPontos79b.style.display = 'inline';
+                                                      mostrarMais79b.style.display = 'none';
+                                                      btnLeiaMais79b.innerHTML = 'Proteção Divina da Vestimenta';
+                                                  } else {
+                                                      tresPontos79b.style.display = 'none';
+                                                      mostrarMais79b.style.display = 'inline';
+                                                      btnLeiaMais79b.innerHTML = 'Proteção Divina da Vestimenta';
+                                                  }
+                                                  }
+                                                  function leiaMais80b() {
+                                                      const tresPontos80b = document.getElementById('tresPontos80b');
+                                                      const mostrarMais80b = document.getElementById('mostrarMais80b');
+                                                      const btnLeiaMais80b = document.getElementById('btnLeiaMais80b');
+                                                      
+                                                      if (tresPontos80b.style.display === 'none') {
+                                                          tresPontos80b.style.display = 'inline';
+                                                          mostrarMais80b.style.display = 'none';
+                                                          btnLeiaMais80b.innerHTML = 'Benção da indestrutibilidade ';
+                                                      } else {
+                                                          tresPontos80b.style.display = 'none';
+                                                          mostrarMais80b.style.display = 'inline';
+                                                          btnLeiaMais80b.innerHTML = 'Benção da indestrutibilidade ';
+                                                      }
+                                                      }
+                                                      function leiaMais81b() {
+                                                          const tresPontos81b = document.getElementById('tresPontos81b');
+                                                          const mostrarMais81b = document.getElementById('mostrarMais81b');
+                                                          const btnLeiaMais81b = document.getElementById('btnLeiaMais81b');
+                                                          
+                                                          if (tresPontos81b.style.display === 'none') {
+                                                              tresPontos81b.style.display = 'inline';
+                                                              mostrarMais81b.style.display = 'none';
+                                                              btnLeiaMais81b.innerHTML = 'Flagelo de glória ';
+                                                          } else {
+                                                              tresPontos81b.style.display = 'none';
+                                                              mostrarMais81b.style.display = 'inline';
+                                                              btnLeiaMais81b.innerHTML = 'Flagelo de glória ';
+                                                          }
+                                                          }
+                                                          function leiaMais82b() {
+                                                              const tresPontos82b = document.getElementById('tresPontos82b');
+                                                              const mostrarMais82b = document.getElementById('mostrarMais82b');
+                                                              const btnLeiaMais82b = document.getElementById('btnLeiaMais82b');
+                                                              
+                                                              if (tresPontos82b.style.display === 'none') {
+                                                                  tresPontos82b.style.display = 'inline';
+                                                                  mostrarMais82b.style.display = 'none';
+                                                                  btnLeiaMais82b.innerHTML = 'Começo atrasado ';
+                                                              } else {
+                                                                  tresPontos82b.style.display = 'none';
+                                                                  mostrarMais82b.style.display = 'inline';
+                                                                  btnLeiaMais82b.innerHTML = 'Começo atrasado ';
+                                                              }
+                                                              }
+                                                              function leiaMais83b() {
+                                                                const tresPontos83b = document.getElementById('tresPontos83b');
+                                                                const mostrarMais83b = document.getElementById('mostrarMais83b');
+                                                                const btnLeiaMais83b = document.getElementById('btnLeiaMais83b');
+                                                                
+                                                                if (tresPontos83b.style.display === 'none') {
+                                                                    tresPontos83b.style.display = 'inline';
+                                                                    mostrarMais83b.style.display = 'none';
+                                                                    btnLeiaMais83b.innerHTML = 'Flagelo de glória ';
+                                                                } else {
+                                                                    tresPontos83b.style.display = 'none';
+                                                                    mostrarMais83b.style.display = 'inline';
+                                                                    btnLeiaMais83b.innerHTML = 'Flagelo de glória ';
+                                                                }
+                                                                }
+                                                                function leiaMais84b() {
+                                                                    const tresPontos84b = document.getElementById('tresPontos84b');
+                                                                    const mostrarMais84b = document.getElementById('mostrarMais84b');
+                                                                    const btnLeiaMais84b = document.getElementById('btnLeiaMais84b');
+                                                                    
+                                                                    if (tresPontos84b.style.display === 'none') {
+                                                                        tresPontos84b.style.display = 'inline';
+                                                                        mostrarMais84b.style.display = 'none';
+                                                                        btnLeiaMais84b.innerHTML = 'Começo atrasado ';
+                                                                    } else {
+                                                                        tresPontos84b.style.display = 'none';
+                                                                        mostrarMais84b.style.display = 'inline';
+                                                                        btnLeiaMais84b.innerHTML = 'Começo atrasado ';
+                                                                    }
+                                                                    }
         // document.getElementById('discount-form').addEventListener('submit', calculateDiscount);
 
  document.getElementById('discount-form').addEventListener('submit', function(e) {
