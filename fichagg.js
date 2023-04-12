@@ -1,17 +1,18 @@
 const data = {
   cristal: 3700,
   star: 1,
-  classe: 1,
+  classe: 2,
+  level: 20,
   age: 18,
   sex: 'male',
 
   life: {
-    current: 100,
-    max: 10*10 * 1,
+    current: 710,
+    max: 35 *10 * 2,
   },
   sanity: {
-    current: 500,
-    max: 50*10*1,
+    current: 2475,
+    max: 75 *10 *2 *1.5 *1.1,
   },
 
   weapons: [
@@ -20,39 +21,39 @@ const data = {
   attributes: [
     {
       type: 'P.Mágico',
-      amount: 15,
+      amount: 40,
     },
     {
       type: 'Constituição',
-      amount: 10,
+      amount: 35,
     },
     {
       type: 'Destreza',
-      amount: 10,
+      amount: 35,
     },
     {
       type: 'Sabedoria',
-      amount: 12,
+      amount: 37,
     },
     {
       type: 'Força',
-      amount: 9,
+      amount: 34,
     },
     {
       type: 'Inteligência',
-      amount: 20,
+      amount: 45,
     },
     {
       type: 'Carisma',
-      amount: 16,
+      amount: 41,
     },
     {
       type: 'Sorte',
-      amount: 20,
+      amount: 45,
     },
     {
       type: 'Sanidade',
-      amount: 16,
+      amount: 65,
     },
   ],
 }
@@ -64,6 +65,7 @@ data.attributes.map((attribute, index) => {
 
 $('#cristal').val(data.cristal)
 $('#classe').val(data.classe)
+$('#level').val(data.level)
 $('#star').val(data.star)
 $('#age').val(data.age)
 $('#sex').val(data.sex)
@@ -219,11 +221,11 @@ function leiaMais4() {
   if (tresPontos4.style.display === 'none') {
       tresPontos4.style.display = 'inline';
       mostrarMais4.style.display = 'none';
-      btnLeiaMais4.innerHTML = 'Mundo das trevas';
+      btnLeiaMais4.innerHTML = 'Back in black';
   } else {
       tresPontos4.style.display = 'none';
       mostrarMais4.style.display = 'inline';
-      btnLeiaMais4.innerHTML = 'Mundo das trevas';
+      btnLeiaMais4.innerHTML = 'Back in black';
   }
 }
 function leiaMais5() {
