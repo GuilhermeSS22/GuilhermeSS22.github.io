@@ -7,7 +7,7 @@ const data = {
   sex: 'male',
 
   life: {
-    current: 710,
+    current: 700,
     max: 35 *10 * 2,
   },
   sanity: {
@@ -236,11 +236,11 @@ function leiaMais5() {
   if (tresPontos5.style.display === 'none') {
       tresPontos5.style.display = 'inline';
       mostrarMais5.style.display = 'none';
-      btnLeiaMais5.innerHTML = 'Tenga goken';
+      btnLeiaMais5.innerHTML = 'Glapinir';
   } else {
       tresPontos5.style.display = 'none';
       mostrarMais5.style.display = 'inline';
-      btnLeiaMais5.innerHTML = 'Tenga goken';
+      btnLeiaMais5.innerHTML = 'Glapinir';
   }
 }
 function leiaMais6() {
