@@ -1,17 +1,18 @@
 const data = {
   cristal: 0,
   star: 1,
-  classe: 5,
-  age: 995,
+  classe: 2,
+  level: 1,
+  age: 1300,
   sex: 'male',
 
   life: {
-    current: 6350,
-    max: 6350,
+    current: 200,
+    max: 10*10*2,
   },
   sanity: {
-    current: 5000,
-    max: 5000,
+    current: 380,
+    max: 19 *10 *2,
   },
 
   weapons: [
@@ -20,35 +21,35 @@ const data = {
   attributes: [
     {
       type: 'P.Mágico',
-      amount: 210,
+      amount: 22,
     },
     {
       type: 'Constituição',
-      amount: 230,
+      amount: 10,
     },
     {
       type: 'Destreza',
-      amount: 230,
+      amount: 16,
     },
     {
       type: 'Sabedoria',
-      amount: 210,
+      amount: 17,
     },
     {
       type: 'Força',
-      amount: 210,
+      amount: 0,
     },
     {
       type: 'Inteligência',
-      amount: 210,
+      amount: 19,
     },
     {
       type: 'Carisma',
-      amount: 210,
+      amount: 17,
     },
     {
       type: 'Sorte',
-      amount: 150,
+      amount: 60,
     },
     {
       type: 'Sanidade',
@@ -64,6 +65,7 @@ data.attributes.map((attribute, index) => {
 
 $('#cristal').val(data.cristal)
 $('#classe').val(data.classe)
+$('#level').val(data.level)
 $('#star').val(data.star)
 $('#age').val(data.age)
 $('#sex').val(data.sex)
@@ -716,11 +718,11 @@ function leiaMais1a() {
   if (tresPontos1a.style.display === 'none') {
       tresPontos1a.style.display = 'inline';
       mostrarMais1a.style.display = 'none';
-      btnLeiaMais1a.innerHTML = 'Evitar Flecha';
+      btnLeiaMais1a.innerHTML = 'Asas de rei';
   } else {
       tresPontos1a.style.display = 'none';
       mostrarMais1a.style.display = 'inline';
-      btnLeiaMais1a.innerHTML = 'Evitar Flecha';
+      btnLeiaMais1a.innerHTML = 'Asas de rei';
   }
 }
 function leiaMais2a() {
@@ -1248,4 +1250,20 @@ if (tresPontos36a.style.display === 'none') {
     mostrarMais36a.style.display = 'inline';
     btnLeiaMais36a.innerHTML = 'Benção da noite';
 }
+}
+
+function openModal(mn){
+    let modal = document.getElementById(mn);
+
+    if (typeof modal == 'undefined' || modal === null) return;
+
+    modal.style.display = 'block';
+}
+
+function closeModall(mn){
+    let modal = document.getElementById(mn);
+
+    if (typeof modal == 'undefined' || modal === null) return;
+
+    modal.style.display = 'none';
 }
