@@ -11,10 +11,10 @@
 
     <link rel="stylesheet" href="fichakawee.css" />
 
-    <title>Ficha do personagem</title>
+    <title>Ficha Kue</title>
   </head>
   <body>
-    <h1 class="title">Dio Brando</h1>
+    <h1 class="title">k</h1>
 
     <!-- modal -->
     <div id="diceAttributes" class="modal">
@@ -73,6 +73,8 @@
           <input type="text" name="star" id="star" value="" />
           <h4>Classe</h4>
           <input type="text" name="classe" id="classe" value="" />
+          <h4>Nível</h4>
+          <input type="text" name="level" id="level" value="" />
           <h4>Idade</h4>
           <input type="text" name="age" id="age" value="" />
           <h4>Sexo</h4>
@@ -84,24 +86,29 @@
           <br>
           <h2>Alma</h2>
           <br>
-          <h3>Cor da alma: Cíana</h3>
+          <h3>Cor da alma: Verde</h3>
           <h4>Habilidade</h4>
           <br>
           <br>
-          <img src="imagens/soul1.png" class="imgsoul">
+          <img src="soul1.png" class="imgsoul">
           <h2>Soul resonance</h2>
           <br>
           <h4>Passiva:</h4>
           <br>
-          <p>Dobra a regeneração de vida, efeitos negativos passam 2x mais rápidos.</p>
+          <p>Aspectos naturais vivos à sua volta lhe ajudam com o possíel.</p>
           <br>
           <h4>Ativa:</h4>
           <br>
-          <p>Envolvendo seus punhos com energia, transformando seu dano em espiritual, quando acerta alguém, a pessoa ganha um ponto de fantasia, quando a pessoa acumula 5 pontos, ela sofre “tormenta fantástica”.</p> 
+          <p>Sua alma é uma semente que florece de forma relativa à sua vontade. Voce pode escolher uma das formas da sua alma: Rosa, Papoula, Lótus.</p> 
           <br>
+          <p>Rosa: Envolve seus movimentos com pétalas de rosas causando 10% da sua vida máxima como dano <strong>verdadeiro</strong> extra.</p>
+          <br>
+          <p>Papula: Envolve você e seus companheiros com o aroma da papoula, regenerando 25% do dano recebido no turno como cura para vida e mana.</p>
+          <br>
+          <p>Lótus: Florece uma lótus grande abaixo de voce e seus companheiros como aura fazendo a pessoa estar em seu centro. Concede um bônus no ataque de todos fazendo-o causar 50% do dano causado ser dano verdadeiro. Além disso concede 10% da vida máxima como escudo até o final do turno.</p>
           <h2>Runas</h2>
           <br>
-          <img class="runaimg" src="imagens/Rune_slots.webp"/>
+          <img class="runaimg" src="Rune_slots.webp"/>
           <br>
           <h4>1: <select id="rune" name="rune">
             <option value="none">Nenhuma</option>
@@ -319,57 +326,57 @@
                 <br>
                 <table border="1" class="res">
                     <tr>
-                        <img src="imagens/fogo5.png" class="imgresfo">
+                        <img src="fogo5.png" class="imgresfo">
                         <td class="elem">Ígneo</td>
-                        <img src="imagens/agua4.png" class="imgresag">
+                        <img src="agua4.png" class="imgresag">
                         <td class="elem">Hydro</td>
-                        <img src="imagens/sagrado2.webp" class="imgressag">
+                        <img src="sagrado2.webp" class="imgressag">
                         <td class="elem">Sagrado</td>
-                        <img src="imagens/morte11.png" class="imgresmor">
+                        <img src="morte11.png" class="imgresmor">
                         <td class="elem">Morte</td>
                     </tr>
                     <tr>
-                        <td>100%</td>
+                        <td>-100%</td>
                         <td>0%</td>
+                        <td>20%</td>
                         <td>-50%</td>
-                        <td>100%</td>
                     </tr>
                     </table>
                     <table>
                     <tr>
-                        <img src="imagens/fisico.png" class="imgresfis">
+                        <img src="fisico.png" class="imgresfis">
                         <td class="elem">Físico</td>
-                        <img src="imagens/veneno.png" class="imgresven">
+                        <img src="veneno.png" class="imgresven">
                         <td 
                         class="elem">Veneno</td>
-                        <img src="imagens/eterio.png" class="imgresete">
+                        <img src="eterio.png" class="imgresete">
                         <td class="elem">Etério</td>
-                        <img src="imagens/eletrico.png" class="imgresele">
+                        <img src="eletrico.png" class="imgresele">
                         <td class="elem">Elétrico</td>
                     </tr>
                     <tr>
                         <td>0%</td>
-                        <td>100%</td>
                         <td>0%</td>
+                        <td>25%</td>
                         <td>0%</td>
                     </tr>
                     </table>
                     <table>
                     <tr>
-                        <img src="imagens/sombra.png" class="imgressom">
+                        <img src="sombra.png" class="imgressom">
                         <td class="elem">Sombra</td>
-                        <img src="imagens/luz.png" class="imgresluz">
+                        <img src="luz.png" class="imgresluz">
                         <td class="elem">Luz</td>
-                        <img src="imagens/psiquico.png" class="imgrespsi">
+                        <img src="psiquico.png" class="imgrespsi">
                         <td class="elem">Psíquico</td>
-                        <img src="imagens/espiritual.png" class="imgresesp">
+                        <img src="espiritual.png" class="imgresesp">
                         <td class="elem">Espiritual</td>
                     </tr>
                     <tr>
                         <td>0%</td>
                         <td>0%</td>
                         <td>50%</td>
-                        <td>25%</td>
+                        <td>0%</td>
                     </tr>
                 </table>
                 <div class="carrossel owl-carousel">
@@ -378,19 +385,20 @@
                         <br><br>
                         <h2>Habilidades</h2>
                         <hr/>
-                        <button onclick="leiaMais1()" id="btnLeiaMais1" class="btnLeiaMais1">Primeiro selo</button>
-                        <span id="tresPontos1"></span><span id="mostrarMais1" class="hability"><br><br>O corpo de Bloodman é completamente feito de Neter, permitindo que ele deforme, modele e mova seu corpo da maneira que desejar, e o torna quase completamente imune a todas as formas de ambos(danos físicos e mágicos). No entanto, se o próprio atacar um alvo, ele deve permanecer tangível, deixando-o suscetível a contra-ataques. Após a liberação do selo, apenas estar perto de Bloodman incita a morte, já que a grande quantidade de neter oprime e mata aqueles que as inalam.<br>
+                        <button onclick="leiaMais1()" id="btnLeiaMais1" class="btnLeiaMais1">Disaster</button>
+                        <span id="tresPontos1"></span><span id="mostrarMais1" class="hability"><br><br>Essa habildiade permite que King exerça o controle sobre a "vida e a morte" podendo ter controle sobre a flora e fazer com que arranhões se tornem feridas fatais.<br>
+                          Efeito: Causa 25% do dano original ao alvo.
+                          Custo: Essa habilidade pode ser usada uma vez por turno, ou pode sacrificar sua ação para realiza-la uma segunda vez.
                         <br><p class="habilitysec">Passiva</p></span>
                         <hr/>
-                        <button onclick="leiaMais2()" id="btnLeiaMais2" class="btnLeiaMais5">Segundo selo</button>
-                <span id="tresPontos2"></span><span id="mostrarMais2" class="hability"><br><br>Depois de liberar o Primeiro Selo, torna-se capaz de liberar o segundo, que convoca um mar de caveiras que rouba a vida daqueles que são pegos nele. O Segundo Selo pode ser dissipado com magia de elemento "positivo".<br><br>Vida drenada:5% do Hp por turno.
+                        <button onclick="leiaMais2()" id="btnLeiaMais2" class="btnLeiaMais5">Levitação</button>
+                <span id="tresPontos2"></span><span id="mostrarMais2" class="hability"><br><br> Pode levitar qualquer coisa, incluindo a sí mesmo, ecxeto outras pessoas.
                 <br><br><p class="habilitysec">Passiva</p></span>
                 <hr/>
-                <button onclick="leiaMais3()" id="btnLeiaMais3" class="btnLeiaMais3">Terceiro selo</button>
-              <span id="tresPontos3"></span><span id="mostrarMais3" class="hability"><br><br>Torna seu corpo completamente feito de neter.<br><br>Efeito:+50% de mana, 100% de resistencia ao éter.
-                <br><br><p class="habilitysec">Passiva</p></span>
+                <button onclick="leiaMais3()" id="btnLeiaMais3" class="btnLeiaMais3">Transformação</button>
+              <span id="tresPontos3"></span><span id="mostrarMais3" class="hability"><br><br>Pode mudar sua aparencia física e suas roupas.
               <hr/>
-              <button onclick="leiaMais4()" id="btnLeiaMais4" class="btnLeiaMais4">Maldição da bomba</button>
+              <button onclick="leiaMais4()" id="btnLeiaMais4" class="btnLeiaMais4"></button>
             <span id="tresPontos4"></span><span id="mostrarMais4" class="hability"><br><br> Reside completamente no uso de explosões, que podem ser acionadas remotamente ou por contato direto. O usuário também pode criar bombas de mana em um formato desejado. Além disso, qualquer contato que fizerem em você pode fazer com que quem o tocou exploda. Ademais, possui a capacidade de transformar o que deseja em bomba, o próprio corpo do usuário não é excluído disso.<br><br>Dano de explosões:100%.<br>
             <br><p class="habilitysec">Passiva</p></span>
             <hr/>
@@ -619,10 +627,10 @@
         <br>
         <table border="1" class="ca">
             <tr>
-                <img src="imagens/esquiva.png" class="imgresqui">
-                <td class="caat">Esquiva: 255</td>
-                <img src="imagens/bloqueio.png" class="imgbloq">
-                <td class="caat">Bloqueio: 220</td>
+                <img src="esquiva.png" class="imgresqui">
+                <td class="caat">Esquiva: 26</td>
+                <img src="bloqueio.png" class="imgbloq">
+                <td class="caat">Bloqueio: 29</td>
             </tr>
             <tr>
                 <td>Bônus extra: 0</td>
@@ -637,10 +645,10 @@
             <br>
             <table border="1" class="speed">
               <tr>
-                  <img src="imagens/corrida.png" class="imgspeed">
-                  <td class="verozidade">Velocidade:</td>
-                  <img src="imagens/Zona" class="imgzona">
-                  <td class="verozidade">Zona:</td>
+                  <img src="corrida.png" class="imgspeed">
+                  <td class="verozidade">Velocidade: 116</td>
+                  <img src="Zona" class="imgzona">
+                  <td class="verozidade">Zona: médio</td>
               </tr>
               </table>
       </div>
@@ -653,44 +661,44 @@
         <br>
         <table class="maesp">
           <tr>
-              <img src="imagens/machado.png" class="imgmaesal">
+              <img src="machado.png" class="imgmaesal">
               <td class="maes">Arma longa</td>
-              <img src="imagens/faca.png" class="imgmaesac">
+              <img src="faca.png" class="imgmaesac">
               <td 
               class="maes">Arma curta</td>
-              <img src="imagens/soco.png" class="imgmaesfis">
+              <img src="soco.png" class="imgmaesfis">
               <td class="maes">Físico</td>
           </tr>
           <tr>
               <td>0</td>
               <td>0</td>
-              <td>240</td>
+              <td>-100</td>
           </tr>
           </table>
           <br>
           <table class="maesp">
           <tr>
-              <img src="imagens/pistole.png" class="imgmaesaf">
+              <img src="pistole.png" class="imgmaesaf">
               <td class="maes">Arma de fogo</td>
-              <img src="imagens/arco.png" class="imgmaesaa">
+              <img src="arco.png" class="imgmaesaa">
               <td class="maes">Arma arcaica</td>
-              <img src="imagens/lança.png" class="imgmaeslan">
+              <img src="lança.png" class="imgmaeslan">
               <td class="maes">Lança</td>
           </tr>
           <tr>
               <td>0</td>
               <td>0</td>
-              <td>0</td>
+              <td>100</td>
           </tr>
       </table>
       <br>
       <table class="maesp">
         <tr>
-            <img src="imagens/cana.png" class="imgmaesaf">
+            <img src="cana.png" class="imgmaesaf">
             <td class="maes">Canalizador</td>
-            <img src="imagens/gadanha1.png" class="imgmaesaa">
+            <img src="gadanha1.png" class="imgmaesaa">
             <td class="maes">Gadanhas</td>
-            <img src="imagens/pecu.png" class="imgmaeslan">
+            <img src="pecu.png" class="imgmaeslan">
             <td class="maes">Peculiaridade</td>
         </tr>
         <tr>
@@ -709,8 +717,8 @@
         <div class="carrossel owl-carousel">
           <div class="conquista">
               <div class="conquistaCaixa">
-                  <button onclick="leiaMais1a()" id="btnLeiaMais1a" class="btnLeiaMais">Evitar Flecha</button>
-                  <span id="tresPontos1a"></span><span id="mostrarMais1a" class="bens"><br><br>Não pode ser acertado por projéteis físicos.<br>
+                  <button onclick="leiaMais1a()" id="btnLeiaMais1a" class="btnLeiaMais">Asas de rei</button>
+                  <span id="tresPontos1a"></span><span id="mostrarMais1a" class="bens"><br><br>Sempre que sair de combate sua mana regenera<br> totalmente.<br> Durante um combate se inícia ganha 5% de dano extra<br> para cada 10% de mana restante.<br> Recebe vantagem em todos os testes de P.M e INT que<br> são relacionadas a mana.<br> Quando estiver em grupo, recupera 5% de mana por<br> turno para cada aliado seu.<br> Quando estiver em torno de uma flora forte recebe 25%<br> de bônus em todos os atributos e maestrias, e quando<br> perto da arvore sagrada esse bônus dobra.<br> Seu sangue faz as coisas florecerem e possuem<br> propriedades mágicas que regeneram 10% da vida<br> máxima do alvo + 20% da sua vida máxima como cura<br> para qualquer um e qualquer coisa.<br>
                   <br></span>
                   <hr/>
                   
@@ -737,7 +745,104 @@
                 </form>
             </div>
         </div>
-
+        <div class="fab"  ontouchstart="">
+          <button class="main" onclick="openModal('dv-modal1')" >
+          </button>
+        </div>
+        <div id="dv-modal1" class="modal">
+          <div class="modal-content-inv">
+            <div class="modal-header">
+              <img src="fechar.png" class="close" id="close-modal" onclick="closeModall('dv-modal1')">
+            <h1>Inventario</h1>
+            </div>
+            <div class="modal-body">
+                <div class="modal-armas">
+                  <br>
+                  <h1 class="stitulo-armas">Armas</h1>
+                  <br>
+                  <h2 class="titulo-armas">Lança do espírito Chastiefol</h2>
+                  <hr/>
+                  <p class="armas-info">A lança possui 8 formas diferentes, mas normalmente é vista como um travesseiro verde, suas formas são:<br><br><br>
+                    1º forma: Lança - Uma lança comprida possuidora de detalhes dourados e azuis. Quando nesse estágio dá ao portador +60 em maestria.<br> <br>
+                    2º forma: Guardião - Um travesseiro em formato de urso. Quando nesse estágio dá ao portador +20 em maestria e +40 em bloqueio. <br><br>
+                    3º forma: Focelização - Uma lança negra com detalhes e uma lâmina dourada. Quando nesse estado, se o inimigo acertado estiver inconciente ele petrifica, se estiver enraizado, imobilizado, stunado, paralizado...(outras formas de se estar preso) o alvo deve ser bem sucedido em um teste de CON (CD = P.M).<br><br>
+                    4º forma: Girassol - Um girassol gigante que brota do solo. Quando nesse estado pode realizar um ataque mágico que causa 400% do P.M como dano etério.<br><br>
+                    5º forma: Aumentar - A lança toma a forma de centenas de kunais. Quando nesse estado dá ao portador +40 em maestria, ademais pode atacar quantos inimigos desejar uma vez por turno.<br><br>
+                    6º forma: Yggdra cloth - Uma armadura. Quando usada Concede +60 em bloqueio.<br><br>
+                    7º forma: Illuminution - Uma bolinha de luz com um anel em sua volta. Quando nessa forma ilumina a área, ademais pode itensificar a luz na qual o alvo deve ser bem sucedido em um teste de CON (CD = P.M + 50% de INT) ou ficará stunado por 1 e cego por 2, em caso de sucesso ainda ficará cego por um turno.<br><br>
+                    8º forma: Jardim de pólen - Toma a forma de um domo de energia verde. Quando nessa forma cura o alvo em 200% do P.M por turno.
+                    <br><br>
+                   
+                  </p>
+                  <br>
+                  <h2 class="titulo-armas">Nenhum</h2>
+                  <hr/>
+                  <br>
+                  <h2 class="titulo-armas">Nenhum</h2>
+                  <hr/>
+                  <br>
+                  <h2 class="titulo-armas">Nenhum</h2>
+                  <hr/>
+                 
+                  <br>
+                  <h2 class="titulo-armas">Nenhum</h2>
+                  <hr/>
+                  <br>
+                  <h2 class="titulo-armas">Nenhum</h2>
+                  <hr/>
+                </div>
+                <br><br>
+                <div class="outros">
+                  <h1 class="stitulo-armas">outros</h1>
+                  <br><br>
+                  <h2 class="titulo-armas">Nenhum / 0x</h2>
+                  <hr/>
+                  <p class="armas-info"> </p>
+                  <br>
+                  <h2 class="titulo-armas">Nenhum / 0x</h2>
+                  <hr/>
+                  <p class="armas-info"> </p>
+                  <br>
+                  <h2 class="titulo-armas">Nenhum / 0x</h2>
+                  <hr/>
+                  <p class="armas-info"> </p>
+                  <br>
+                  <h2 class="titulo-armas">Nenhum / 0x</h2>
+                  <hr/>
+                  <p class="armas-info"> </p>
+                  <br>
+                  <h2 class="titulo-armas">Nenhum / 0x</h2>
+                  <hr/>
+                  <p class="items"></p>
+                  <br>
+                  <h2 class="titulo-armas">Nenhum / 0x</h2>
+                  <hr/>
+                  <p class="items"></p>
+                  <br>
+                  <h2 class="titulo-armas">Nenhum / 0x</h2>
+                  <hr/>
+                  <p class="items"></p>
+                  <br>
+                  <h2 class="titulo-armas">Nenhum / 0x</h2>
+                  <hr/>
+                  <p class="items"></p>
+                  <br>
+                  <h2 class="titulo-armas">Nenhum / 0x</h2>
+                  <hr/>
+                  <p class="items"></p>
+                  <br>
+                  <h2 class="titulo-armas">Nenhum / 0x</h2>
+                  <hr/>
+                  <p class="items"></p>
+                  <br>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn-inv" onclick="closeModall('dv-modal1')">Fechar</button>
+            </div>
+        </div>
+        </div>
+    </div>
     <script src="fichakawee.js"></script>
   </body>
 </html>
