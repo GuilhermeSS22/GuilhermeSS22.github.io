@@ -7,11 +7,11 @@ const data = {
 
   life: {
     current: 260,
-    max: 26*10*4,
+    max: 26*10*1,
   },
   sanity: {
     current: 140,
-    max: 14*10*4,
+    max: 14*10*1,
   },
 
   weapons: [
