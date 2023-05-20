@@ -733,11 +733,11 @@ const btnLeiaMais2a = document.getElementById('btnLeiaMais2a');
 if (tresPontos2a.style.display === 'none') {
     tresPontos2a.style.display = 'inline';
     mostrarMais2a.style.display = 'none';
-    btnLeiaMais2a.innerHTML = 'Garantia de Flecha';
+    btnLeiaMais2a.innerHTML = 'Nucleódium';
 } else {
     tresPontos2a.style.display = 'none';
     mostrarMais2a.style.display = 'inline';
-    btnLeiaMais2a.innerHTML = 'Garantia de Flecha';
+    btnLeiaMais2a.innerHTML = 'Nucleódium';
 }
 }
 function leiaMais3a() {
