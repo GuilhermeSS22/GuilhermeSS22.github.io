@@ -176,11 +176,11 @@ function leiaMais1() {
     if (tresPontos1.style.display === 'none') {
         tresPontos1.style.display = 'inline';
         mostrarMais1.style.display = 'none';
-        btnLeiaMais1.innerHTML = 'Primeiro selo';
+        btnLeiaMais1.innerHTML = 'Disaster';
     } else {
         tresPontos1.style.display = 'none';
         mostrarMais1.style.display = 'inline';
-        btnLeiaMais1.innerHTML = 'Primeiro selo';
+        btnLeiaMais1.innerHTML = 'Disaster';
     }
 }
 function leiaMais2() {
@@ -191,11 +191,11 @@ function leiaMais2() {
   if (tresPontos2.style.display === 'none') {
       tresPontos2.style.display = 'inline';
       mostrarMais2.style.display = 'none';
-      btnLeiaMais2.innerHTML = 'Segundo selo';
+      btnLeiaMais2.innerHTML = 'Levitação';
   } else {
       tresPontos2.style.display = 'none';
       mostrarMais2.style.display = 'inline';
-      btnLeiaMais2.innerHTML = 'Segundo selo';
+      btnLeiaMais2.innerHTML = 'Levitação';
   }
 }
 function leiaMais3() {
@@ -206,11 +206,11 @@ function leiaMais3() {
   if (tresPontos3.style.display === 'none') {
       tresPontos3.style.display = 'inline';
       mostrarMais3.style.display = 'none';
-      btnLeiaMais3.innerHTML = 'terceiro selo';
+      btnLeiaMais3.innerHTML = 'Transformação';
   } else {
       tresPontos3.style.display = 'none';
       mostrarMais3.style.display = 'inline';
-      btnLeiaMais3.innerHTML = 'terceiro selo';
+      btnLeiaMais3.innerHTML = 'Transformação';
   }
 }
 function leiaMais4() {
@@ -221,11 +221,11 @@ function leiaMais4() {
   if (tresPontos4.style.display === 'none') {
       tresPontos4.style.display = 'inline';
       mostrarMais4.style.display = 'none';
-      btnLeiaMais4.innerHTML = 'Maldição da bomba';
+      btnLeiaMais4.innerHTML = 'Ancestral feérico';
   } else {
       tresPontos4.style.display = 'none';
       mostrarMais4.style.display = 'inline';
-      btnLeiaMais4.innerHTML = 'Maldição da bomba';
+      btnLeiaMais4.innerHTML = 'Ancestral feérico';
   }
 }
 function leiaMais5() {
@@ -236,11 +236,11 @@ function leiaMais5() {
   if (tresPontos5.style.display === 'none') {
       tresPontos5.style.display = 'inline';
       mostrarMais5.style.display = 'none';
-      btnLeiaMais5.innerHTML = 'Tenga goken';
+      btnLeiaMais5.innerHTML = 'Fonte da corrupção';
   } else {
       tresPontos5.style.display = 'none';
       mostrarMais5.style.display = 'inline';
-      btnLeiaMais5.innerHTML = 'Tenga goken';
+      btnLeiaMais5.innerHTML = 'Fonte da corrupção';
   }
 }
 function leiaMais6() {
@@ -251,11 +251,11 @@ function leiaMais6() {
   if (tresPontos6.style.display === 'none') {
       tresPontos6.style.display = 'inline';
       mostrarMais6.style.display = 'none';
-      btnLeiaMais6.innerHTML = 'Tenchi Kaimei';
+      btnLeiaMais6.innerHTML = 'Inferno de areia corrompida';
   } else {
       tresPontos6.style.display = 'none';
       mostrarMais6.style.display = 'inline';
-      btnLeiaMais6.innerHTML = 'Tenchi Kaimei';
+      btnLeiaMais6.innerHTML = 'Inferno de areia corrompida';
   }
 }
 function leiaMais7() {
@@ -266,11 +266,11 @@ function leiaMais7() {
   if (tresPontos7.style.display === 'none') {
       tresPontos7.style.display = 'inline';
       mostrarMais7.style.display = 'none';
-      btnLeiaMais7.innerHTML = 'Devil slayer de gelo';
+      btnLeiaMais7.innerHTML = 'Mão de Anubis corrompida';
   } else {
       tresPontos7.style.display = 'none';
       mostrarMais7.style.display = 'inline';
-      btnLeiaMais7.innerHTML = 'Devil slayer de gelo';
+      btnLeiaMais7.innerHTML = 'Mão de Anubis corrompida';
   }
 }
 function leiaMais8() {
@@ -281,11 +281,11 @@ function leiaMais8() {
   if (tresPontos8.style.display === 'none') {
       tresPontos8.style.display = 'inline';
       mostrarMais8.style.display = 'none';
-      btnLeiaMais8.innerHTML = 'Maldição dos espinhos';
+      btnLeiaMais8.innerHTML = 'Fúria de Anubis';
   } else {
       tresPontos8.style.display = 'none';
       mostrarMais8.style.display = 'inline';
-      btnLeiaMais8.innerHTML = 'Maldição dos espinhos';
+      btnLeiaMais8.innerHTML = 'Fúria de Anubis';
   }
 }
 function leiaMais9() {
