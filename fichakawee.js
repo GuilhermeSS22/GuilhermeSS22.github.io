@@ -1,7 +1,7 @@
 const data = {
   cristal: 0,
   star: 1,
-  classe: 2,
+  classe: 4,
   level: 1,
   age: 1300,
   sex: 'male',
