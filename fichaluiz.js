@@ -1335,11 +1335,11 @@ function leiaMais39a() {
     if (tresPontos39a.style.display === 'none') {
         tresPontos39a.style.display = 'inline';
         mostrarMais39a.style.display = 'none';
-        btnLeiaMais39a.innerHTML = 'Benção da indestrutibilidade ';
+        btnLeiaMais39a.innerHTML = 'Verdade absoluta ';
     } else {
         tresPontos39a.style.display = 'none';
         mostrarMais39a.style.display = 'inline';
-        btnLeiaMais39a.innerHTML = 'Benção da indestrutibilidade ';
+        btnLeiaMais39a.innerHTML = 'Verdade absoluta ';
     }
 }
 function leiaMais40a() {
