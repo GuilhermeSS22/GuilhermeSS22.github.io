@@ -2,7 +2,7 @@ const data = {
     cristal: 500,
     star: 1,
     classe: 4,
-    level: 37,
+    level: 38,
     age: 20,
     sex: 'male',
 
@@ -2994,6 +2994,21 @@ function leiaMais106b() {
         tresPontos106b.style.display = 'none';
         mostrarMais106b.style.display = 'inline';
         btnLeiaMais106b.innerHTML = 'Clones';
+    }
+}
+function leiaMais107b() {
+    const tresPontos107b = document.getElementById('tresPontos107b');
+    const mostrarMais107b = document.getElementById('mostrarMais107b');
+    const btnLeiaMais107b = document.getElementById('btnLeiaMais107b');
+
+    if (tresPontos107b.style.display === 'none') {
+        tresPontos107b.style.display = 'inline';
+        mostrarMais107b.style.display = 'none';
+        btnLeiaMais107b.innerHTML = 'Clones';
+    } else {
+        tresPontos107b.style.display = 'none';
+        mostrarMais107b.style.display = 'inline';
+        btnLeiaMais107b.innerHTML = 'Clones';
     }
 }
 // document.getElementById('discount-form').addEventListener('submit', calculateDiscount);
