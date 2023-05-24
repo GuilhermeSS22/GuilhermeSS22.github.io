@@ -5,7 +5,7 @@
 }
 
 body {
-    background: linear-gradient(#13011f , #40006b, #820365,#38032c );
+    background: linear-gradient(#13011f , #40006b,#38032c );
     color: #fff;
     font-family: 'Itim', sans-serif;
 }
@@ -251,7 +251,7 @@ select:focus {
     width: 50%;
     height: 25px;
     background-color: #9902eb;
-    color: #200030;
+    color: #11001a;
     transition: width 2s;
     display: flex;
     align-items: center;
