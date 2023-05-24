@@ -3004,11 +3004,11 @@ function leiaMais107b() {
     if (tresPontos107b.style.display === 'none') {
         tresPontos107b.style.display = 'inline';
         mostrarMais107b.style.display = 'none';
-        btnLeiaMais107b.innerHTML = 'Clones';
+        btnLeiaMais107b.innerHTML = 'No long human';
     } else {
         tresPontos107b.style.display = 'none';
         mostrarMais107b.style.display = 'inline';
-        btnLeiaMais107b.innerHTML = 'Clones';
+        btnLeiaMais107b.innerHTML = 'No long human';
     }
 }
 // document.getElementById('discount-form').addEventListener('submit', calculateDiscount);
